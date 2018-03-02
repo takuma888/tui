@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+$theme-name: 'tachigo' !default;
+
+@import "functions";
+@import "variables";
+@import "mixins";
+
+@import "theme/bootstrap/background";

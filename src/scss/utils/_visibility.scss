@@ -1,0 +1,9 @@
+// Visibility
+
+@include tui('.visible') {
+  @include invisible(visible);
+}
+
+@include tui('.invisible') {
+  @include invisible(hidden);
+}

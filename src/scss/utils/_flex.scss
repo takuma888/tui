@@ -1,0 +1,117 @@
+// Flex
+
+// stylelint-disable declaration-no-important
+
+// Flex variation
+//
+// Custom styles for additional flex alignment options.
+
+@mixin flex-utils($infix) {
+  @include tui('.flex#{$infix}-row, .flex-row#{$infix}') {
+    flex-direction: row !important;
+  }
+  @include tui('.flex#{$infix}-column, .flex-column#{$infix}') {
+    flex-direction: column !important;
+  }
+  @include tui('.flex#{$infix}-row-reverse, .flex-row-reverse#{$infix}') {
+    flex-direction: row-reverse !important;
+  }
+  @include tui('.flex#{$infix}-column-reverse, .flex-column-reverse#{$infix}') {
+    flex-direction: column-reverse !important;
+  }
+
+  @include tui('.flex#{$infix}-wrap, .flex-wrap#{$infix}') {
+    flex-wrap: wrap !important;
+  }
+  @include tui('.flex#{$infix}-nowrap, .flex-nowrap#{$infix}') {
+    flex-wrap: nowrap !important;
+  }
+  @include tui('.flex#{$infix}-wrap-reverse, .flex-wrap-reverse#{$infix}') {
+    flex-wrap: wrap-reverse !important;
+  }
+  @include tui('.flex#{$infix}-fill, .flex-fill#{$infix}') {
+    flex: 1 1 auto !important;
+  }
+
+  @include tui('.justify-content#{$infix}-start, .flex-justify-content-start#{$infix}') {
+    justify-content: flex-start !important;
+  }
+  @include tui('.justify-content#{$infix}-end, .flex-justify-content-end#{$infix}') {
+    justify-content: flex-end !important;
+  }
+  @include tui('.justify-content#{$infix}-center, .flex-justify-content-center#{$infix}') {
+    justify-content: center !important;
+  }
+  @include tui('.justify-content#{$infix}-between, .flex-justify-content-between#{$infix}') {
+    justify-content: space-between !important;
+  }
+  @include tui('.justify-content#{$infix}-around, .flex-justify-content-around#{$infix}') {
+    justify-content: space-around !important;
+  }
+
+  @include tui('.align-items#{$infix}-start, .flex-align-items-start#{$infix}') {
+    align-items: flex-start !important;
+  }
+  @include tui('.align-items#{$infix}-end, .flex-align-items-end#{$infix}') {
+    align-items: flex-end !important;
+  }
+  @include tui('.align-items#{$infix}-center, .flex-align-items-center#{$infix}') {
+    align-items: center !important;
+  }
+  @include tui('.align-items#{$infix}-baseline, .flex-align-items-baseline#{$infix}') {
+    align-items: baseline !important;
+  }
+  @include tui('.align-items#{$infix}-stretch, .flex-align-items-stretch#{$infix}') {
+    align-items: stretch !important;
+  }
+
+  @include tui('.align-content#{$infix}-start, .flex-align-content-start#{$infix}') {
+    align-content: flex-start !important;
+  }
+  @include tui('.align-content#{$infix}-end, .flex-align-content-end#{$infix}') {
+    align-content: flex-end !important;
+  }
+  @include tui('.align-content#{$infix}-center, .flex-align-content-center#{$infix}') {
+    align-content: center !important;
+  }
+  @include tui('.align-content#{$infix}-between, .flex-align-content-between#{$infix}') {
+    align-content: space-between !important;
+  }
+  @include tui('.align-content#{$infix}-around, .flex-align-content-around#{$infix}') {
+    align-content: space-around !important;
+  }
+  @include tui('.align-content#{$infix}-stretch, .flex-align-content-stretch#{$infix}') {
+    align-content: stretch !important;
+  }
+
+  @include tui('.align-self#{$infix}-auto, .flex-align-self-auto#{$infix}') {
+    align-self: auto !important;
+  }
+  @include tui('.align-self#{$infix}-start, .flex-align-self-start#{$infix}') {
+    align-self: flex-start !important;
+  }
+  @include tui('.align-self#{$infix}-end, .flex-align-self-end#{$infix}') {
+    align-self: flex-end !important;
+  }
+  @include tui('.align-self#{$infix}-center, .flex-align-self-center#{$infix}') {
+    align-self: center !important;
+  }
+  @include tui('.align-self#{$infix}-baseline, .flex-align-self-baseline#{$infix}') {
+    align-self: baseline !important;
+  }
+  @include tui('.align-self#{$infix}-stretch, .flex-align-self-stretch#{$infix}') {
+    align-self: stretch !important;
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @include flex-utils($infix);
+
+    @if ($infix == "") {
+      @include flex-utils('-xs');
+    }
+  }
+}
