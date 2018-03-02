@@ -1,9 +1,0 @@
-// Screen Reader
-
-@include tui('.sr-only') {
-  @include sr-only();
-}
-
-@include tui('.sr-only-focusable') {
-  @include sr-only-focusable();
-}
