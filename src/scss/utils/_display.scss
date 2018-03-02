@@ -1,0 +1,99 @@
+// Display
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @include tui-class('.d#{$infix}-none, .d-none#{$infix}') {
+      display: none !important;
+    }
+
+    @include tui-class('.d#{$infix}-inline, .d-inline#{$infix}') {
+      display: inline !important;
+    }
+    @include tui-class('.d#{$infix}-inline-block, .d-inline-block#{$infix}') {
+      display: inline-block !important;
+    }
+    @include tui-class('.d#{$infix}-block, .d-block#{$infix}') {
+      display: block !important;
+    }
+    @include tui-class('.d#{$infix}-table, .d-table#{$infix}') {
+      display: table !important;
+    }
+    @include tui-class('.d#{$infix}-table-row, .d-table-row#{$infix}') {
+      display: table-row !important;
+    }
+    @include tui-class('.d#{$infix}-table-cell, .d-table-cell#{$infix}') {
+      display: table-cell !important;
+    }
+    @include tui-class('.d#{$infix}-flex, .d-flex#{$infix}') {
+      display: flex !important;
+    }
+    @include tui-class('.d#{$infix}-inline-flex, .d-inline-flex#{$infix}') {
+      display: inline-flex !important;
+    }
+
+    @if ($infix == "") {
+      @include tui-class('.d-xs-none, .d-none-xs') {
+        display: none !important;
+      }
+      @include tui-class('.d-xs-inline, .d-inline-xs') {
+        display: inline !important;
+      }
+      @include tui-class('.d-xs-inline-block, .d-inline-block-xs') {
+        display: inline-block !important;
+      }
+      @include tui-class('.d-xs-block, .d-block-xs') {
+        display: block !important;
+      }
+      @include tui-class('.d-xs-table, .d-table-xs') {
+        display: table !important;
+      }
+      @include tui-class('.d-xs-table-row, .d-table-row-xs') {
+        display: table-row !important;
+      }
+      @include tui-class('.d-xs-table-cell, .d-table-cell-xs') {
+        display: table-cell !important;
+      }
+      @include tui-class('.d-xs-flex, .d-flex-xs') {
+        display: flex !important;
+      }
+      @include tui-class('.d-xs-inline-flex, .d-inline-flex-xs') {
+        display: inline-flex !important;
+      }
+    }
+  }
+}
+
+
+@media print {
+  @include tui-class('.d-print-none, .d-none-print') {
+    display: none !important;
+  }
+  @include tui-class('.d-print-inline, .d-inline-print') {
+    display: inline !important;
+  }
+  @include tui-class('.d-print-inline-block, .d-inline-block-print') {
+    display: inline-block !important;
+  }
+  @include tui-class('.d-print-block, .d-block-print') {
+    display: block !important;
+  }
+  @include tui-class('.d-print-table, .d-table-print') {
+    display: table !important;
+  }
+  @include tui-class('.d-print-table-row, .d-table-row-print') {
+    display: table-row !important;
+  }
+  @include tui-class('.d-print-table-cell, .d-table-cell-print') {
+    display: table-cell !important;
+  }
+  @include tui-class('.d-print-flex, .d-flex-print') {
+    display: flex !important;
+  }
+  @include tui-class('.d-print-inline-flex, .d-inline-flex-print') {
+    display: inline-flex !important;
+  }
+}

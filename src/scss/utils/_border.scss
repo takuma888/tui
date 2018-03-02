@@ -1,0 +1,75 @@
+// Border
+
+@include tui('.border') {
+  border: $border-width solid $border-color !important;
+}
+@include tui('.border-top') {
+  border-top: $border-width solid $border-color !important;
+}
+@include tui('.border-right') {
+  border-right: $border-width solid $border-color !important;
+}
+@include tui('.border-bottom') {
+  border-bottom: $border-width solid $border-color !important;
+}
+@include tui('.border-left') {
+  border-left: $border-width solid $border-color !important;
+}
+
+@include tui('.border-0') {
+  border: 0 !important;
+}
+@include tui('.border-top-0') {
+  border-top: 0 !important;
+}
+@include tui('.border-right-0') {
+  border-right: 0 !important;
+}
+@include tui('.border-bottom-0') {
+  border-bottom: 0 !important;
+}
+@include tui('.border-left-0') {
+  border-left: 0 !important;
+}
+
+@each $color, $value in $theme-colors {
+  @include tui('.border-#{$color}') {
+    border-color: $value !important;
+  }
+}
+
+@include tui('.border-white') {
+  border-color: $white !important;
+}
+
+//
+// Border-radius
+//
+
+@include tui('.rounded, .border-rounded') {
+  border-radius: $border-radius !important;
+}
+@include tui('.rounded-top, .border-rounded-top') {
+  border-top-left-radius: $border-radius !important;
+  border-top-right-radius: $border-radius !important;
+}
+@include tui('.rounded-right, .border-rounded-right') {
+  border-top-right-radius: $border-radius !important;
+  border-bottom-right-radius: $border-radius !important;
+}
+@include tui('.rounded-bottom, .border-rounded-bottom') {
+  border-bottom-right-radius: $border-radius !important;
+  border-bottom-left-radius: $border-radius !important;
+}
+@include tui('.rounded-left, .border-rounded-left') {
+  border-top-left-radius: $border-radius !important;
+  border-bottom-left-radius: $border-radius !important;
+}
+
+@include tui('.rounded-circle, .border-rounded-circle') {
+  border-radius: 50% !important;
+}
+
+@include tui('.rounded-0, .border-rounded-0') {
+  border-radius: 0 !important;
+}

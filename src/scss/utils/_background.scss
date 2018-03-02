@@ -1,0 +1,17 @@
+// Background
+
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}", $value);
+}
+
+@each $color, $value in $theme-colors {
+  @include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+}
+
+@include tui('.bg-white') {
+  background-color: $white !important;
+}
+
+@include tui('.bg-transparent') {
+  background-color: transparent !important;
+}

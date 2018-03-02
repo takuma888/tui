@@ -1,0 +1,34 @@
+// Position
+
+// Sass list not in variables since it's not intended for customization.
+$positions: static, relative, absolute, fixed, sticky;
+
+
+@each $position in $positions {
+  @include tui('.position-#{$position}') {
+    position: $position !important;
+  }
+}
+
+// Shorthand
+
+@include tui('.fixed-top') {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+@include tui('.fixed-bottom') {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@include tui('.sticky-top') {
+  @supports (position: sticky) {
+    position: sticky;
+    top: 0;
+  }
+}

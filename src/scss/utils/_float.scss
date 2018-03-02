@@ -1,0 +1,33 @@
+// Float
+
+@mixin float-utils($infix) {
+  @include tui('.float#{$infix}-left, .float-left#{$infix}') {
+    @include float-left;
+  }
+  @include tui('.float#{$infix}-right, .float-right#{$infix}') {
+    @include float-right;
+  }
+  @include tui('.float#{$infix}-none, .float-none#{$infix}') {
+    @include float-none;
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @include float-utils($infix);
+
+    @if ($infix == "") {
+      @include float-utils('-xs');
+    }
+  }
+}
+
+@include tui('.pull-left') {
+  @include float-left;
+}
+
+@include tui('.pull-right') {
+  @include float-right;
+}
