@@ -1,0 +1,228 @@
+// Table
+
+@include tui('.table') {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $spacer;
+  background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+
+}
+
+
+@include tui('.table-condensed, .table-sm') {
+  th,
+  td {
+    padding: $table-cell-padding-sm;
+  }
+}
+
+@include tui('.table-bordered') {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $table-border-width);
+    }
+  }
+}
+
+@include tui('.table-borderless') {
+  th,
+  td,
+  thead th,
+  tbody + tbody {
+    border: 0;
+  }
+
+}
+
+@include tui('.table-striped') {
+  tbody tr:nth-of-type(#{$table-striped-order}) {
+    background-color: $table-accent-bg;
+  }
+}
+
+@include tui('.table-hover') {
+  tbody tr {
+    @include hover {
+      background-color: $table-hover-bg;
+    }
+  }
+}
+
+
+
+@each $color, $value in $theme-colors {
+  @include table-row-variant($color, theme-color-level($color, -9));
+}
+
+@include table-row-variant(active, $table-active-bg);
+
+
+@include tui('.table-dark') {
+  color: $table-dark-color;
+  background-color: $table-dark-bg;
+
+  th,
+  td,
+  thead th {
+    border-color: $table-dark-border-color;
+  }
+
+  &.table-bordered {
+    border: 0;
+  }
+
+  &.table-striped {
+    tbody tr:nth-of-type(odd) {
+      background-color: $table-dark-accent-bg;
+    }
+  }
+
+  &.table-hover {
+    tbody tr {
+      @include hover {
+        background-color: $table-dark-hover-bg;
+      }
+    }
+  }
+}
+
+
+// Responsive table
+// 和Bootstrap不一样，tui认为响应式的表格应该将表格翻转，即由竖向的变成横向，并且固定表头
+
+@mixin table-responsive($infix, $breakpoint) {
+
+  &.table-responsive#{$infix} {
+    @include media-breakpoint-down($breakpoint) {
+      border-collapse: collapse;
+      border-spacing: 0;
+      display: block;
+      position: relative;
+      width: 100%;
+
+      thead {
+        display: block;
+        float: left;
+
+        tr {
+          display: block;
+          @include clearfix1();
+
+          th {
+            display: block;
+            width: auto !important;
+            text-align: right;
+          }
+        }
+      }
+
+      tbody {
+        display: block;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+        white-space: nowrap;
+
+        tr {
+          display: inline-block;
+          &:not(:first-child) {
+            margin-left: -5px;
+          }
+          td {
+            display: block;
+            text-align: left;
+          }
+        }
+      }
+
+      &.table {
+        th,
+        td {
+          border: none;
+          border-right: $table-border-width solid $table-border-color;
+        }
+
+        thead th {
+          border: none;
+          border-right: (2 * $table-border-width) solid $table-border-color;
+        }
+
+        tbody + tbody {
+          border: none;
+          border-right: (2 * $table-border-width) solid $table-border-color;
+        }
+      }
+
+      &.table-bordered {
+        thead {
+          td, th {
+            border-top: $table-border-width solid $table-border-color;
+            &:first-child {
+              border-top: 0;
+            }
+          }
+        }
+
+        tbody {
+          td, th {
+            vertical-align: bottom;
+            border-top: $table-border-width solid $table-border-color;
+            &:first-child {
+              border-top: 0;
+            }
+          }
+        }
+      }
+
+      &.table-borderless {
+        th,
+        td,
+        thead th,
+        tbody + tbody {
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+@include tui('.table-responsive') {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    @if ($infix != '') {
+      @include table-responsive($infix, $breakpoint);
+    }
+
+    @if ($infix == "") {
+      @include table-responsive('-xs', $breakpoint);
+    }
+  }
+}

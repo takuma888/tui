@@ -1,0 +1,163 @@
+// Button
+
+@include tui('.btn') {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $btn-border-width solid transparent;
+  text-decoration: none;
+
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height);
+
+  @include transition($btn-transition);
+
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    cursor: not-allowed;
+    @include box-shadow(none);
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .btn elements
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-image: none;
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+
+@include tui('a.btn.disabled, fieldset:disabled a.btn') {
+  pointer-events: none;
+}
+
+// Color
+
+@each $color, $value in $theme-colors {
+  @include tui('.btn-#{$color}') {
+    @include button-variant($value, $value);
+
+    &.btn-gradient {
+      @include button-gradient($value, $value);
+    }
+    &.btn-shadow {
+      @include button-boxshadow($value);
+    }
+  }
+}
+
+// default style
+$default-btn-color: #BBBBBB !default;
+@include tui('.btn-default') {
+  @include button-variant($default-btn-color, $default-btn-color);
+  &.btn-gradient {
+    @include button-gradient($default-btn-color, $default-btn-color);
+  }
+  &.btn-shadow {
+    @include button-boxshadow($default-btn-color);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  @include tui('.btn-outline-#{$color}') {
+    @include button-outline-variant($value);
+
+    &.btn-gradient {
+      @include button-gradient($value, $value);
+    }
+    &.btn-shadow {
+      @include button-boxshadow($value);
+    }
+  }
+}
+
+@include tui('.btn-outline-default') {
+  @include button-outline-variant($default-btn-color);
+
+  &.btn-shadow {
+    @include button-boxshadow($default-btn-color);
+  }
+}
+
+
+// border radius
+
+@include tui('.btn-rounded') {
+  @include button-rounded();
+}
+
+// link style button
+@include tui('.btn-link') {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  background-color: transparent;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+  }
+}
+
+
+// size
+
+@include tui('.btn-lg') {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg);
+  &.btn-rounded {
+    border-radius: $btn-border-radius-lg;
+  }
+}
+
+@include tui('.btn-sm') {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm);
+  &.btn-rounded {
+    border-radius: $btn-border-radius-sm;
+  }
+}
+
+
+// block button
+
+@include tui('.btn-block') {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}

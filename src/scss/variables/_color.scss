@@ -91,3 +91,6 @@ $yiq-text-light: $white !default;
 
 $body-bg:                   $white !default;
 $body-color:                $gray-900 !default;
+
+$component-active-color:      $white !default;
+$component-active-bg:         theme-color("primary") !default;

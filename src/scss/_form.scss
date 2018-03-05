@@ -1,0 +1,45 @@
+// Form
+
+@include tui('.form-group-inline') {
+  label {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: auto;
+    max-width: 100%;
+    word-break: keep-all;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    margin-top: .45rem;
+
+    > *:first-child {
+      width: 100%;
+      margin-left: 1rem;
+      margin-top: -0.45rem;
+    }
+  }
+  margin-bottom: .45rem;
+}
+
+@include tui('.form-group-inline-sm') {
+  label {
+    font-size: $font-size-sm;
+    margin-top: .35rem;
+
+    > *:first-child {
+      margin-top: -.35rem;
+    }
+  }
+  margin-bottom: .35rem;
+}
+
+@include tui('.form-group-inline-lg') {
+  label {
+    font-size: $font-size-lg;
+    margin-top: .6rem;
+
+    > *:first-child {
+      margin-top: -.6rem;
+    }
+  }
+  margin-bottom: .6rem;
+}

@@ -53,6 +53,30 @@ module.exports = function (grunt) {
                     'dist/css/tui-typography.css': 'src/scss/tui-typography.scss'
                 }
             },
+            tui_table: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-table.css': 'src/scss/tui-table.scss'
+                }
+            },
+            tui_button: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-button.css': 'src/scss/tui-button.scss'
+                }
+            },
+            tui_form: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-form.css': 'src/scss/tui-form.scss'
+                }
+            },
             doc: {
                 options: {
                     style: 'expanded'
@@ -105,6 +129,24 @@ module.exports = function (grunt) {
                 },
                 src: 'dist/css/tui-typography.css'
             },
+            tui_table: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-table.css'
+            },
+            tui_button: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-button.css'
+            },
+            tui_form: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-form.css'
+            },
             doc: {
                 options: {
                     map: true
@@ -146,6 +188,24 @@ module.exports = function (grunt) {
                 src: 'tui-typography.css',
                 dest: 'dist/css/'
             },
+            tui_table: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-table.css',
+                dest: 'dist/css/'
+            },
+            tui_button: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-button.css',
+                dest: 'dist/css/'
+            },
+            tui_form: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-form.css',
+                dest: 'dist/css/'
+            },
             doc: {
                 expand: true,
                 cwd: 'dist/css/',
@@ -180,6 +240,18 @@ module.exports = function (grunt) {
             tui_typography: {
                 src: ['dist/css/tui-typography.css'],
                 dest: 'dist/css/tui-typography.min.css'
+            },
+            tui_table: {
+                src: ['dist/css/tui-table.css'],
+                dest: 'dist/css/tui-table.min.css'
+            },
+            tui_button: {
+                src: ['dist/css/tui-button.css'],
+                dest: 'dist/css/tui-button.min.css'
+            },
+            tui_form: {
+                src: ['dist/css/tui-form.css'],
+                dest: 'dist/css/tui-form.min.css'
             },
             tui: {
                 src: ['dist/css/tui.css'],
@@ -217,7 +289,10 @@ module.exports = function (grunt) {
                     'dist/css/tui-normalize.css',
                     'dist/css/tui-grid.css',
                     'dist/css/tui-util.css',
-                    'dist/css/tui-typography.css'
+                    'dist/css/tui-typography.css',
+                    'dist/css/tui-table.css',
+                    'dist/css/tui-form.css',
+                    'dist/css/tui-button.css'
                 ],
                 dest: 'dist/css/tui.css'
             },
@@ -264,6 +339,9 @@ module.exports = function (grunt) {
         'sass:tui_grid', 'autoprefixer:tui_grid', 'csscomb:tui_grid', 'cssmin:tui_grid',
         'sass:tui_util', 'autoprefixer:tui_util', 'csscomb:tui_util', 'cssmin:tui_util',
         'sass:tui_typography', 'autoprefixer:tui_typography', 'csscomb:tui_typography', 'cssmin:tui_typography',
+        'sass:tui_table', 'autoprefixer:tui_table', 'csscomb:tui_table', 'cssmin:tui_table',
+        'sass:tui_button', 'autoprefixer:tui_button', 'csscomb:tui_button', 'cssmin:tui_button',
+        'sass:tui_form', 'autoprefixer:tui_form', 'csscomb:tui_form', 'cssmin:tui_form',
         'concat:tui_css', 'cssmin:tui',
         'sass:doc', 'autoprefixer:doc', 'csscomb:doc', 'cssmin:doc',
         'jshint:tui', 'jscs:tui', 'concat:tui_js', 'uglify:tui',
