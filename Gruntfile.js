@@ -77,6 +77,14 @@ module.exports = function (grunt) {
                     'dist/css/tui-form.css': 'src/scss/tui-form.scss'
                 }
             },
+            tui: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui.css': 'src/scss/tui.scss'
+                }
+            },
             doc: {
                 options: {
                     style: 'expanded'
@@ -147,6 +155,12 @@ module.exports = function (grunt) {
                 },
                 src: 'dist/css/tui-form.css'
             },
+            tui: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui.css'
+            },
             doc: {
                 options: {
                     map: true
@@ -204,6 +218,12 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'dist/css/',
                 src: 'tui-form.css',
+                dest: 'dist/css/'
+            },
+            tui: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui.css',
                 dest: 'dist/css/'
             },
             doc: {
@@ -284,19 +304,7 @@ module.exports = function (grunt) {
                 banner: '<%= banner %>',
                 stripBanners: false
             },
-            tui_css: {
-                src: [
-                    'dist/css/tui-normalize.css',
-                    'dist/css/tui-grid.css',
-                    'dist/css/tui-util.css',
-                    'dist/css/tui-typography.css',
-                    'dist/css/tui-table.css',
-                    'dist/css/tui-form.css',
-                    'dist/css/tui-button.css'
-                ],
-                dest: 'dist/css/tui.css'
-            },
-            tui_js: {
+            tui: {
                 src: [
                     'src/js/util.js'
                 ],
@@ -312,7 +320,7 @@ module.exports = function (grunt) {
                 preserveComments: /^!|@preserve|@license|@cc_on/i
             },
             tui: {
-                src: '<%= concat.tui_js.dest %>',
+                src: '<%= concat.tui.dest %>',
                 dest: 'dist/js/tui.min.js'
             }
         },
@@ -336,15 +344,17 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'sass:normalize', 'autoprefixer:normalize', 'csscomb:normalize', 'cssmin:normalize',
         'sass:tui_normalize', 'autoprefixer:tui_normalize', 'csscomb:tui_normalize', 'cssmin:tui_normalize',
+
         'sass:tui_grid', 'autoprefixer:tui_grid', 'csscomb:tui_grid', 'cssmin:tui_grid',
         'sass:tui_util', 'autoprefixer:tui_util', 'csscomb:tui_util', 'cssmin:tui_util',
         'sass:tui_typography', 'autoprefixer:tui_typography', 'csscomb:tui_typography', 'cssmin:tui_typography',
         'sass:tui_table', 'autoprefixer:tui_table', 'csscomb:tui_table', 'cssmin:tui_table',
         'sass:tui_button', 'autoprefixer:tui_button', 'csscomb:tui_button', 'cssmin:tui_button',
         'sass:tui_form', 'autoprefixer:tui_form', 'csscomb:tui_form', 'cssmin:tui_form',
-        'concat:tui_css', 'cssmin:tui',
+
+        'sass:tui', 'autoprefixer:tui', 'csscomb:tui', 'cssmin:tui',
         'sass:doc', 'autoprefixer:doc', 'csscomb:doc', 'cssmin:doc',
-        'jshint:tui', 'jscs:tui', 'concat:tui_js', 'uglify:tui',
+        'jshint:tui', 'jscs:tui', 'concat:tui', 'uglify:tui',
         'copy:release'
     ]);
 };

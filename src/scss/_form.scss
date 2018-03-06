@@ -1,45 +1,82 @@
 // Form
 
 @include tui('.form-group-inline') {
-  label {
-    display: inline-flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-bottom: 0;
+
+  // Allow folks to *not* use `.form-group`
+  .form-control {
+    display: inline-block;
+    width: auto; // Prevent labels from stacking above inputs in `.form-group`
+    vertical-align: middle;
+  }
+
+  // Make static controls behave like regular ones
+  .form-control-plaintext {
+    display: inline-block;
+  }
+
+  .input-group,
+  .custom-select {
     width: auto;
-    max-width: 100%;
-    word-break: keep-all;
-    flex: 0 0 auto;
-    justify-content: space-between;
-    margin-top: .45rem;
-
-    > *:first-child {
-      width: 100%;
-      margin-left: 1rem;
-      margin-top: -0.45rem;
-    }
   }
-  margin-bottom: .45rem;
+
+  // Remove default margin on radios/checkboxes that were used for stacking, and
+  // then undo the floating of radios and checkboxes to match.
+  .form-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding-left: 0;
+  }
+  .form-check-input {
+    position: relative;
+    margin-top: 0;
+    margin-right: $form-check-input-margin-x;
+    margin-left: 0;
+  }
+
+  .custom-control {
+    align-items: center;
+    justify-content: center;
+  }
+  .custom-control-label {
+    margin-bottom: 0;
+  }
 }
 
-@include tui('.form-group-inline-sm') {
-  label {
-    font-size: $font-size-sm;
-    margin-top: .35rem;
+@include tui('.form-check-input') {
+  cursor: pointer;
+  & ~ .form-check-label {
+    cursor: pointer;
+  }
 
-    > *:first-child {
-      margin-top: -.35rem;
+  &:disabled {
+    cursor: not-allowed;
+    & ~ .form-check-label {
+      cursor: not-allowed;
     }
   }
-  margin-bottom: .35rem;
 }
 
-@include tui('.form-group-inline-lg') {
-  label {
-    font-size: $font-size-lg;
-    margin-top: .6rem;
 
-    > *:first-child {
-      margin-top: -.6rem;
+@include tui('input[type="radio"], input[type="checkbox"]') {
+  &.custom-control-input {
+    cursor: pointer;
+    & ~ .custom-control-label {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+
+      & ~ .custom-control-label {
+        cursor: not-allowed;
+      }
     }
   }
-  margin-bottom: .6rem;
 }
