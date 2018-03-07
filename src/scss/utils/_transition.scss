@@ -1,0 +1,34 @@
+@include tui('.fade') {
+  opacity: 0;
+  @include transition($transition-fade);
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+@include tui('.collapse') {
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+
+@include tui(tr) {
+  &.collapse.show {
+    display: table-row;
+  }
+}
+
+@include tui(tbody) {
+  &.collapse.show {
+    display: table-row-group;
+  }
+}
+
+@include tui('.collapsing') {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
+}

@@ -1,0 +1,219 @@
+.badge.tui {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+.badge.tui:empty {
+  display: none;
+}
+
+.tui .badge {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+.tui .badge:empty {
+  display: none;
+}
+
+.btn.tui .badge {
+  position: relative;
+  top: -1px;
+}
+
+.tui .btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+.badge-rounded.tui {
+  border-radius: .25rem;
+}
+
+.tui .badge-rounded {
+  border-radius: .25rem;
+}
+
+.badge-pill.tui {
+  padding-right: .6em;
+  padding-left: .6em;
+  border-radius: 10rem;
+}
+
+.tui .badge-pill {
+  padding-right: .6em;
+  padding-left: .6em;
+  border-radius: 10rem;
+}
+
+.badge-primary.tui {
+  color: #fff;
+  background-color: #007bff;
+}
+.badge-primary.tui[href]:hover, .badge-primary.tui[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0062cc;
+}
+
+.tui .badge-primary {
+  color: #fff;
+  background-color: #007bff;
+}
+.tui .badge-primary[href]:hover, .tui .badge-primary[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0062cc;
+}
+
+.badge-secondary.tui {
+  color: #fff;
+  background-color: #6c757d;
+}
+.badge-secondary.tui[href]:hover, .badge-secondary.tui[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #545b62;
+}
+
+.tui .badge-secondary {
+  color: #fff;
+  background-color: #6c757d;
+}
+.tui .badge-secondary[href]:hover, .tui .badge-secondary[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #545b62;
+}
+
+.badge-success.tui {
+  color: #fff;
+  background-color: #28a745;
+}
+.badge-success.tui[href]:hover, .badge-success.tui[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1e7e34;
+}
+
+.tui .badge-success {
+  color: #fff;
+  background-color: #28a745;
+}
+.tui .badge-success[href]:hover, .tui .badge-success[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1e7e34;
+}
+
+.badge-info.tui {
+  color: #fff;
+  background-color: #17a2b8;
+}
+.badge-info.tui[href]:hover, .badge-info.tui[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #117a8b;
+}
+
+.tui .badge-info {
+  color: #fff;
+  background-color: #17a2b8;
+}
+.tui .badge-info[href]:hover, .tui .badge-info[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #117a8b;
+}
+
+.badge-warning.tui {
+  color: #212529;
+  background-color: #ffc107;
+}
+.badge-warning.tui[href]:hover, .badge-warning.tui[href]:focus {
+  color: #212529;
+  text-decoration: none;
+  background-color: #d39e00;
+}
+
+.tui .badge-warning {
+  color: #212529;
+  background-color: #ffc107;
+}
+.tui .badge-warning[href]:hover, .tui .badge-warning[href]:focus {
+  color: #212529;
+  text-decoration: none;
+  background-color: #d39e00;
+}
+
+.badge-danger.tui {
+  color: #fff;
+  background-color: #dc3545;
+}
+.badge-danger.tui[href]:hover, .badge-danger.tui[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #bd2130;
+}
+
+.tui .badge-danger {
+  color: #fff;
+  background-color: #dc3545;
+}
+.tui .badge-danger[href]:hover, .tui .badge-danger[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #bd2130;
+}
+
+.badge-light.tui {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+.badge-light.tui[href]:hover, .badge-light.tui[href]:focus {
+  color: #212529;
+  text-decoration: none;
+  background-color: #dae0e5;
+}
+
+.tui .badge-light {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+.tui .badge-light[href]:hover, .tui .badge-light[href]:focus {
+  color: #212529;
+  text-decoration: none;
+  background-color: #dae0e5;
+}
+
+.badge-dark.tui {
+  color: #fff;
+  background-color: #343a40;
+}
+.badge-dark.tui[href]:hover, .badge-dark.tui[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1d2124;
+}
+
+.tui .badge-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+.tui .badge-dark[href]:hover, .tui .badge-dark[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1d2124;
+}
+
+/*# sourceMappingURL=tui-badge.css.map */

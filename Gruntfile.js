@@ -77,6 +77,30 @@ module.exports = function (grunt) {
                     'dist/css/tui-form.css': 'src/scss/tui-form.scss'
                 }
             },
+            tui_badge: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-badge.css': 'src/scss/tui-badge.scss'
+                }
+            },
+            tui_breadcrumb: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-breadcrumb.css': 'src/scss/tui-breadcrumb.scss'
+                }
+            },
+            tui_component: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-component.css': 'src/scss/tui-component.scss'
+                }
+            },
             tui: {
                 options: {
                     style: 'expanded'
@@ -155,6 +179,24 @@ module.exports = function (grunt) {
                 },
                 src: 'dist/css/tui-form.css'
             },
+            tui_badge: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-badge.css'
+            },
+            tui_breadcrumb: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-breadcrumb.css'
+            },
+            tui_component: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-component.css'
+            },
             tui: {
                 options: {
                     map: true
@@ -220,6 +262,24 @@ module.exports = function (grunt) {
                 src: 'tui-form.css',
                 dest: 'dist/css/'
             },
+            tui_badge: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-badge.css',
+                dest: 'dist/css/'
+            },
+            tui_breadcrumb: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-breadcrumb.css',
+                dest: 'dist/css/'
+            },
+            tui_component: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-component.css',
+                dest: 'dist/css/'
+            },
             tui: {
                 expand: true,
                 cwd: 'dist/css/',
@@ -273,6 +333,18 @@ module.exports = function (grunt) {
                 src: ['dist/css/tui-form.css'],
                 dest: 'dist/css/tui-form.min.css'
             },
+            tui_badge: {
+                src: ['dist/css/tui-badge.css'],
+                dest: 'dist/css/tui-badge.min.css'
+            },
+            tui_breadcrumb: {
+                src: ['dist/css/tui-breadcrumb.css'],
+                dest: 'dist/css/tui-breadcrumb.min.css'
+            },
+            tui_component: {
+                src: ['dist/css/tui-component.css'],
+                dest: 'dist/css/tui-component.min.css'
+            },
             tui: {
                 src: ['dist/css/tui.css'],
                 dest: 'dist/css/tui.min.css'
@@ -280,48 +352,6 @@ module.exports = function (grunt) {
             doc: {
                 src: ['dist/css/tui-doc.css'],
                 dest: 'dist/css/tui-doc.min.css'
-            }
-        },
-        // js
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc'
-            },
-            tui: {
-                src: 'src/js/*.js'
-            }
-        },
-        jscs: {
-            options: {
-                config: '.jscsrc'
-            },
-            tui: {
-                src: '<%= jshint.tui.src %>'
-            }
-        },
-        concat: {
-            options: {
-                banner: '<%= banner %>',
-                stripBanners: false
-            },
-            tui: {
-                src: [
-                    'src/js/util.js'
-                ],
-                dest: 'dist/js/tui.js'
-            }
-        },
-        uglify: {
-            options: {
-                compress: {
-                    warnings: false
-                },
-                mangle: true,
-                preserveComments: /^!|@preserve|@license|@cc_on/i
-            },
-            tui: {
-                src: '<%= concat.tui.dest %>',
-                dest: 'dist/js/tui.min.js'
             }
         },
         // copy
@@ -351,10 +381,12 @@ module.exports = function (grunt) {
         'sass:tui_table', 'autoprefixer:tui_table', 'csscomb:tui_table', 'cssmin:tui_table',
         'sass:tui_button', 'autoprefixer:tui_button', 'csscomb:tui_button', 'cssmin:tui_button',
         'sass:tui_form', 'autoprefixer:tui_form', 'csscomb:tui_form', 'cssmin:tui_form',
+        'sass:tui_badge', 'autoprefixer:tui_badge', 'csscomb:tui_badge', 'cssmin:tui_badge',
+
+        'sass:tui_component', 'autoprefixer:tui_component', 'csscomb:tui_component', 'cssmin:tui_component',
 
         'sass:tui', 'autoprefixer:tui', 'csscomb:tui', 'cssmin:tui',
         'sass:doc', 'autoprefixer:doc', 'csscomb:doc', 'cssmin:doc',
-        'jshint:tui', 'jscs:tui', 'concat:tui', 'uglify:tui',
         'copy:release'
     ]);
 };

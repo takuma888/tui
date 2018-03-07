@@ -208,9 +208,6 @@ $inline-elements: map-merge((
   font-weight: bolder;
 }
 
-%code-kbd-samp {
-
-}
 @include tui-element("code, kbd, samp") {
   font-family: monospace, monospace;
   font-size: inherit;

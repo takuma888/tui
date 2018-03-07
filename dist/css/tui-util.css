@@ -514,6 +514,62 @@ a.bg-dark.tui:hover, a.bg-dark.tui:focus, button.bg-dark.tui:hover, button.bg-da
   content: "";
 }
 
+.close.tui {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+.close.tui:hover, .close.tui:focus {
+  color: #000;
+  text-decoration: none;
+  opacity: .75;
+}
+.close.tui:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.tui .close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+.tui .close:hover, .tui .close:focus {
+  color: #000;
+  text-decoration: none;
+  opacity: .75;
+}
+.tui .close:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+button.close.tui {
+  -webkit-appearance: none;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.tui button.close {
+  -webkit-appearance: none;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .d-none.tui, .d-none.tui {
   display: none !important;
 }
@@ -7509,6 +7565,74 @@ a.text-dark.tui:hover, a.text-dark.tui:focus {
   text-shadow: none;
   background-color: transparent;
   border: 0;
+}
+
+.fade.tui {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+       -o-transition: opacity .15s linear;
+          transition: opacity .15s linear;
+}
+.fade.tui.show {
+  opacity: 1;
+}
+
+.tui .fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+       -o-transition: opacity .15s linear;
+          transition: opacity .15s linear;
+}
+.tui .fade.show {
+  opacity: 1;
+}
+
+.collapse.tui {
+  display: none;
+}
+.collapse.tui.show {
+  display: block;
+}
+
+.tui .collapse {
+  display: none;
+}
+.tui .collapse.show {
+  display: block;
+}
+
+tr.tui.collapse.show {
+  display: table-row;
+}
+
+.tui tr.collapse.show {
+  display: table-row;
+}
+
+tbody.tui.collapse.show {
+  display: table-row-group;
+}
+
+.tui tbody.collapse.show {
+  display: table-row-group;
+}
+
+.collapsing.tui {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .35s ease;
+       -o-transition: height .35s ease;
+          transition: height .35s ease;
+}
+
+.tui .collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .35s ease;
+       -o-transition: height .35s ease;
+          transition: height .35s ease;
 }
 
 .visible.tui {
