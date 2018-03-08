@@ -1,0 +1,21 @@
+// Jumbotron
+
+@include tui('.jumbotron') {
+  padding: $jumbotron-padding ($jumbotron-padding / 2);
+  margin-bottom: $jumbotron-padding;
+  background-color: $jumbotron-bg;
+
+  @include media-breakpoint-up(sm) {
+    padding: ($jumbotron-padding * 2) $jumbotron-padding;
+  }
+}
+
+@include tui('.jumbotron-rounded') {
+  @include border-radius($border-radius-lg);
+}
+
+@include tui('.jumbotron-fluid') {
+  padding-right: 0;
+  padding-left: 0;
+  @include border-radius(0);
+}

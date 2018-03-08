@@ -93,6 +93,22 @@ module.exports = function (grunt) {
                     'dist/css/tui-breadcrumb.css': 'src/scss/tui-breadcrumb.scss'
                 }
             },
+            tui_card: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-card.css': 'src/scss/tui-card.scss'
+                }
+            },
+            tui_jumbotron: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-jumbotron.css': 'src/scss/tui-jumbotron.scss'
+                }
+            },
             tui_component: {
                 options: {
                     style: 'expanded'
@@ -191,6 +207,18 @@ module.exports = function (grunt) {
                 },
                 src: 'dist/css/tui-breadcrumb.css'
             },
+            tui_card: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-card.css'
+            },
+            tui_jumbotron: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-jumbotron.css'
+            },
             tui_component: {
                 options: {
                     map: true
@@ -274,6 +302,18 @@ module.exports = function (grunt) {
                 src: 'tui-breadcrumb.css',
                 dest: 'dist/css/'
             },
+            tui_card: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-card.css',
+                dest: 'dist/css/'
+            },
+            tui_jumbotron: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-jumbotron.css',
+                dest: 'dist/css/'
+            },
             tui_component: {
                 expand: true,
                 cwd: 'dist/css/',
@@ -341,6 +381,14 @@ module.exports = function (grunt) {
                 src: ['dist/css/tui-breadcrumb.css'],
                 dest: 'dist/css/tui-breadcrumb.min.css'
             },
+            tui_card: {
+                src: ['dist/css/tui-card.css'],
+                dest: 'dist/css/tui-card.min.css'
+            },
+            tui_jumbotron: {
+                src: ['dist/css/tui-jumbotron.css'],
+                dest: 'dist/css/tui-jumbotron.min.css'
+            },
             tui_component: {
                 src: ['dist/css/tui-component.css'],
                 dest: 'dist/css/tui-component.min.css'
@@ -382,6 +430,8 @@ module.exports = function (grunt) {
         'sass:tui_button', 'autoprefixer:tui_button', 'csscomb:tui_button', 'cssmin:tui_button',
         'sass:tui_form', 'autoprefixer:tui_form', 'csscomb:tui_form', 'cssmin:tui_form',
         'sass:tui_badge', 'autoprefixer:tui_badge', 'csscomb:tui_badge', 'cssmin:tui_badge',
+        'sass:tui_card', 'autoprefixer:tui_card', 'csscomb:tui_card', 'cssmin:tui_card',
+        'sass:tui_jumbotron', 'autoprefixer:tui_jumbotron', 'csscomb:tui_jumbotron', 'cssmin:tui_jumbotron',
 
         'sass:tui_component', 'autoprefixer:tui_component', 'csscomb:tui_component', 'cssmin:tui_component',
 
