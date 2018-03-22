@@ -3,6 +3,7 @@
 namespace
 {
 
+    use Tachigo\Bundle\UI\TCGUIBundle;
     use Tachigo\Module\UI\TachigoUIModule;
     use TCG\Module\Web\TCGWebModule;
     use TCG\Module\Base\TCGBaseModule;
@@ -24,6 +25,7 @@ namespace
                 'log_root' => LOG_ROOT,
                 'src_root' => SRC_ROOT,
                 'cache_root' => CACHE_ROOT,
+                'vendor_root' => VENDOR_ROOT,
             ], 'UI');
             parent::setCurrentKernelNamespace($this->getNamespace());
 
