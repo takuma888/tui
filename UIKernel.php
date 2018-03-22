@@ -3,7 +3,6 @@
 namespace
 {
 
-    use Tachigo\Bundle\UI\TCGUIBundle;
     use Tachigo\Module\UI\TachigoUIModule;
     use TCG\Module\Web\TCGWebModule;
     use TCG\Module\Base\TCGBaseModule;
