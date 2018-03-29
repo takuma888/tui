@@ -25,7 +25,7 @@ namespace
                 'src_root' => SRC_ROOT,
                 'cache_root' => CACHE_ROOT,
                 'vendor_root' => VENDOR_ROOT,
-            ], 'UI');
+            ], __CLASS__);
             parent::setCurrentKernelNamespace($this->getNamespace());
 
             $this->addModules([

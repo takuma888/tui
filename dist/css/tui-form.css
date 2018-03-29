@@ -5959,4 +5959,188 @@ input[type="radio"].tui.custom-control-input:disabled ~ .custom-control-label, i
   cursor: not-allowed;
 }
 
+.tui-input.tui {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+       -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+          transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.tui-input.tui::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.tui-input.tui:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: rgba(0, 123, 255, .25);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .25);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+.tui-input.tui::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.tui-input.tui::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.tui-input.tui:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.tui-input.tui::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.tui-input.tui:disabled, .tui-input.tui[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+.tui .tui-input {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+       -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+          transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.tui .tui-input::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.tui .tui-input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: rgba(0, 123, 255, .25);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .25);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+.tui .tui-input::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.tui .tui-input::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.tui .tui-input:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.tui .tui-input::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.tui .tui-input:disabled, .tui .tui-input[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+.tui-label.tui {
+  padding-top: -webkit-calc(.375rem + 1px);
+  padding-top:         calc(.375rem + 1px);
+  padding-bottom: -webkit-calc(.375rem + 1px);
+  padding-bottom:         calc(.375rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.tui .tui-label {
+  padding-top: -webkit-calc(.375rem + 1px);
+  padding-top:         calc(.375rem + 1px);
+  padding-bottom: -webkit-calc(.375rem + 1px);
+  padding-bottom:         calc(.375rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.tui-control.tui {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.tui .tui-control {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.tui-control-inline.tui {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.tui-control-inline.tui .tui-label {
+  display: block;
+  float: left;
+  width: 10em;
+  margin-bottom: 0;
+}
+.tui-control-inline.tui .tui-input {
+  float: left;
+  margin-left: 10em;
+}
+.tui-control-inline.tui::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.tui .tui-control-inline {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.tui .tui-control-inline .tui-label {
+  display: block;
+  float: left;
+  width: 10em;
+  margin-bottom: 0;
+}
+.tui .tui-control-inline .tui-input {
+  float: left;
+  margin-left: 10em;
+}
+.tui .tui-control-inline::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
 /*# sourceMappingURL=tui-form.css.map */
