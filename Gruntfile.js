@@ -109,6 +109,22 @@ module.exports = function (grunt) {
                     'dist/css/tui-jumbotron.css': 'src/scss/tui-jumbotron.scss'
                 }
             },
+            tui_pagination: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-pagination.css': 'src/scss/tui-pagination.scss'
+                }
+            },
+            tui_listgroup: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-listgroup.css': 'src/scss/tui-listgroup.scss'
+                }
+            },
             tui_component: {
                 options: {
                     style: 'expanded'
@@ -219,6 +235,18 @@ module.exports = function (grunt) {
                 },
                 src: 'dist/css/tui-jumbotron.css'
             },
+            tui_pagination: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-pagination.css'
+            },
+            tui_listgroup: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-listgroup.css'
+            },
             tui_component: {
                 options: {
                     map: true
@@ -314,6 +342,18 @@ module.exports = function (grunt) {
                 src: 'tui-jumbotron.css',
                 dest: 'dist/css/'
             },
+            tui_pagination: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-pagination.css',
+                dest: 'dist/css/'
+            },
+            tui_listgroup: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-listgroup.css',
+                dest: 'dist/css/'
+            },
             tui_component: {
                 expand: true,
                 cwd: 'dist/css/',
@@ -389,6 +429,14 @@ module.exports = function (grunt) {
                 src: ['dist/css/tui-jumbotron.css'],
                 dest: 'dist/css/tui-jumbotron.min.css'
             },
+            tui_pagination: {
+                src: ['dist/css/tui-pagination.css'],
+                dest: 'dist/css/tui-pagination.min.css'
+            },
+            tui_listgroup: {
+                src: ['dist/css/tui-listgroup.css'],
+                dest: 'dist/css/tui-listgroup.min.css'
+            },
             tui_component: {
                 src: ['dist/css/tui-component.css'],
                 dest: 'dist/css/tui-component.min.css'
@@ -432,6 +480,8 @@ module.exports = function (grunt) {
         'sass:tui_badge', 'autoprefixer:tui_badge', 'csscomb:tui_badge', 'cssmin:tui_badge',
         'sass:tui_card', 'autoprefixer:tui_card', 'csscomb:tui_card', 'cssmin:tui_card',
         'sass:tui_jumbotron', 'autoprefixer:tui_jumbotron', 'csscomb:tui_jumbotron', 'cssmin:tui_jumbotron',
+        'sass:tui_pagination', 'autoprefixer:tui_pagination', 'csscomb:tui_pagination', 'cssmin:tui_pagination',
+        'sass:tui_listgroup', 'autoprefixer:tui_listgroup', 'csscomb:tui_listgroup', 'cssmin:tui_listgroup',
 
         'sass:tui_component', 'autoprefixer:tui_component', 'csscomb:tui_component', 'cssmin:tui_component',
 

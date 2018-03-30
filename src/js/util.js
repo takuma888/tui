@@ -5,29 +5,23 @@ const Util = (($) => {
     let transition = false;
 
     const MAX_UID = 1000000;
+    const TRANSITION_END = 'transitionend';
+    const MILLISECONDS_MULTIPLIER = 1000;
 
-    function toType() {
-        return {
-            bindType: transition.end,
-            delegateType: transition.end,
-            handle(event) {
-                if ($(event.target).is(this)) {
-                    return event.handleObj.handler.apply(this, arguments);
-                }
-                return undefined;
-            }
-        }
+    // Shoutout AngusCroll (https://goo.gl/pxwQGp)
+    function toType(obj) {
+        return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase()
     }
 
     function getSpecialTransitionEndEvent() {
         return {
-            bindType: transition.end,
-            delegateType: transition.end,
+            bindType: TRANSITION_END,
+            delegateType: TRANSITION_END,
             handle(event) {
                 if ($(event.target).is(this)) {
-                    return event.handleObj.handler.apply(this, arguments);
+                    return event.handleObj.handler.apply(this, arguments) // eslint-disable-line prefer-rest-params
                 }
-                return undefined;
+                return undefined // eslint-disable-line no-undefined
             }
         }
     }
@@ -91,6 +85,26 @@ const Util = (($) => {
             } catch (err) {
                 return null;
             }
+        },
+
+        getTransitionDurationFromElement(element) {
+            if (!element) {
+                return 0;
+            }
+
+            // Get transition-duration of the element
+            let transitionDuration = $(element).css('transition-duration');
+            const floatTransitionDuration = parseFloat(transitionDuration);
+
+            // Return 0 if element or transition duration is not found
+            if (!floatTransitionDuration) {
+                return 0;
+            }
+
+            // If multiple durations are defined, take the first
+            transitionDuration = transitionDuration.split(',')[0];
+
+            return parseFloat(transitionDuration) * MILLISECONDS_MULTIPLIER;
         },
 
         reflow(element) {

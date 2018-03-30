@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Alert from './alert';
+import Popout from './popout';
 import Util from './util';
 
 
@@ -22,5 +23,6 @@ import Util from './util';
 
 export {
     Util,
-    Alert
+    Alert,
+    Popout
 };

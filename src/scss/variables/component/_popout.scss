@@ -1,0 +1,25 @@
+$popout-min-width:                10rem !default;
+$popout-padding-y:                .5rem !default;
+$popout-spacer:                   .125rem !default;
+$popout-bg:                       $white !default;
+$popout-border-color:             rgba($black, .15) !default;
+$popout-border-radius:            $border-radius !default;
+$popout-border-width:             $border-width !default;
+$popout-divider-bg:               $gray-200 !default;
+$popout-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
+
+$popout-link-color:               $gray-900 !default;
+$popout-link-hover-color:         darken($gray-900, 5%) !default;
+$popout-link-hover-bg:            $gray-100 !default;
+
+$popout-link-active-color:        $component-active-color !default;
+$popout-link-active-bg:           $component-active-bg !default;
+
+$popout-link-disabled-color:      $gray-600 !default;
+
+$popout-item-padding-y:           .25rem !default;
+$popout-item-padding-x:           1.5rem !default;
+
+$popout-header-color:             $gray-600 !default;
+
+$zindex-popout:                   1000 !default;

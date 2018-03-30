@@ -1,0 +1,170 @@
+// Popout
+@include tui('.popup, .popright, .popout, .popleft') {
+  position: relative;
+}
+
+@include tui('.popout-toggle') {
+  // Generate the caret automatically
+  @include caret;
+}
+
+
+// The popout menu
+
+@include tui('.popout-menu') {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $zindex-popout;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: $popout-min-width;
+  padding: $popout-padding-y 0;
+  margin: $popout-spacer 0 0; // override default ul
+  font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+  color: $body-color;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  list-style: none;
+  background-color: $popout-bg;
+  background-clip: padding-box;
+  border: $popout-border-width solid $popout-border-color;
+  @include border-radius(0);
+  @include box-shadow($popout-box-shadow);
+
+  &.popout-menu-rounded {
+    @include border-radius($popout-border-radius);
+  }
+
+  &.popout-menu-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+// Allow for popouts to go bottom up (aka, popup-menu)
+// Just add .popup after the standard .popout class and you're set.
+
+@include tui('.popup') {
+  .popout-menu {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: $popout-spacer;
+  }
+
+  .popout-toggle {
+    @include caret(up);
+  }
+}
+
+@include tui('.popright') {
+  .popout-menu {
+    top: 0;
+    right: auto;
+    left: 100%;
+    margin-top: 0;
+    margin-left: $popout-spacer;
+  }
+
+  .popout-toggle {
+    @include caret(right);
+    &::after {
+      vertical-align: 0;
+    }
+  }
+}
+
+@include tui('.popleft') {
+  .popout-menu {
+    top: 0;
+    right: 100%;
+    left: auto;
+    margin-top: 0;
+    margin-right: $popout-spacer;
+  }
+
+  .popout-toggle {
+    @include caret(left);
+    &::before {
+      vertical-align: 0;
+    }
+  }
+}
+
+// When enabled Popper.js, reset basic popout position
+// stylelint-disable no-duplicate-selectors
+@include tui('.popout-menu') {
+  &[x-placement^="top"],
+  &[x-placement^="right"],
+  &[x-placement^="bottom"],
+  &[x-placement^="left"] {
+    right: auto;
+    bottom: auto;
+  }
+}
+// stylelint-enable no-duplicate-selectors
+
+// Dividers (basically an `<hr>`) within the popout
+@include tui('.popout-divider') {
+  @include nav-divider($popout-divider-bg);
+}
+
+// Links, buttons, and more within the popout menu
+//
+// `<button>`-specific styles are denoted with `// For <button>s`
+
+@include tui('.popout-item') {
+  display: block;
+  width: 100%; // For `<button>`s
+  padding: $popout-item-padding-y $popout-item-padding-x;
+  clear: both;
+  font-weight: $font-weight-normal;
+  color: $popout-link-color;
+  text-align: inherit; // For `<button>`s
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  background-color: transparent; // For `<button>`s
+  border: 0; // For `<button>`s
+
+  @include hover-focus {
+    color: $popout-link-hover-color;
+    text-decoration: none;
+    @include gradient-bg($popout-link-hover-bg);
+  }
+
+  &.active,
+  &:active {
+    color: $popout-link-active-color;
+    text-decoration: none;
+    @include gradient-bg($popout-link-active-bg);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $popout-link-disabled-color;
+    background-color: transparent;
+    // Remove CSS gradients if they're enabled
+    background-image: none;
+  }
+}
+
+@include tui('.popout-menu.show') {
+  display: block;
+}
+
+
+// Dropdown section headers
+@include tui('.popout-header') {
+  display: block;
+  padding: $popout-padding-y $popout-item-padding-x;
+  margin-bottom: 0; // for use with heading elements
+  font-size: $font-size-sm;
+  color: $popout-header-color;
+  white-space: nowrap; // as with > li > a
+}
+
+// Dropdown text
+@include tui('.popout-item-text') {
+  display: block;
+  padding: $popout-item-padding-y $popout-item-padding-x;
+  color: $popout-link-color;
+}
