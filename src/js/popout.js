@@ -329,7 +329,7 @@ const Popout = (($) => {
                     continue;
                 }
 
-                const dropdownMenu = context._menu;
+                const popoutMenu = context._menu;
                 if (!$(parent).hasClass(ClassName.SHOW)) {
                     continue;
                 }
@@ -354,7 +354,7 @@ const Popout = (($) => {
 
                 toggles[i].setAttribute('aria-expanded', 'false');
 
-                $(dropdownMenu).removeClass(ClassName.SHOW);
+                $(popoutMenu).removeClass(ClassName.SHOW);
                 $(parent)
                     .removeClass(ClassName.SHOW)
                     .trigger($.Event(Event.HIDDEN, relatedTarget));
@@ -375,12 +375,12 @@ const Popout = (($) => {
         // eslint-disable-next-line complexity
         static _dataApiKeydownHandler(event) {
             // If not input/textarea:
-            //  - And not a key in REGEXP_KEYDOWN => not a dropdown command
+            //  - And not a key in REGEXP_KEYDOWN => not a popout command
             // If input/textarea:
-            //  - If space key => not a dropdown command
+            //  - If space key => not a popout command
             //  - If key is other than escape
-            //    - If key is not up or down => not a dropdown command
-            //    - If trigger inside the menu => not a dropdown command
+            //    - If key is not up or down => not a popout command
+            //    - If trigger inside the menu => not a popout command
             if (/input|textarea/i.test(event.target.tagName)
                     ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE &&
                     (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE ||

@@ -125,6 +125,14 @@ module.exports = function (grunt) {
                     'dist/css/tui-listgroup.css': 'src/scss/tui-listgroup.scss'
                 }
             },
+            tui_nav: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'dist/css/tui-nav.css': 'src/scss/tui-nav.scss'
+                }
+            },
             tui_component: {
                 options: {
                     style: 'expanded'
@@ -247,6 +255,12 @@ module.exports = function (grunt) {
                 },
                 src: 'dist/css/tui-listgroup.css'
             },
+            tui_nav: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/tui-nav.css'
+            },
             tui_component: {
                 options: {
                     map: true
@@ -354,6 +368,12 @@ module.exports = function (grunt) {
                 src: 'tui-listgroup.css',
                 dest: 'dist/css/'
             },
+            tui_nav: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: 'tui-nav.css',
+                dest: 'dist/css/'
+            },
             tui_component: {
                 expand: true,
                 cwd: 'dist/css/',
@@ -437,6 +457,10 @@ module.exports = function (grunt) {
                 src: ['dist/css/tui-listgroup.css'],
                 dest: 'dist/css/tui-listgroup.min.css'
             },
+            tui_nav: {
+                src: ['dist/css/tui-nav.css'],
+                dest: 'dist/css/tui-nav.min.css'
+            },
             tui_component: {
                 src: ['dist/css/tui-component.css'],
                 dest: 'dist/css/tui-component.min.css'
@@ -482,6 +506,7 @@ module.exports = function (grunt) {
         'sass:tui_jumbotron', 'autoprefixer:tui_jumbotron', 'csscomb:tui_jumbotron', 'cssmin:tui_jumbotron',
         'sass:tui_pagination', 'autoprefixer:tui_pagination', 'csscomb:tui_pagination', 'cssmin:tui_pagination',
         'sass:tui_listgroup', 'autoprefixer:tui_listgroup', 'csscomb:tui_listgroup', 'cssmin:tui_listgroup',
+        'sass:tui_nav', 'autoprefixer:tui_nav', 'csscomb:tui_nav', 'cssmin:tui_nav',
 
         'sass:tui_component', 'autoprefixer:tui_component', 'csscomb:tui_component', 'cssmin:tui_component',
 

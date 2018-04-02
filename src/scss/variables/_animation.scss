@@ -1,6 +1,8 @@
 // Effect
 
 
-$transition-base:             all .2s ease-in-out !default;
-$transition-fade:             opacity .15s linear !default;
-$transition-collapse:         height .35s ease !default;
+$transition-base:               all .2s ease-in-out !default;
+$transition-fade:               opacity .15s linear !default;
+$transition-collapse-height:    height .35s ease !default;
+$transition-collapse-width:     width .35s ease !default;
+

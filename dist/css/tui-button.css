@@ -107,7 +107,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #007bff;
   border-color: #007bff;
 }
-.btn-primary.tui:not(:disabled):not(.disabled):active, .btn-primary.tui:not(:disabled):not(.disabled).active, .show > .btn-primary.tui.dropdown-toggle {
+.btn-primary.tui:not(:disabled):not(.disabled):active, .btn-primary.tui:not(:disabled):not(.disabled).active, .show > .btn-primary.tui.popout-toggle {
   color: #fff;
   background-color: #0062cc;
   border-color: #005cbf;
@@ -134,7 +134,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
-.btn-primary.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-primary.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.tui.btn-shadow.dropdown-toggle:focus {
+.btn-primary.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-primary.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
@@ -158,7 +158,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #007bff;
   border-color: #007bff;
 }
-.tui .btn-primary:not(:disabled):not(.disabled):active, .tui .btn-primary:not(:disabled):not(.disabled).active, .show > .tui .btn-primary.dropdown-toggle {
+.tui .btn-primary:not(:disabled):not(.disabled):active, .tui .btn-primary:not(:disabled):not(.disabled).active, .show > .tui .btn-primary.popout-toggle {
   color: #fff;
   background-color: #0062cc;
   border-color: #005cbf;
@@ -185,7 +185,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
-.tui .btn-primary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-primary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-primary.btn-shadow.dropdown-toggle:focus {
+.tui .btn-primary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-primary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-primary.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
@@ -209,7 +209,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #6c757d;
   border-color: #6c757d;
 }
-.btn-secondary.tui:not(:disabled):not(.disabled):active, .btn-secondary.tui:not(:disabled):not(.disabled).active, .show > .btn-secondary.tui.dropdown-toggle {
+.btn-secondary.tui:not(:disabled):not(.disabled):active, .btn-secondary.tui:not(:disabled):not(.disabled).active, .show > .btn-secondary.tui.popout-toggle {
   color: #fff;
   background-color: #545b62;
   border-color: #4e555b;
@@ -236,7 +236,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
-.btn-secondary.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-secondary.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.tui.btn-shadow.dropdown-toggle:focus {
+.btn-secondary.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-secondary.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
@@ -260,7 +260,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #6c757d;
   border-color: #6c757d;
 }
-.tui .btn-secondary:not(:disabled):not(.disabled):active, .tui .btn-secondary:not(:disabled):not(.disabled).active, .show > .tui .btn-secondary.dropdown-toggle {
+.tui .btn-secondary:not(:disabled):not(.disabled):active, .tui .btn-secondary:not(:disabled):not(.disabled).active, .show > .tui .btn-secondary.popout-toggle {
   color: #fff;
   background-color: #545b62;
   border-color: #4e555b;
@@ -287,7 +287,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
-.tui .btn-secondary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-secondary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-secondary.btn-shadow.dropdown-toggle:focus {
+.tui .btn-secondary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-secondary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-secondary.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
@@ -311,7 +311,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #28a745;
   border-color: #28a745;
 }
-.btn-success.tui:not(:disabled):not(.disabled):active, .btn-success.tui:not(:disabled):not(.disabled).active, .show > .btn-success.tui.dropdown-toggle {
+.btn-success.tui:not(:disabled):not(.disabled):active, .btn-success.tui:not(:disabled):not(.disabled).active, .show > .btn-success.tui.popout-toggle {
   color: #fff;
   background-color: #1e7e34;
   border-color: #1c7430;
@@ -338,7 +338,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
-.btn-success.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-success.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-success.tui.btn-shadow.dropdown-toggle:focus {
+.btn-success.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-success.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-success.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
@@ -362,7 +362,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #28a745;
   border-color: #28a745;
 }
-.tui .btn-success:not(:disabled):not(.disabled):active, .tui .btn-success:not(:disabled):not(.disabled).active, .show > .tui .btn-success.dropdown-toggle {
+.tui .btn-success:not(:disabled):not(.disabled):active, .tui .btn-success:not(:disabled):not(.disabled).active, .show > .tui .btn-success.popout-toggle {
   color: #fff;
   background-color: #1e7e34;
   border-color: #1c7430;
@@ -389,7 +389,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
-.tui .btn-success.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-success.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-success.btn-shadow.dropdown-toggle:focus {
+.tui .btn-success.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-success.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-success.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
@@ -413,7 +413,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #17a2b8;
   border-color: #17a2b8;
 }
-.btn-info.tui:not(:disabled):not(.disabled):active, .btn-info.tui:not(:disabled):not(.disabled).active, .show > .btn-info.tui.dropdown-toggle {
+.btn-info.tui:not(:disabled):not(.disabled):active, .btn-info.tui:not(:disabled):not(.disabled).active, .show > .btn-info.tui.popout-toggle {
   color: #fff;
   background-color: #117a8b;
   border-color: #10707f;
@@ -440,7 +440,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
-.btn-info.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-info.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-info.tui.btn-shadow.dropdown-toggle:focus {
+.btn-info.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-info.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-info.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
@@ -464,7 +464,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #17a2b8;
   border-color: #17a2b8;
 }
-.tui .btn-info:not(:disabled):not(.disabled):active, .tui .btn-info:not(:disabled):not(.disabled).active, .show > .tui .btn-info.dropdown-toggle {
+.tui .btn-info:not(:disabled):not(.disabled):active, .tui .btn-info:not(:disabled):not(.disabled).active, .show > .tui .btn-info.popout-toggle {
   color: #fff;
   background-color: #117a8b;
   border-color: #10707f;
@@ -491,7 +491,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
-.tui .btn-info.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-info.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-info.btn-shadow.dropdown-toggle:focus {
+.tui .btn-info.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-info.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-info.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
@@ -515,7 +515,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #ffc107;
   border-color: #ffc107;
 }
-.btn-warning.tui:not(:disabled):not(.disabled):active, .btn-warning.tui:not(:disabled):not(.disabled).active, .show > .btn-warning.tui.dropdown-toggle {
+.btn-warning.tui:not(:disabled):not(.disabled):active, .btn-warning.tui:not(:disabled):not(.disabled).active, .show > .btn-warning.tui.popout-toggle {
   color: #212529;
   background-color: #d39e00;
   border-color: #c69500;
@@ -542,7 +542,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
-.btn-warning.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-warning.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-warning.tui.btn-shadow.dropdown-toggle:focus {
+.btn-warning.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-warning.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-warning.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
@@ -566,7 +566,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #ffc107;
   border-color: #ffc107;
 }
-.tui .btn-warning:not(:disabled):not(.disabled):active, .tui .btn-warning:not(:disabled):not(.disabled).active, .show > .tui .btn-warning.dropdown-toggle {
+.tui .btn-warning:not(:disabled):not(.disabled):active, .tui .btn-warning:not(:disabled):not(.disabled).active, .show > .tui .btn-warning.popout-toggle {
   color: #212529;
   background-color: #d39e00;
   border-color: #c69500;
@@ -593,7 +593,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
-.tui .btn-warning.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-warning.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-warning.btn-shadow.dropdown-toggle:focus {
+.tui .btn-warning.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-warning.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-warning.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
@@ -617,7 +617,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #dc3545;
   border-color: #dc3545;
 }
-.btn-danger.tui:not(:disabled):not(.disabled):active, .btn-danger.tui:not(:disabled):not(.disabled).active, .show > .btn-danger.tui.dropdown-toggle {
+.btn-danger.tui:not(:disabled):not(.disabled):active, .btn-danger.tui:not(:disabled):not(.disabled).active, .show > .btn-danger.tui.popout-toggle {
   color: #fff;
   background-color: #bd2130;
   border-color: #b21f2d;
@@ -644,7 +644,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
-.btn-danger.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-danger.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-danger.tui.btn-shadow.dropdown-toggle:focus {
+.btn-danger.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-danger.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-danger.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
@@ -668,7 +668,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #dc3545;
   border-color: #dc3545;
 }
-.tui .btn-danger:not(:disabled):not(.disabled):active, .tui .btn-danger:not(:disabled):not(.disabled).active, .show > .tui .btn-danger.dropdown-toggle {
+.tui .btn-danger:not(:disabled):not(.disabled):active, .tui .btn-danger:not(:disabled):not(.disabled).active, .show > .tui .btn-danger.popout-toggle {
   color: #fff;
   background-color: #bd2130;
   border-color: #b21f2d;
@@ -695,7 +695,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
-.tui .btn-danger.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-danger.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-danger.btn-shadow.dropdown-toggle:focus {
+.tui .btn-danger.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-danger.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-danger.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
@@ -719,7 +719,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
-.btn-light.tui:not(:disabled):not(.disabled):active, .btn-light.tui:not(:disabled):not(.disabled).active, .show > .btn-light.tui.dropdown-toggle {
+.btn-light.tui:not(:disabled):not(.disabled):active, .btn-light.tui:not(:disabled):not(.disabled).active, .show > .btn-light.tui.popout-toggle {
   color: #212529;
   background-color: #dae0e5;
   border-color: #d3d9df;
@@ -746,7 +746,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
-.btn-light.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-light.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-light.tui.btn-shadow.dropdown-toggle:focus {
+.btn-light.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-light.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-light.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
@@ -770,7 +770,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
-.tui .btn-light:not(:disabled):not(.disabled):active, .tui .btn-light:not(:disabled):not(.disabled).active, .show > .tui .btn-light.dropdown-toggle {
+.tui .btn-light:not(:disabled):not(.disabled):active, .tui .btn-light:not(:disabled):not(.disabled).active, .show > .tui .btn-light.popout-toggle {
   color: #212529;
   background-color: #dae0e5;
   border-color: #d3d9df;
@@ -797,7 +797,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
-.tui .btn-light.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-light.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-light.btn-shadow.dropdown-toggle:focus {
+.tui .btn-light.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-light.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-light.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
@@ -821,7 +821,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #343a40;
   border-color: #343a40;
 }
-.btn-dark.tui:not(:disabled):not(.disabled):active, .btn-dark.tui:not(:disabled):not(.disabled).active, .show > .btn-dark.tui.dropdown-toggle {
+.btn-dark.tui:not(:disabled):not(.disabled):active, .btn-dark.tui:not(:disabled):not(.disabled).active, .show > .btn-dark.tui.popout-toggle {
   color: #fff;
   background-color: #1d2124;
   border-color: #171a1d;
@@ -848,7 +848,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
-.btn-dark.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-dark.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-dark.tui.btn-shadow.dropdown-toggle:focus {
+.btn-dark.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-dark.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-dark.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
@@ -872,7 +872,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #343a40;
   border-color: #343a40;
 }
-.tui .btn-dark:not(:disabled):not(.disabled):active, .tui .btn-dark:not(:disabled):not(.disabled).active, .show > .tui .btn-dark.dropdown-toggle {
+.tui .btn-dark:not(:disabled):not(.disabled):active, .tui .btn-dark:not(:disabled):not(.disabled).active, .show > .tui .btn-dark.popout-toggle {
   color: #fff;
   background-color: #1d2124;
   border-color: #171a1d;
@@ -899,7 +899,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
-.tui .btn-dark.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-dark.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-dark.btn-shadow.dropdown-toggle:focus {
+.tui .btn-dark.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-dark.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-dark.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
@@ -923,7 +923,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #bbb;
   border-color: #bbb;
 }
-.btn-default.tui:not(:disabled):not(.disabled):active, .btn-default.tui:not(:disabled):not(.disabled).active, .show > .btn-default.tui.dropdown-toggle {
+.btn-default.tui:not(:disabled):not(.disabled):active, .btn-default.tui:not(:disabled):not(.disabled).active, .show > .btn-default.tui.popout-toggle {
   color: #212529;
   background-color: #a2a2a2;
   border-color: #9b9b9b;
@@ -950,7 +950,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
-.btn-default.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-default.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-default.tui.btn-shadow.dropdown-toggle:focus {
+.btn-default.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-default.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-default.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
@@ -974,7 +974,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   background-color: #bbb;
   border-color: #bbb;
 }
-.tui .btn-default:not(:disabled):not(.disabled):active, .tui .btn-default:not(:disabled):not(.disabled).active, .show > .tui .btn-default.dropdown-toggle {
+.tui .btn-default:not(:disabled):not(.disabled):active, .tui .btn-default:not(:disabled):not(.disabled).active, .show > .tui .btn-default.popout-toggle {
   color: #212529;
   background-color: #a2a2a2;
   border-color: #9b9b9b;
@@ -1001,7 +1001,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
-.tui .btn-default.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-default.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-default.btn-shadow.dropdown-toggle:focus {
+.tui .btn-default.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-default.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-default.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
@@ -1025,7 +1025,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #007bff;
   background-color: transparent;
 }
-.btn-outline-primary.tui:not(:disabled):not(.disabled):active, .btn-outline-primary.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.tui.dropdown-toggle {
+.btn-outline-primary.tui:not(:disabled):not(.disabled):active, .btn-outline-primary.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.tui.popout-toggle {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
@@ -1052,7 +1052,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
-.btn-outline-primary.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-primary.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.tui.btn-shadow.dropdown-toggle:focus {
+.btn-outline-primary.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-primary.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
@@ -1076,7 +1076,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #007bff;
   background-color: transparent;
 }
-.tui .btn-outline-primary:not(:disabled):not(.disabled):active, .tui .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-primary.dropdown-toggle {
+.tui .btn-outline-primary:not(:disabled):not(.disabled):active, .tui .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-primary.popout-toggle {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
@@ -1103,7 +1103,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
-.tui .btn-outline-primary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-primary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-primary.btn-shadow.dropdown-toggle:focus {
+.tui .btn-outline-primary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-primary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-primary.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
@@ -1127,7 +1127,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #6c757d;
   background-color: transparent;
 }
-.btn-outline-secondary.tui:not(:disabled):not(.disabled):active, .btn-outline-secondary.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.tui.dropdown-toggle {
+.btn-outline-secondary.tui:not(:disabled):not(.disabled):active, .btn-outline-secondary.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.tui.popout-toggle {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
@@ -1154,7 +1154,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
-.btn-outline-secondary.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.tui.btn-shadow.dropdown-toggle:focus {
+.btn-outline-secondary.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
@@ -1178,7 +1178,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #6c757d;
   background-color: transparent;
 }
-.tui .btn-outline-secondary:not(:disabled):not(.disabled):active, .tui .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-secondary.dropdown-toggle {
+.tui .btn-outline-secondary:not(:disabled):not(.disabled):active, .tui .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-secondary.popout-toggle {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
@@ -1205,7 +1205,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
-.tui .btn-outline-secondary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-secondary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-secondary.btn-shadow.dropdown-toggle:focus {
+.tui .btn-outline-secondary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-secondary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-secondary.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
@@ -1229,7 +1229,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #28a745;
   background-color: transparent;
 }
-.btn-outline-success.tui:not(:disabled):not(.disabled):active, .btn-outline-success.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-success.tui.dropdown-toggle {
+.btn-outline-success.tui:not(:disabled):not(.disabled):active, .btn-outline-success.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-success.tui.popout-toggle {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
@@ -1256,7 +1256,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
-.btn-outline-success.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-success.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.tui.btn-shadow.dropdown-toggle:focus {
+.btn-outline-success.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-success.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
@@ -1280,7 +1280,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #28a745;
   background-color: transparent;
 }
-.tui .btn-outline-success:not(:disabled):not(.disabled):active, .tui .btn-outline-success:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-success.dropdown-toggle {
+.tui .btn-outline-success:not(:disabled):not(.disabled):active, .tui .btn-outline-success:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-success.popout-toggle {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
@@ -1307,7 +1307,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
-.tui .btn-outline-success.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-success.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-success.btn-shadow.dropdown-toggle:focus {
+.tui .btn-outline-success.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-success.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-success.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
@@ -1331,7 +1331,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #17a2b8;
   background-color: transparent;
 }
-.btn-outline-info.tui:not(:disabled):not(.disabled):active, .btn-outline-info.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-info.tui.dropdown-toggle {
+.btn-outline-info.tui:not(:disabled):not(.disabled):active, .btn-outline-info.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-info.tui.popout-toggle {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
@@ -1358,7 +1358,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
-.btn-outline-info.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-info.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-info.tui.btn-shadow.dropdown-toggle:focus {
+.btn-outline-info.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-info.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-info.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
@@ -1382,7 +1382,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #17a2b8;
   background-color: transparent;
 }
-.tui .btn-outline-info:not(:disabled):not(.disabled):active, .tui .btn-outline-info:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-info.dropdown-toggle {
+.tui .btn-outline-info:not(:disabled):not(.disabled):active, .tui .btn-outline-info:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-info.popout-toggle {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
@@ -1409,7 +1409,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
-.tui .btn-outline-info.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-info.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-info.btn-shadow.dropdown-toggle:focus {
+.tui .btn-outline-info.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-info.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-info.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
@@ -1433,7 +1433,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #ffc107;
   background-color: transparent;
 }
-.btn-outline-warning.tui:not(:disabled):not(.disabled):active, .btn-outline-warning.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-warning.tui.dropdown-toggle {
+.btn-outline-warning.tui:not(:disabled):not(.disabled):active, .btn-outline-warning.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-warning.tui.popout-toggle {
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
@@ -1460,7 +1460,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
-.btn-outline-warning.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-warning.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-warning.tui.btn-shadow.dropdown-toggle:focus {
+.btn-outline-warning.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-warning.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-warning.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
@@ -1484,7 +1484,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #ffc107;
   background-color: transparent;
 }
-.tui .btn-outline-warning:not(:disabled):not(.disabled):active, .tui .btn-outline-warning:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-warning.dropdown-toggle {
+.tui .btn-outline-warning:not(:disabled):not(.disabled):active, .tui .btn-outline-warning:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-warning.popout-toggle {
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
@@ -1511,7 +1511,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
-.tui .btn-outline-warning.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-warning.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-warning.btn-shadow.dropdown-toggle:focus {
+.tui .btn-outline-warning.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-warning.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-warning.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
@@ -1535,7 +1535,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #dc3545;
   background-color: transparent;
 }
-.btn-outline-danger.tui:not(:disabled):not(.disabled):active, .btn-outline-danger.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-danger.tui.dropdown-toggle {
+.btn-outline-danger.tui:not(:disabled):not(.disabled):active, .btn-outline-danger.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-danger.tui.popout-toggle {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
@@ -1562,7 +1562,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
-.btn-outline-danger.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-danger.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.tui.btn-shadow.dropdown-toggle:focus {
+.btn-outline-danger.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-danger.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
@@ -1586,7 +1586,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #dc3545;
   background-color: transparent;
 }
-.tui .btn-outline-danger:not(:disabled):not(.disabled):active, .tui .btn-outline-danger:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-danger.dropdown-toggle {
+.tui .btn-outline-danger:not(:disabled):not(.disabled):active, .tui .btn-outline-danger:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-danger.popout-toggle {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
@@ -1613,7 +1613,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
-.tui .btn-outline-danger.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-danger.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-danger.btn-shadow.dropdown-toggle:focus {
+.tui .btn-outline-danger.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-danger.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-danger.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
@@ -1637,7 +1637,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #f8f9fa;
   background-color: transparent;
 }
-.btn-outline-light.tui:not(:disabled):not(.disabled):active, .btn-outline-light.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-light.tui.dropdown-toggle {
+.btn-outline-light.tui:not(:disabled):not(.disabled):active, .btn-outline-light.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-light.tui.popout-toggle {
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
@@ -1664,7 +1664,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
-.btn-outline-light.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-light.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-light.tui.btn-shadow.dropdown-toggle:focus {
+.btn-outline-light.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-light.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-light.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
@@ -1688,7 +1688,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #f8f9fa;
   background-color: transparent;
 }
-.tui .btn-outline-light:not(:disabled):not(.disabled):active, .tui .btn-outline-light:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-light.dropdown-toggle {
+.tui .btn-outline-light:not(:disabled):not(.disabled):active, .tui .btn-outline-light:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-light.popout-toggle {
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
@@ -1715,7 +1715,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
-.tui .btn-outline-light.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-light.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-light.btn-shadow.dropdown-toggle:focus {
+.tui .btn-outline-light.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-light.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-light.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
@@ -1739,7 +1739,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #343a40;
   background-color: transparent;
 }
-.btn-outline-dark.tui:not(:disabled):not(.disabled):active, .btn-outline-dark.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-dark.tui.dropdown-toggle {
+.btn-outline-dark.tui:not(:disabled):not(.disabled):active, .btn-outline-dark.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-dark.tui.popout-toggle {
   color: #fff;
   background-color: #343a40;
   border-color: #343a40;
@@ -1766,7 +1766,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
-.btn-outline-dark.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-dark.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.tui.btn-shadow.dropdown-toggle:focus {
+.btn-outline-dark.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-dark.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
@@ -1790,7 +1790,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #343a40;
   background-color: transparent;
 }
-.tui .btn-outline-dark:not(:disabled):not(.disabled):active, .tui .btn-outline-dark:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-dark.dropdown-toggle {
+.tui .btn-outline-dark:not(:disabled):not(.disabled):active, .tui .btn-outline-dark:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-dark.popout-toggle {
   color: #fff;
   background-color: #343a40;
   border-color: #343a40;
@@ -1817,7 +1817,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
-.tui .btn-outline-dark.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-dark.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-dark.btn-shadow.dropdown-toggle:focus {
+.tui .btn-outline-dark.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-dark.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-dark.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
@@ -1841,7 +1841,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #bbb;
   background-color: transparent;
 }
-.btn-outline-default.tui:not(:disabled):not(.disabled):active, .btn-outline-default.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-default.tui.dropdown-toggle {
+.btn-outline-default.tui:not(:disabled):not(.disabled):active, .btn-outline-default.tui:not(:disabled):not(.disabled).active, .show > .btn-outline-default.tui.popout-toggle {
   color: #212529;
   background-color: #bbb;
   border-color: #bbb;
@@ -1854,7 +1854,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
-.btn-outline-default.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-default.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-default.tui.btn-shadow.dropdown-toggle:focus {
+.btn-outline-default.tui.btn-shadow:not(:disabled):not(.disabled):active:focus, .btn-outline-default.tui.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-default.tui.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
@@ -1878,7 +1878,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #bbb;
   background-color: transparent;
 }
-.tui .btn-outline-default:not(:disabled):not(.disabled):active, .tui .btn-outline-default:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-default.dropdown-toggle {
+.tui .btn-outline-default:not(:disabled):not(.disabled):active, .tui .btn-outline-default:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-default.popout-toggle {
   color: #212529;
   background-color: #bbb;
   border-color: #bbb;
@@ -1891,7 +1891,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
-.tui .btn-outline-default.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-default.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-default.btn-shadow.dropdown-toggle:focus {
+.tui .btn-outline-default.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-default.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-default.btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
