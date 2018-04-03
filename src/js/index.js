@@ -2,6 +2,8 @@ import $ from 'jquery';
 import Alert from './alert';
 import Popout from './popout';
 import Collapse from './collapse';
+import Carousel from './carousel';
+import Layer from './layer';
 import Util from './util';
 
 
@@ -26,5 +28,7 @@ export {
     Util,
     Alert,
     Popout,
-    Collapse
+    Collapse,
+    Carousel,
+    Layer
 };

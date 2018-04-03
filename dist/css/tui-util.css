@@ -7623,7 +7623,7 @@ tbody.tui.collapse.show {
   display: table-row-group !important;
 }
 
-.collapsing.tui {
+.collapsing-height.tui {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -7632,13 +7632,31 @@ tbody.tui.collapse.show {
           transition: height .35s ease;
 }
 
-.tui .collapsing {
+.tui .collapsing-height {
   position: relative;
   height: 0;
   overflow: hidden;
   -webkit-transition: height .35s ease;
        -o-transition: height .35s ease;
           transition: height .35s ease;
+}
+
+.collapsing-width.tui {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width .35s ease;
+       -o-transition: width .35s ease;
+          transition: width .35s ease;
+}
+
+.tui .collapsing-width {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width .35s ease;
+       -o-transition: width .35s ease;
+          transition: width .35s ease;
 }
 
 .visible.tui {

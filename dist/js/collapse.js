@@ -16,7 +16,6 @@ var Collapse = function ($) {
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
-  var ANIMATION_CLASS = 'animation';
   var Default = {
     toggle: true,
     parent: ''
@@ -36,7 +35,8 @@ var Collapse = function ($) {
     SHOW: 'show',
     COLLAPSE: 'collapse',
     COLLAPSING: 'collapsing-',
-    COLLAPSED: 'collapsed'
+    COLLAPSED: 'collapsed',
+    ANIMATION: 'collapsing'
   };
   var Dimension = {
     WIDTH: 'width',
@@ -79,7 +79,7 @@ var Collapse = function ($) {
         this._addAriaAndCollapsedClass(this._element, this._triggerArray);
       }
 
-      this._animation = $(this._element).hasClass(ANIMATION_CLASS); // window.console.log(this._animation);
+      this._animation = $(this._element).hasClass(ClassName.ANIMATION);
 
       if (this._config.toggle) {
         this.toggle();
@@ -141,10 +141,9 @@ var Collapse = function ($) {
 
       var dimension = this._getDimension();
 
-      $(this._element).removeClass(ClassName.COLLAPSE);
+      $(this._element).removeClass(ClassName.COLLAPSE); // .addClass(ClassName.COLLAPSING + dimension);
 
       if (this._animation) {
-        window.console.log('add class collapsing');
         $(this._element).addClass(ClassName.COLLAPSING + dimension);
       }
 
@@ -154,34 +153,32 @@ var Collapse = function ($) {
         $(this._triggerArray).removeClass(ClassName.COLLAPSED).attr('aria-expanded', true);
       }
 
-      if (this._animation) {
-        this.setTransitioning(true);
-      }
+      this.setTransitioning(true);
 
       var complete = function complete() {
         if (_this._animation) {
           $(_this._element).removeClass(ClassName.COLLAPSING + dimension);
         }
 
-        $(_this._element).addClass(ClassName.COLLAPSE).addClass(ClassName.SHOW);
+        $(_this._element) // .removeClass(ClassName.COLLAPSING + dimension)
+        .addClass(ClassName.COLLAPSE).addClass(ClassName.SHOW);
         _this._element.style[dimension] = '';
 
-        if (_this._animation) {
-          _this.setTransitioning(false);
-        }
+        _this.setTransitioning(false);
 
         $(_this._element).trigger(Event.SHOWN);
       };
 
       var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
       var scrollSize = "scroll" + capitalizedDimension;
-      this._element.style[dimension] = this._element[scrollSize] + "px";
+      var transitionDuration = Util.getTransitionDurationFromElement(this._element);
 
       if (this._animation) {
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
         $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        this._element.style[dimension] = this._element[scrollSize] + "px";
       } else {
         complete();
+        this._element.style[dimension] = this._element[scrollSize] + "px";
       }
     };
 
@@ -203,12 +200,7 @@ var Collapse = function ($) {
 
       this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
       Util.reflow(this._element);
-
-      if (this._animation) {
-        $(this._element).addClass(ClassName.COLLAPSING + dimension);
-      }
-
-      $(this._element).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
+      $(this._element).addClass(ClassName.COLLAPSING + dimension).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
 
       if (this._triggerArray.length > 0) {
         for (var i = 0; i < this._triggerArray.length; i++) {
@@ -225,24 +217,18 @@ var Collapse = function ($) {
         }
       }
 
-      if (this._animation) {
-        this.setTransitioning(true);
-      }
+      this.setTransitioning(true);
 
       var complete = function complete() {
-        if (_this2._animation) {
-          _this2.setTransitioning(false);
+        _this2.setTransitioning(false);
 
-          $(_this2._element).removeClass(ClassName.COLLAPSING + dimension);
-        }
-
-        $(_this2._element).addClass(ClassName.COLLAPSE).trigger(Event.HIDDEN);
+        $(_this2._element).removeClass(ClassName.COLLAPSING + dimension).addClass(ClassName.COLLAPSE).trigger(Event.HIDDEN);
       };
 
       this._element.style[dimension] = '';
+      var transitionDuration = Util.getTransitionDurationFromElement(this._element);
 
       if (this._animation) {
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
         $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
@@ -273,7 +259,7 @@ var Collapse = function ($) {
     };
 
     _proto._getDimension = function _getDimension() {
-      var hasWidth = $(this._element).hasClass(Dimension.WIDTH);
+      var hasWidth = $(this._element).hasClass('collapse-' + Dimension.WIDTH);
       return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
     };
 

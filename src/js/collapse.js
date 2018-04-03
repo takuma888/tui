@@ -14,7 +14,6 @@ const Collapse = (($) => {
     const EVENT_KEY           = `.${DATA_KEY}`;
     const DATA_API_KEY        = '.data-api';
     const JQUERY_NO_CONFLICT  = $.fn[NAME];
-    const ANIMATION_CLASS     = 'animation';
 
     const Default = {
         toggle : true,
@@ -38,7 +37,8 @@ const Collapse = (($) => {
         SHOW       : 'show',
         COLLAPSE   : 'collapse',
         COLLAPSING : 'collapsing-',
-        COLLAPSED  : 'collapsed'
+        COLLAPSED  : 'collapsed',
+        ANIMATION  : 'collapsing'
     };
 
     const Dimension = {
@@ -81,8 +81,7 @@ const Collapse = (($) => {
             if (!this._config.parent) {
                 this._addAriaAndCollapsedClass(this._element, this._triggerArray);
             }
-            this._animation = $(this._element).hasClass(ANIMATION_CLASS);
-            // window.console.log(this._animation);
+            this._animation = $(this._element).hasClass(ClassName.ANIMATION);
 
             if (this._config.toggle) {
                 this.toggle();
@@ -132,7 +131,7 @@ const Collapse = (($) => {
             if (actives) {
                 activesData = $(actives).not(this._selector).data(DATA_KEY);
                 if (activesData && activesData._isTransitioning) {
-                    return;
+                    return
                 }
             }
 
@@ -153,22 +152,20 @@ const Collapse = (($) => {
 
             $(this._element)
                 .removeClass(ClassName.COLLAPSE);
+                // .addClass(ClassName.COLLAPSING + dimension);
             if (this._animation) {
-                $(this._element)
-                    .addClass(ClassName.COLLAPSING + dimension);
+                $(this._element).addClass(ClassName.COLLAPSING + dimension);
             }
-
 
             this._element.style[dimension] = 0;
 
             if (this._triggerArray.length > 0) {
                 $(this._triggerArray)
                     .removeClass(ClassName.COLLAPSED)
-                    .attr('aria-expanded', true);
+                    .attr('aria-expanded', true)
             }
-            if (this._animation) {
-                this.setTransitioning(true);
-            }
+
+            this.setTransitioning(true);
 
             const complete = () => {
                 if (this._animation) {
@@ -176,32 +173,32 @@ const Collapse = (($) => {
                         .removeClass(ClassName.COLLAPSING + dimension);
                 }
                 $(this._element)
+                    // .removeClass(ClassName.COLLAPSING + dimension)
                     .addClass(ClassName.COLLAPSE)
                     .addClass(ClassName.SHOW);
 
                 this._element.style[dimension] = '';
-                if (this._animation) {
-                    this.setTransitioning(false);
-                }
+
+                this.setTransitioning(false);
 
                 $(this._element).trigger(Event.SHOWN);
             };
 
             const capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
             const scrollSize = `scroll${capitalizedDimension}`;
-            this._element.style[dimension] = `${this._element[scrollSize]}px`;
+            const transitionDuration = Util.getTransitionDurationFromElement(this._element);
 
             if (this._animation) {
-                const transitionDuration = Util.getTransitionDurationFromElement(this._element);
-
                 $(this._element)
                     .one(Util.TRANSITION_END, complete)
                     .emulateTransitionEnd(transitionDuration);
 
-
+                this._element.style[dimension] = `${this._element[scrollSize]}px`;
             } else {
                 complete();
+                this._element.style[dimension] = `${this._element[scrollSize]}px`;
             }
+
         }
 
         hide() {
@@ -222,11 +219,8 @@ const Collapse = (($) => {
 
             Util.reflow(this._element);
 
-            if (this._animation) {
-                $(this._element)
-                    .addClass(ClassName.COLLAPSING + dimension);
-            }
             $(this._element)
+                .addClass(ClassName.COLLAPSING + dimension)
                 .removeClass(ClassName.COLLAPSE)
                 .removeClass(ClassName.SHOW);
 
@@ -235,34 +229,29 @@ const Collapse = (($) => {
                     const trigger = this._triggerArray[i];
                     const selector = Util.getSelectorFromElement(trigger);
                     if (selector !== null) {
-                        const $elem = $(selector)
+                        const $elem = $(selector);
                         if (!$elem.hasClass(ClassName.SHOW)) {
                             $(trigger).addClass(ClassName.COLLAPSED)
-                                .attr('aria-expanded', false);
+                                .attr('aria-expanded', false)
                         }
                     }
                 }
             }
-            if (this._animation) {
-                this.setTransitioning(true);
-            }
+
+            this.setTransitioning(true);
 
             const complete = () => {
-                if (this._animation) {
-                    this.setTransitioning(false);
-                    $(this._element)
-                        .removeClass(ClassName.COLLAPSING + dimension);
-                }
+                this.setTransitioning(false);
                 $(this._element)
+                    .removeClass(ClassName.COLLAPSING + dimension)
                     .addClass(ClassName.COLLAPSE)
                     .trigger(Event.HIDDEN);
             };
 
             this._element.style[dimension] = '';
+            const transitionDuration = Util.getTransitionDurationFromElement(this._element);
 
             if (this._animation) {
-                const transitionDuration = Util.getTransitionDurationFromElement(this._element);
-
                 $(this._element)
                     .one(Util.TRANSITION_END, complete)
                     .emulateTransitionEnd(transitionDuration);
@@ -299,7 +288,7 @@ const Collapse = (($) => {
         }
 
         _getDimension() {
-            const hasWidth = $(this._element).hasClass(Dimension.WIDTH);
+            const hasWidth = $(this._element).hasClass('collapse-' + Dimension.WIDTH);
             return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
         }
 
@@ -413,6 +402,6 @@ const Collapse = (($) => {
     }
 
     return Collapse;
-})($)
+})($);
 
-export default Collapse
+export default Collapse;
