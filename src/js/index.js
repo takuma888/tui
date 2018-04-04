@@ -4,6 +4,7 @@ import Popout from './popout';
 import Collapse from './collapse';
 import Carousel from './carousel';
 import Layer from './layer';
+import Tab from './tab';
 import Util from './util';
 
 
@@ -30,5 +31,6 @@ export {
     Popout,
     Collapse,
     Carousel,
-    Layer
+    Layer,
+    Tab
 };
