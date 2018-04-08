@@ -121,7 +121,15 @@ const Tab = (($) => {
             };
 
             if (target) {
-                this._activate(target, target.parentNode, complete);
+                let url = $(this._element).data('url');
+                if (url) {
+                    $(target)
+                        .load(url, $.proxy(function () {
+                            this._activate(target, target.parentNode, complete);
+                        }, this))
+                } else {
+                    this._activate(target, target.parentNode, complete);
+                }
             } else {
                 complete();
             }
@@ -253,4 +261,4 @@ const Tab = (($) => {
     return Tab;
 })($);
 
-export default Tab;;
+export default Tab;

@@ -93,11 +93,11 @@ const Layer = (($) => {
         // Getters
 
         static get VERSION() {
-            return VERSION
+            return VERSION;
         }
 
         static get Default() {
-            return Default
+            return Default;
         }
 
         // Public

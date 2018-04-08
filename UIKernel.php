@@ -4,6 +4,9 @@ namespace
 {
 
     use Tachigo\Module\UI\TachigoUIModule;
+    use TCG\Bundle\Base\TCGBaseBundle;
+    use TCG\Bundle\Http\TCGHttpBundle;
+    use TCG\Bundle\Twig\TCGTwigBundle;
     use TCG\Module\Web\TCGWebModule;
     use TCG\Module\Base\TCGBaseModule;
 
@@ -27,6 +30,12 @@ namespace
                 'vendor_root' => VENDOR_ROOT,
             ], __CLASS__);
             parent::setCurrentKernelNamespace($this->getNamespace());
+
+            $this->addBundles([
+                new TCGBaseBundle(),
+                new TCGHttpBundle(),
+                new TCGTwigBundle(),
+            ]);
 
             $this->addModules([
                 new TCGBaseModule(),

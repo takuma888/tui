@@ -5,6 +5,8 @@ import Collapse from './collapse';
 import Carousel from './carousel';
 import Layer from './layer';
 import Tab from './tab';
+import Table from './table';
+import Select from './select';
 import Util from './util';
 
 
@@ -32,5 +34,7 @@ export {
     Collapse,
     Carousel,
     Layer,
-    Tab
+    Tab,
+    Table,
+    Select
 };

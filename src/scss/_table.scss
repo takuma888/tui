@@ -15,11 +15,11 @@
 
   thead th {
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    border-bottom: (1 * $table-border-width) solid $table-border-color;
   }
 
   tbody + tbody {
-    border-top: (2 * $table-border-width) solid $table-border-color;
+    border-top: (1 * $table-border-width) solid $table-border-color;
   }
 
 }
@@ -43,7 +43,7 @@
   thead {
     th,
     td {
-      border-bottom-width: (2 * $table-border-width);
+      border-bottom-width: (1 * $table-border-width);
     }
   }
 }
@@ -170,12 +170,12 @@
 
         thead th {
           border: none;
-          border-right: (2 * $table-border-width) solid $table-border-color;
+          border-right: (1 * $table-border-width) solid $table-border-color;
         }
 
         tbody + tbody {
           border: none;
-          border-right: (2 * $table-border-width) solid $table-border-color;
+          border-right: (1 * $table-border-width) solid $table-border-color;
         }
       }
 

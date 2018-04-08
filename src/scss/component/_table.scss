@@ -1,0 +1,77 @@
+@include tui('.tui-table') {
+  margin: 0;
+  border: none;
+  thead {
+    th, td {
+      background-image: linear-gradient(#f9f9f9,#e4e4e4);
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#ffe4e4e4', GradientType=0);
+    }
+  }
+  &.table-bordered {
+    td {
+      border-top: none;
+      border-bottom: none;
+      &:first-child {
+        border-left: none;
+      }
+    }
+    th {
+      border-top: none;
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  .tui-table-row-selected {
+    background-color: #b6d5ff!important;
+  }
+
+  .tui-table-cell {
+    width: inherit;
+  }
+}
+
+@include tui('.tui-table-body') {
+  display: block;
+  overflow-x: auto;
+}
+
+@include tui('.tui-table-footer') {
+  display: flex;
+  flex: 0 0 auto;
+  box-shadow: 0 -1px 4px #eee;
+  color: #444;
+  background-color: #f8f8f8;
+  border-top: 1px solid $table-border-color;
+  align-items: center;
+}
+
+@include tui('.tui-table-pager') {
+  list-style: none;
+  display: flex;
+  padding: .5rem 1rem;
+  margin-bottom: 0;
+
+  li {
+    font-size: 80%;
+    a {
+      padding: 0 .5em;
+      @include hover {
+        text-decoration: none;
+        background-color: rgba($component-active-bg, .25);
+        color: color-yiq($black);
+      }
+
+      &.active {
+        background-color: rgba($component-active-bg, 1);
+        color: color-yiq($black);
+      }
+    }
+  }
+}
+
+@include tui('.tui-table-wrapper') {
+  margin-bottom: $spacer;
+  border: 1px solid $table-border-color;
+}

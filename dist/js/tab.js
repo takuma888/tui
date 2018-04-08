@@ -107,7 +107,15 @@ var Tab = function ($) {
       };
 
       if (target) {
-        this._activate(target, target.parentNode, complete);
+        var url = $(this._element).data('url');
+
+        if (url) {
+          $(target).load(url, $.proxy(function () {
+            this._activate(target, target.parentNode, complete);
+          }, this));
+        } else {
+          this._activate(target, target.parentNode, complete);
+        }
       } else {
         complete();
       }
@@ -241,6 +249,4 @@ var Tab = function ($) {
 
   return Tab;
 }($);
-
-;
 //# sourceMappingURL=tab.js.map

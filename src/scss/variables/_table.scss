@@ -4,12 +4,12 @@ $table-cell-padding:          .75rem !default;
 $table-cell-padding-sm:       5px !default;
 
 $table-bg:                    transparent !default;
-$table-accent-bg:             rgba($black, .05) !default;
-$table-hover-bg:              rgba($black, .075) !default;
+$table-accent-bg:             #f3f6fa !default;
+$table-hover-bg:              #e6f0ff !default;
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;
-$table-border-color:          $gray-300 !default;
+$table-border-color:          #c5c5c5 !default;
 
 $table-head-bg:               $gray-200 !default;
 $table-head-color:            $gray-700 !default;
