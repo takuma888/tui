@@ -13,7 +13,9 @@ var Table = function ($) {
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var Selector = {
     DATA_TOGGLE: '[data-toggle="tui-table"]',
-    PAGE_TOGGLE: '[data-toggle="tui-table-page"]'
+    PAGE_TOGGLE: '[data-toggle="tui-table-page"]',
+    SORT_TOGGLE: '[data-toggle="tui-table-sort"]',
+    FILTER_TOGGLE: '[data-toggle="tui-table-filter"]'
   };
   var Default = {
     url: '',
@@ -25,7 +27,9 @@ var Table = function ($) {
     caption: '',
     method: 'get',
     pageTpl: '翻页',
-    pageNum: 7
+    pageNum: 7,
+    sort: '',
+    filter: ''
   };
   var DefaultType = {
     url: 'string',
@@ -37,17 +41,28 @@ var Table = function ($) {
     caption: 'string',
     method: 'string',
     pageTpl: 'string',
-    pageNum: 'number'
+    pageNum: 'number',
+    sort: 'string',
+    filter: 'string'
   };
   var ClassName = {
     TABLE: 'tui-table',
     ROW: 'tui-table-row',
     ROW_SELECTED: 'tui-table-row-selected',
     TABLE_CELL: 'tui-table-cell text-truncate',
-    TABLE_FOOTER: 'tui-table-footer'
+    TABLE_CELL_FILTER: 'tui-table-cell-filter',
+    TABLE_FOOTER: 'tui-table-footer',
+    TABLE_HEADER: 'tui-table-header',
+    TABLE_SORT: 'tui-table-sort',
+    TABLE_SORT_DESC: 'tui-table-sort-desc',
+    TABLE_FILTER_TOGGLE: 'tui-table-filter-toggle',
+    TABLE_FILTER: 'tui-table-filter'
   };
   var Event = {
-    CLICK_PAGE: "click.page" + EVENT_KEY
+    CLICK_PAGE: "click.page" + EVENT_KEY,
+    CLICK_SORT: "click.sort" + EVENT_KEY,
+    CLICK_FILTER: "click.filter" + EVENT_KEY,
+    CLICK_SELECT: "click.select" + EVENT_KEY
   };
 
   var Table =
@@ -65,21 +80,87 @@ var Table = function ($) {
         this._config.pageNum += 1;
       }
 
-      var that = this; // 创建footer
+      if (this._config['sort'].length > 0) {
+        var sort = this._config['sort'].split('|');
+
+        var sorts = {};
+        $(sort).each(function (i, d) {
+          var sortValues = d.split(',');
+          sorts[sortValues[0]] = {
+            'key': sortValues[0],
+            'dir': sortValues[1] ? sortValues[1] : 'asc'
+          };
+        });
+        this._config['sort'] = sorts;
+      } // 创建header
+
+
+      var headerDiv = document.createElement('div');
+      headerDiv.className = ClassName.TABLE_HEADER;
+      $(this._container).prepend(headerDiv);
+      $("." + ClassName.TABLE_HEADER, this._container).append('<div class="tui-table-filter-wrapper"></div>'); // 创建footer
 
       var footerDiv = document.createElement('div');
       footerDiv.className = ClassName.TABLE_FOOTER;
 
-      this._container.appendChild(footerDiv); // 分页
+      this._container.appendChild(footerDiv);
 
+      $("." + ClassName.TABLE_FOOTER, this._container).append('<div class="tui-table-pagination"></div>');
+
+      if (this._config.filter.length > 0) {
+        var filter = this._config.filter.split('|');
+
+        var filters = {};
+        $(filter).each(function (i, d) {
+          filters[d] = {
+            'key': d,
+            'value': ''
+          };
+        });
+        this._config.filter = filters;
+      }
+
+      var that = this; // 选取
+
+      $(this._container).on(Event.CLICK_SELECT, "." + ClassName.ROW, function () {
+        $("." + ClassName.ROW, that._container).removeClass(ClassName.ROW_SELECTED);
+        $(this).addClass(ClassName.ROW_SELECTED);
+      }); // 分页
 
       $(this._container).on(Event.CLICK_PAGE, Selector.PAGE_TOGGLE, function () {
         that._config.page = $(this).data('page');
 
         that._getData(function () {
-          that._drawBody();
+          that._drawTableBody('page');
 
-          that._drawPage();
+          that._drawPage('page');
+        });
+      }); // sort
+
+      $(this._container).on(Event.CLICK_SORT, Selector.SORT_TOGGLE, function () {
+        var sortKey = $(this).parent('th').data('key');
+        that._config['sort'][sortKey]['dir'] = $(this).hasClass(ClassName.TABLE_SORT_DESC) ? 'asc' : 'desc';
+
+        that._getData(function () {
+          that._drawTableBody('sort');
+
+          that._drawPage('sort');
+        });
+      }); // filter
+
+      $(this._container).on(Event.CLICK_FILTER, Selector.FILTER_TOGGLE, function () {
+        var $target = $($(this).data('target'));
+        $target.toggleClass('show');
+      });
+      $(this._container).on('input', '.tui-table-filter-input', function () {
+        var $input = $(this);
+        var key = this.getAttribute('name');
+        that._config.filter[key].value = $input.val();
+
+        that._getData(function () {
+          that._drawTableBody('filter');
+
+          that._drawPage('filter');
         });
       });
     }
@@ -101,20 +182,31 @@ var Table = function ($) {
       var that = this;
 
       this._getData(function () {
-        that._drawBody();
+        that._drawTable('toggle');
 
-        that._drawPage();
+        that._drawPage('toggle');
+
+        that._isShown = true;
       });
     }; // Private
 
 
-    _proto._drawPage = function _drawPage() {
+    _proto._drawPage = function _drawPage(scope) {
+      console.log('draw page when "' + scope + '"');
       var html = '';
-      html += '<div class="tui-table-pagination"><nav aria-label="Page navigation"><ul class="tui-table-pager">';
+      html += '<nav aria-label="Page navigation"><ul class="tui-table-pager">';
+
+      if (this._config.total <= 0) {
+        html += '<li>未查询到数据</li>';
+        html += '</ul></nav>';
+        $("." + ClassName.TABLE_FOOTER, this._container).find('.tui-table-pagination').empty().html(html);
+        return;
+      }
+
       html += '<li>' + this._config.pageTpl + '</li>';
       html += '<li><a href="javascript:void(0);" data-toggle="tui-table-page" data-page="1" aria-label="Previous"><span aria-hidden="true">&laquo;</span><span class="sr-only">First</span></a></li>';
       var lastPage = Math.ceil(this._config.total / this._config.size);
-      var currentPage = parseInt(this._config.page);
+      var currentPage = Math.min(Math.max(1, parseInt(this._config.page)), lastPage);
       var delta = (parseInt(this._config.pageNum) - 1) / 2;
       var left = 0;
       var right = 0;
@@ -122,11 +214,12 @@ var Table = function ($) {
       var prevPage = parseInt(currentPage) - 1;
       var nextPage = parseInt(currentPage) + 1;
       var leftStop = false;
-      var rightStop = false;
+      var rightStop = false; // if (scope === 'filter') {
+      //     console.log('here', left, right, delta);
+      // }
 
       while (left < delta && right < delta) {
-        console.log('left:' + left, 'prevPage:' + prevPage);
-
+        // console.log('here', left, right, delta, leftStop, rightStop);
         if (!leftStop) {
           if (prevPage > 1) {
             currentPageHtml = '<li><a href="javascript:void(0);" data-toggle="tui-table-page" data-page="' + prevPage + '">' + prevPage + '</a></li>' + currentPageHtml;
@@ -148,6 +241,10 @@ var Table = function ($) {
             left -= delta - right;
           }
         }
+
+        if (leftStop && rightStop) {
+          break;
+        }
       }
 
       if (prevPage > 0) {
@@ -160,48 +257,90 @@ var Table = function ($) {
 
       html += currentPageHtml;
       html += '<li><a href="javascript:void(0);" data-toggle="tui-table-page" data-page="' + lastPage + '" aria-label="Previous"><span aria-hidden="true">&raquo;</span><span class="sr-only">Last</span></a></li>';
-      html += '</ul></nav></div>';
-      $(this._container).find("." + ClassName.TABLE_FOOTER).empty().html(html);
+      html += '<li>共 ' + this._config.total + '</li>';
+      html += '</ul></nav>';
+      $("." + ClassName.TABLE_FOOTER, this._container).find('.tui-table-pagination').empty().html(html);
     };
 
-    _proto._drawBody = function _drawBody() {
+    _proto._drawTable = function _drawTable(scope) {
+      console.log('draw table when "' + scope + '"');
       $(this._element).removeClass(ClassName.TABLE).addClass(ClassName.TABLE).empty();
       var html = ''; // caption
 
       if (this._config.caption) {
         html += '<caption>' + this._config.caption + '</caption>';
-      } // thead
-
-
-      if (this._headers.length > 0) {
-        html += '<thead><tr>';
-        $(this._headers).each(function (i, d) {
-          html += '<th title="' + d['name'] + '" style="' + d['style'] + '"><div class="' + ClassName.TABLE_CELL + '">' + d['name'] + '</div></th>';
-        });
-        html += '</tr></thead>';
-      } // rows
-
-
-      if (this._rows.length > 0) {
-        html += '<tbody>';
-        var that = this;
-        $(this._rows).each(function (i, d) {
-          var row = '<tr class="' + ClassName.ROW + ' ' + ClassName.ROW + '-' + i + '">';
-          $(that._headers).each(function (j, h) {
-            var cell = d[j];
-            row += '<td title="' + cell + '" style="' + h['style'] + '"><div class="' + ClassName.TABLE_CELL + '" >' + cell + '</div></td>';
-          });
-          row += '</tr>';
-          html += row;
-        });
-        html += '</tbody>';
       }
 
+      html += '<thead></thead><tbody></tbody><tfoot></tfoot>';
       $(this._element).html(html);
-      $(document).on('click', "." + ClassName.ROW, function () {
-        $('.tui-table-row').removeClass(ClassName.ROW_SELECTED);
-        $(this).addClass(ClassName.ROW_SELECTED);
+
+      this._drawTableHeader(scope);
+
+      this._drawTableBody(scope);
+
+      this._drawTableFooter(scope);
+    };
+
+    _proto._drawTableHeader = function _drawTableHeader(scope) {
+      console.log('draw table header when "' + scope + '"');
+
+      if (this._headers.length > 0) {
+        var html = '';
+        html += '<tr>';
+        var that = this;
+        $(this._headers).each(function (i, d) {
+          html += '<th data-key="' + d['key'] + '" title="' + d['name'] + '" style="' + d['style'] + '">';
+          html += '<div class="' + ClassName.TABLE_CELL + '">' + d['name'] + '</div>';
+
+          if (that._config.filter[d['key']]) {
+            var item = that._config.filter[d['key']];
+            html += '<div class="' + ClassName.TABLE_FILTER_TOGGLE + '" data-toggle="tui-table-filter" data-target="#filter-' + d['key'] + '">';
+            html += '</div>';
+            html += '<div class="tui-control tui-table-filter-control" id="filter-' + d['key'] + '"><input type="text" name="' + d['key'] + '" class="tui-input tui-table-filter-input" value="' + item['value'] + '"></div>';
+          }
+
+          if (that._config['sort'][d['key']]) {
+            var sortConfig = that._config['sort'][d['key']];
+
+            if (sortConfig['dir'] === 'asc') {
+              html += '<div data-toggle="tui-table-sort" class="' + ClassName.TABLE_SORT + '"></div>';
+            } else {
+              html += '<div data-toggle="tui-table-sort" class="' + ClassName.TABLE_SORT + ' ' + ClassName.TABLE_SORT_DESC + '"></div>';
+            }
+          }
+
+          html += '</th>';
+        });
+        html += '</tr>';
+        $('thead', this._element).empty().html(html);
+      }
+    };
+
+    _proto._drawTableBody = function _drawTableBody(scope) {
+      console.log('draw table body when "' + scope + '"'); // rows
+
+      var html = '';
+      var that = this;
+      $(this._rows).each(function (i, d) {
+        var row = '<tr class="' + ClassName.ROW + ' ' + ClassName.ROW + '-' + i + '">';
+        $(that._headers).each(function (j, h) {
+          var cell = d[j];
+          var cellClass = ClassName.TABLE_CELL;
+
+          if (that._config.filter[h['key']] && that._config.filter[h['key']]['value'] !== '') {
+            cellClass += ' ' + ClassName.TABLE_CELL_FILTER;
+          }
+
+          row += '<td title="' + cell + '"><div class="' + cellClass + '" style="' + h['style'] + '">' + cell + '</div></td>';
+        });
+        row += '</tr>';
+        html += row;
       });
+      $('tbody', this._element).empty().html(html);
+    };
+
+    _proto._drawTableFooter = function _drawTableFooter(scope) {
+      console.log('draw table footer when "' + scope + '"');
     };
 
     _proto._getConfig = function _getConfig(config) {
@@ -233,28 +372,46 @@ var Table = function ($) {
         }
 
         this._headers = _headers;
+        var data = {};
+        data.page = Math.max(1, this._config.page);
+
+        if (this._isShown) {
+          data.sort = this._config.sort;
+          data.filter = this._config.filter;
+        }
+
         var that = this;
         $.ajax({
           url: this._config.url,
           type: this._config.method,
-          data: {
-            page: Math.max(1, this._config.page)
-          },
+          data: data,
           success: function success(data) {
             that._rows = [];
             that._config.page = data['page'];
             that._config.size = data['size'];
             that._config.total = data['total'];
-            var rows = data['data'];
-            $(rows).each(function (i, d) {
-              var r = [];
-              $(that._headers).each(function (i, p) {
-                r.push(d[p['key']]);
-              });
 
-              that._rows.push(r);
-            });
-            callback.call(that);
+            if (data['sort']) {
+              that._config.sort = data['sort'];
+            }
+
+            if (data['filter']) {
+              that._config.filter = data['filter'];
+            }
+
+            var rows = data['data'];
+
+            if (typeof rows === 'object') {
+              $(rows).each(function (i, d) {
+                var r = [];
+                $(that._headers).each(function (i, p) {
+                  r.push(d[p['key']]);
+                });
+
+                that._rows.push(r);
+              });
+              callback.call(that);
+            }
           }
         });
       } else {
@@ -263,7 +420,9 @@ var Table = function ($) {
           var $e = $(d);
 
           _headers.push({
-            'name': $e.html()
+            'key': $e.data('key'),
+            'name': $e.html(),
+            'style': d.getAttribute('style')
           });
         });
         this._headers = _headers;

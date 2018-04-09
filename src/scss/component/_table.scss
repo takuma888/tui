@@ -5,6 +5,7 @@
     th, td {
       background-image: linear-gradient(#f9f9f9,#e4e4e4);
       filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#ffe4e4e4', GradientType=0);
+      position: relative;
     }
   }
   &.table-bordered {
@@ -14,12 +15,21 @@
       &:first-child {
         border-left: none;
       }
+      &:last-child {
+        border-right: none;
+      }
     }
     th {
       border-top: none;
       &:first-child {
         border-left: none;
       }
+      &:last-child {
+        border-right: none;
+      }
+    }
+    th, td {
+      @include clearfix1();
     }
   }
 
@@ -28,13 +38,34 @@
   }
 
   .tui-table-cell {
-    width: inherit;
+    float: left;
+
+    &.tui-table-cell-filter {
+      color: theme-color('warning');
+    }
   }
 }
 
 @include tui('.tui-table-body') {
   display: block;
   overflow-x: auto;
+  min-height: 70px;
+}
+
+@include tui('.tui-table-header') {
+  .tui-table-filter-wrapper {
+    position: relative;
+
+    .tui-control {
+      position: absolute;
+      bottom: 2px;
+      display: none;
+
+      &.show {
+        display: block;
+      }
+    }
+  }
 }
 
 @include tui('.tui-table-footer') {
@@ -47,6 +78,7 @@
   align-items: center;
 }
 
+// pager
 @include tui('.tui-table-pager') {
   list-style: none;
   display: flex;
@@ -70,6 +102,132 @@
     }
   }
 }
+
+
+// sort
+@include tui('.tui-table-sort') {
+  display: flex;
+  align-items: center;
+  float: right;
+  height: 100%;
+  width: $spacer;
+  margin-right: $spacer / 4;
+  cursor: pointer;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba($black, 0.5);
+
+  @include hover {
+    color: rgba($black, 1);
+  }
+
+  &::before {
+    content: "\f160";
+  }
+
+  &.tui-table-sort-desc {
+    &::before {
+      content: "\f161";
+    }
+  }
+}
+
+// filter
+@include tui('.tui-table-filter-toggle') {
+  display: flex;
+  align-items: center;
+  float: right;
+  height: 100%;
+  cursor: pointer;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba($black, 0.5);
+
+  @include hover {
+    color: rgba($black, 1);
+  }
+
+  &::before {
+    content: "\f002";
+  }
+
+}
+
+@include tui('.tui-table-filter-control') {
+  display: none;
+
+  &.show {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 2px;
+  }
+
+  .tui-table-filter-input {
+    background-color: rgba($white, 0.7);
+    font-weight: $font-weight-bold;
+  }
+}
+
+@mixin tui-table-responsive($infix, $breakpoint) {
+  &.table-responsive#{$infix} {
+    @include media-breakpoint-down($breakpoint) {
+      .tui-table-filter-control {
+        &.show {
+          display: block;
+          left: 100%;
+          top: 0;
+          right: auto;
+          margin-top: 0;
+          margin-left: 2px;
+          z-index: 1;
+          width: 120%;
+        }
+      }
+    }
+  }
+}
+
+@include tui('.table-responsive') {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    @if ($infix != '') {
+      @include tui-table-responsive($infix, $breakpoint);
+    }
+
+    @if ($infix == "") {
+      @include tui-table-responsive('-xs', $breakpoint);
+    }
+  }
+}
+
+
+.table {
+  .tui-table-filter-toggle {
+    margin-top: -$table-cell-padding;
+    margin-bottom: -$table-cell-padding;
+    padding: $table-cell-padding;
+  }
+
+  &.table-sm,.table-condensed {
+    .tui-table-filter-toggle {
+      margin-top: -$table-cell-padding-sm;
+      margin-bottom: -$table-cell-padding-sm;
+      padding: $table-cell-padding-sm;
+    }
+  }
+}
+
 
 @include tui('.tui-table-wrapper') {
   margin-bottom: $spacer;
