@@ -2664,6 +2664,7 @@ var Table = function ($$$1) {
       this._container = container;
       this._rows = [];
       this._headers = [];
+      this._sorted = false;
 
       if (this._config.pageNum % 2 === 0) {
         this._config.pageNum += 1;
@@ -2729,11 +2730,14 @@ var Table = function ($$$1) {
       $$$1(this._container).on(Event.CLICK_SORT, Selector.SORT_TOGGLE, function () {
         var sortKey = $$$1(this).parent('th').data('key');
         that._config['sort'][sortKey]['dir'] = $$$1(this).hasClass(ClassName.TABLE_SORT_DESC) ? 'asc' : 'desc';
+        that._sorted = true;
 
         that._getData(function () {
           that._drawTableBody('sort');
 
           that._drawPage('sort');
+
+          that._drawSort('sort');
         });
       }); // filter
 
@@ -2779,6 +2783,22 @@ var Table = function ($$$1) {
       });
     }; // Private
 
+
+    _proto._drawSort = function _drawSort(scope) {
+      console.log('draw sort when "' + scope + '"');
+      var that = this;
+      $$$1(this._headers).each(function (i, d) {
+        if (that._config['sort'][d['key']]) {
+          var sortConfig = that._config['sort'][d['key']];
+          var $sortDiv = $$$1('thead th[data-key="' + d['key'] + '"]', that._element).find(Selector.SORT_TOGGLE);
+          $sortDiv.removeClass(ClassName.TABLE_SORT_DESC);
+
+          if (sortConfig['dir'] !== 'asc') {
+            $sortDiv.addClass(ClassName.TABLE_SORT_DESC);
+          }
+        }
+      });
+    };
 
     _proto._drawPage = function _drawPage(scope) {
       console.log('draw page when "' + scope + '"');
@@ -2920,7 +2940,7 @@ var Table = function ($$$1) {
             cellClass += ' ' + ClassName.TABLE_CELL_FILTER;
           }
 
-          row += '<td title="' + cell + '"><div class="' + cellClass + '" style="' + h['style'] + '">' + cell + '</div></td>';
+          row += '<td><div class="' + cellClass + '" style="' + h['style'] + '">' + cell + '</div></td>';
         });
         row += '</tr>';
         html += row;
@@ -2965,8 +2985,11 @@ var Table = function ($$$1) {
         data.page = Math.max(1, this._config.page);
 
         if (this._isShown) {
-          data.sort = this._config.sort;
           data.filter = this._config.filter;
+
+          if (this._sorted) {
+            data.sort = this._config.sort;
+          }
         }
 
         var that = this;
@@ -3076,16 +3099,19 @@ var Table = function ($$$1) {
 
   $$$1(document).ready(function () {
     var $element = $$$1(Selector.DATA_TOGGLE);
-    var target;
-    var selector = Util.getSelectorFromElement($element[0]);
 
-    if (selector) {
-      target = $$$1(selector)[0];
+    if ($element.length) {
+      var target;
+      var selector = Util.getSelectorFromElement($element[0]);
+
+      if (selector) {
+        target = $$$1(selector)[0];
+      }
+
+      var config = $$$1(target).data(DATA_KEY) ? 'toggle' : _extends({}, $$$1(target).data(), $element.data());
+
+      Table._jQueryInterface.call($$$1(target), $element[0], config);
     }
-
-    var config = $$$1(target).data(DATA_KEY) ? 'toggle' : _extends({}, $$$1(target).data(), $element.data());
-
-    Table._jQueryInterface.call($$$1(target), $element[0], config);
   });
   /**
    * ------------------------------------------------------------------------

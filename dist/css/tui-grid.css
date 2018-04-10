@@ -1,8 +1,10 @@
 .container.tui {
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  overflow: hidden;
 }
 @media (min-width: 576px) {
   .container.tui {
@@ -26,10 +28,12 @@
 }
 
 .tui .container {
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  overflow: hidden;
 }
 @media (min-width: 576px) {
   .tui .container {
@@ -53,17 +57,21 @@
 }
 
 .container-fluid.tui {
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  overflow: hidden;
 }
 
 .tui .container-fluid {
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  overflow: hidden;
 }
 
 .row.tui {

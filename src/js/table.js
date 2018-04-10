@@ -75,6 +75,7 @@ const Table = (($) => {
             this._container             = container;
             this._rows                  = [];
             this._headers               = [];
+            this._sorted                = false;
 
             if (this._config.pageNum % 2 === 0) {
                 this._config.pageNum += 1;
@@ -134,9 +135,11 @@ const Table = (($) => {
             $(this._container).on(Event.CLICK_SORT, Selector.SORT_TOGGLE, function () {
                 const sortKey = $(this).parent('th').data('key');
                 that._config['sort'][sortKey]['dir'] = $(this).hasClass(ClassName.TABLE_SORT_DESC) ? 'asc' : 'desc';
+                that._sorted = true;
                 that._getData(function () {
                     that._drawTableBody('sort');
                     that._drawPage('sort');
+                    that._drawSort('sort');
                 });
             });
 
@@ -188,6 +191,22 @@ const Table = (($) => {
         }
 
         // Private
+
+
+        _drawSort(scope) {
+            console.log('draw sort when "' + scope + '"');
+            let that = this;
+            $(this._headers).each(function (i, d) {
+                if (that._config['sort'][d['key']]) {
+                    const sortConfig = that._config['sort'][d['key']];
+                    let $sortDiv = $('thead th[data-key="' + d['key'] + '"]', that._element).find(Selector.SORT_TOGGLE);
+                    $sortDiv.removeClass(ClassName.TABLE_SORT_DESC);
+                    if (sortConfig['dir'] !== 'asc') {
+                        $sortDiv.addClass(ClassName.TABLE_SORT_DESC);
+                    }
+                }
+            });
+        }
 
         _drawPage(scope) {
             console.log('draw page when "' + scope + '"');
@@ -325,7 +344,7 @@ const Table = (($) => {
                     if (that._config.filter[h['key']] && that._config.filter[h['key']]['value'] !== '') {
                         cellClass += ' ' + ClassName.TABLE_CELL_FILTER;
                     }
-                    row += '<td title="' + cell + '"><div class="' + cellClass + '" style="' + h['style'] + '">' + cell + '</div></td>';
+                    row += '<td><div class="' + cellClass + '" style="' + h['style'] + '">' + cell + '</div></td>';
                 });
                 row += '</tr>';
                 html += row;
@@ -371,8 +390,10 @@ const Table = (($) => {
                 let data = {};
                 data.page = Math.max(1, this._config.page);
                 if (this._isShown) {
-                    data.sort = this._config.sort;
                     data.filter = this._config.filter;
+                    if (this._sorted) {
+                        data.sort = this._config.sort;
+                    }
                 }
                 let that = this;
                 $.ajax({
@@ -467,19 +488,21 @@ const Table = (($) => {
      */
     $(document).ready(function () {
         let $element = $(Selector.DATA_TOGGLE);
-        let target;
-        const selector = Util.getSelectorFromElement($element[0]);
+        if ($element.length) {
+            let target;
+            const selector = Util.getSelectorFromElement($element[0]);
 
-        if (selector) {
-            target = $(selector)[0];
+            if (selector) {
+                target = $(selector)[0];
+            }
+            const config = $(target).data(DATA_KEY)
+                ? 'toggle' : {
+                    ...$(target).data(),
+                    ...$element.data()
+                };
+
+            Table._jQueryInterface.call($(target), $element[0], config);
         }
-        const config = $(target).data(DATA_KEY)
-            ? 'toggle' : {
-                ...$(target).data(),
-                ...$element.data()
-            };
-
-        Table._jQueryInterface.call($(target), $element[0], config);
     });
 
     /**
