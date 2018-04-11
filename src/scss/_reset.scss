@@ -30,8 +30,6 @@ html {
 // 重置所有 block 元素
 %block-element {
   display: block;
-  margin: 0;
-  padding: 0;
 }
 @mixin reset-block($element) {
   .tui {
@@ -84,7 +82,6 @@ $block-elements: map-merge((
 // 重置所有 inline-block 元素
 %inline-block-element {
   display: inline-block;
-  margin: 0;
 }
 @mixin reset-inline-block($element) {
   .tui {
@@ -113,7 +110,6 @@ $inline-block-elements: map-merge((
 // 重置所有 inline 元素
 %inline-element {
   display: inline;
-  margin: 0;
 }
 @mixin reset-inline($element) {
   .tui {

@@ -5,6 +5,9 @@
   padding: $alert-padding-y $alert-padding-x;
   margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
+}
+
+@include tui('.alert-rounded') {
   @include border-radius($alert-border-radius);
 }
 

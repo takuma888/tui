@@ -26,7 +26,6 @@
   line-height: $line-height-base;
   color: $body-color;
   text-align: left;
-  background-color: $body-bg;
 }
 
 @include tui-element('[tabindex="-1"]:focus') {
