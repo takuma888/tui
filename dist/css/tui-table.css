@@ -38,6 +38,28 @@
   border-top: 1px solid #c5c5c5;
 }
 
+.form-table.tui {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+.form-table.tui th.form-table-label, .form-table.tui td.form-table-label {
+  padding-right: .25rem;
+  padding-left: .25rem;
+}
+
+.tui .form-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+.tui .form-table th.form-table-label, .tui .form-table td.form-table-label {
+  padding-right: .25rem;
+  padding-left: .25rem;
+}
+
 .table-condensed.tui th,
 .table-condensed.tui td, .table-sm.tui th,
 .table-sm.tui td {

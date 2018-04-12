@@ -94,15 +94,21 @@ const Table = (($) => {
                 this._config['sort'] = sorts;
             }
             // 创建header
-            let headerDiv = document.createElement('div');
-            headerDiv.className = ClassName.TABLE_HEADER;
-            $(this._container).prepend(headerDiv);
-            $(`.${ClassName.TABLE_HEADER}`, this._container).append('<div class="tui-table-filter-wrapper"></div>');
+            if ($(`.${ClassName.TABLE_HEADER}`, this._container).length === 0) {
+                let headerDiv = document.createElement('div');
+                headerDiv.className = ClassName.TABLE_HEADER;
+                $(this._container).prepend(headerDiv);
+            }
+
             // 创建footer
-            let footerDiv = document.createElement('div');
-            footerDiv.className = ClassName.TABLE_FOOTER;
-            this._container.appendChild(footerDiv);
-            $(`.${ClassName.TABLE_FOOTER}`, this._container).append('<div class="tui-table-pagination"></div>');
+            if ($(`.${ClassName.TABLE_FOOTER}`, this._container).length === 0) {
+                let footerDiv = document.createElement('div');
+                footerDiv.className = ClassName.TABLE_FOOTER;
+                this._container.appendChild(footerDiv);
+            }
+            if ($(`.${ClassName.TABLE_FOOTER}`, this._container).find('.tui-table-pagination').length === 0) {
+                $(`.${ClassName.TABLE_FOOTER}`, this._container).prepend('<div class="tui-table-pagination"></div>');
+            }
 
             if (this._config.filter.length > 0) {
                 let filter = this._config.filter.split('|');

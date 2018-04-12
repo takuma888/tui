@@ -51,8 +51,6 @@ body.layer-open {
 @include tui('.layer-inner') {
   width: 100%;
   position: relative;
-  // allow clicks to pass through for custom click handling to close modal
-  pointer-events: none;
 }
 
 // Actual modal

@@ -49,7 +49,9 @@
 @include tui('.tui-table-body') {
   display: block;
   overflow-x: auto;
-  min-height: 70px;
+  min-height: 58px;
+  margin-top: -1px;
+  border: $table-border-width solid $table-border-color;
 }
 
 @include tui('.tui-table-header') {
@@ -74,8 +76,9 @@
   box-shadow: 0 -1px 4px #eee;
   color: #444;
   background-color: #f8f8f8;
-  border-top: 1px solid $table-border-color;
+  border: 1px solid $table-border-color;
   align-items: center;
+  margin-top: -1px;
 }
 
 // pager
@@ -169,11 +172,13 @@
     right: 0;
     top: 100%;
     margin-top: 2px;
+    min-height: 0;
   }
 
   .tui-table-filter-input {
     background-color: rgba($white, 0.7);
     font-weight: $font-weight-bold;
+    padding: 0;
   }
 }
 
@@ -231,5 +236,4 @@
 
 @include tui('.tui-table-wrapper') {
   margin-bottom: $spacer;
-  border: 1px solid $table-border-color;
 }

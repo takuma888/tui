@@ -6,7 +6,7 @@ import Carousel from './carousel';
 import Layer from './layer';
 import Tab from './tab';
 import Table from './table';
-import Select from './select';
+import Select3 from './select3';
 import Util from './util';
 
 
@@ -36,5 +36,5 @@ export {
     Layer,
     Tab,
     Table,
-    Select
+    Select3
 };

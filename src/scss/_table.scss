@@ -21,7 +21,20 @@
   tbody + tbody {
     border-top: (1 * $table-border-width) solid $table-border-color;
   }
+}
 
+@include tui('.form-table') {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $spacer;
+  background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+
+  th, td {
+    &.form-table-label {
+      padding-left: $spacer / 4;
+      padding-right: $spacer / 4;
+    }
+  }
 }
 
 
