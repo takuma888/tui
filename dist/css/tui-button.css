@@ -39,7 +39,7 @@
   background-image: none;
 }
 
-.tui .btn {
+.tui .btn:not(.not-tui) {
   display: inline-block;
   padding: .375rem .75rem;
   font-size: 1rem;
@@ -59,24 +59,24 @@
        -o-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
           transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-.tui .btn:hover, .tui .btn:focus {
+.tui .btn:not(.not-tui):hover, .tui .btn:not(.not-tui):focus {
   text-decoration: none;
 }
-.tui .btn:focus, .tui .btn.focus {
+.tui .btn:not(.not-tui):focus, .tui .btn:not(.not-tui).focus {
   outline: 0;
   -webkit-box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
           box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
 }
-.tui .btn.disabled, .tui .btn:disabled {
+.tui .btn:not(.not-tui).disabled, .tui .btn:not(.not-tui):disabled {
   cursor: not-allowed;
   -webkit-box-shadow: none;
           box-shadow: none;
   opacity: .65;
 }
-.tui .btn:not(:disabled):not(.disabled) {
+.tui .btn:not(.not-tui):not(:disabled):not(.disabled) {
   cursor: pointer;
 }
-.tui .btn:not(:disabled):not(.disabled):active, .tui .btn:not(:disabled):not(.disabled).active {
+.tui .btn:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn:not(.not-tui):not(:disabled):not(.disabled).active {
   background-image: none;
 }
 
@@ -84,7 +84,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   pointer-events: none;
 }
 
-.tui a.btn.disabled, .tui fieldset:disabled a.btn {
+.tui a.btn.disabled, .tui fieldset:disabled a.btn:not(.not-tui) {
   pointer-events: none;
 }
 
@@ -139,53 +139,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
 
-.tui .btn-primary {
+.tui .btn-primary:not(.not-tui) {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
 }
-.tui .btn-primary:hover {
+.tui .btn-primary:not(.not-tui):hover {
   color: #fff;
   background-color: #0069d9;
   border-color: #0062cc;
 }
-.tui .btn-primary:focus, .tui .btn-primary.focus {
+.tui .btn-primary:not(.not-tui):focus, .tui .btn-primary:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
-.tui .btn-primary.disabled, .tui .btn-primary:disabled {
+.tui .btn-primary:not(.not-tui).disabled, .tui .btn-primary:not(.not-tui):disabled {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
 }
-.tui .btn-primary:not(:disabled):not(.disabled):active, .tui .btn-primary:not(:disabled):not(.disabled).active, .show > .tui .btn-primary.popout-toggle {
+.tui .btn-primary:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-primary:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-primary:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #0062cc;
   border-color: #005cbf;
 }
-.tui .btn-primary.btn-gradient {
+.tui .btn-primary:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#268fff), to(#007bff));
   background-image: -webkit-linear-gradient(top, #268fff 0%, #007bff 100%);
   background-image:      -o-linear-gradient(top, #268fff 0%, #007bff 100%);
   background-image:         linear-gradient(to bottom, #268fff 0%, #007bff 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-primary.btn-gradient:hover {
+.tui .btn-primary:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#268fff), to(#007bff));
   background-image: -webkit-linear-gradient(top, #268fff 0%, #007bff 100%);
   background-image:      -o-linear-gradient(top, #268fff 0%, #007bff 100%);
   background-image:         linear-gradient(to bottom, #268fff 0%, #007bff 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-primary.btn-shadow {
+.tui .btn-primary:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-primary.btn-shadow:focus, .tui .btn-primary.btn-shadow.focus {
+.tui .btn-primary:not(.not-tui).btn-shadow:focus, .tui .btn-primary:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
-.tui .btn-primary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-primary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-primary.btn-shadow.popout-toggle:focus {
+.tui .btn-primary:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-primary:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-primary:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
@@ -241,53 +241,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
 
-.tui .btn-secondary {
+.tui .btn-secondary:not(.not-tui) {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
 }
-.tui .btn-secondary:hover {
+.tui .btn-secondary:not(.not-tui):hover {
   color: #fff;
   background-color: #5a6268;
   border-color: #545b62;
 }
-.tui .btn-secondary:focus, .tui .btn-secondary.focus {
+.tui .btn-secondary:not(.not-tui):focus, .tui .btn-secondary:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
-.tui .btn-secondary.disabled, .tui .btn-secondary:disabled {
+.tui .btn-secondary:not(.not-tui).disabled, .tui .btn-secondary:not(.not-tui):disabled {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
 }
-.tui .btn-secondary:not(:disabled):not(.disabled):active, .tui .btn-secondary:not(:disabled):not(.disabled).active, .show > .tui .btn-secondary.popout-toggle {
+.tui .btn-secondary:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-secondary:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-secondary:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #545b62;
   border-color: #4e555b;
 }
-.tui .btn-secondary.btn-gradient {
+.tui .btn-secondary:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7f8890), to(#6c757d));
   background-image: -webkit-linear-gradient(top, #7f8890 0%, #6c757d 100%);
   background-image:      -o-linear-gradient(top, #7f8890 0%, #6c757d 100%);
   background-image:         linear-gradient(to bottom, #7f8890 0%, #6c757d 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-secondary.btn-gradient:hover {
+.tui .btn-secondary:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7f8890), to(#6c757d));
   background-image: -webkit-linear-gradient(top, #7f8890 0%, #6c757d 100%);
   background-image:      -o-linear-gradient(top, #7f8890 0%, #6c757d 100%);
   background-image:         linear-gradient(to bottom, #7f8890 0%, #6c757d 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-secondary.btn-shadow {
+.tui .btn-secondary:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-secondary.btn-shadow:focus, .tui .btn-secondary.btn-shadow.focus {
+.tui .btn-secondary:not(.not-tui).btn-shadow:focus, .tui .btn-secondary:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
-.tui .btn-secondary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-secondary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-secondary.btn-shadow.popout-toggle:focus {
+.tui .btn-secondary:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-secondary:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-secondary:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
@@ -343,53 +343,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
 
-.tui .btn-success {
+.tui .btn-success:not(.not-tui) {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
 }
-.tui .btn-success:hover {
+.tui .btn-success:not(.not-tui):hover {
   color: #fff;
   background-color: #218838;
   border-color: #1e7e34;
 }
-.tui .btn-success:focus, .tui .btn-success.focus {
+.tui .btn-success:not(.not-tui):focus, .tui .btn-success:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
-.tui .btn-success.disabled, .tui .btn-success:disabled {
+.tui .btn-success:not(.not-tui).disabled, .tui .btn-success:not(.not-tui):disabled {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
 }
-.tui .btn-success:not(:disabled):not(.disabled):active, .tui .btn-success:not(:disabled):not(.disabled).active, .show > .tui .btn-success.popout-toggle {
+.tui .btn-success:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-success:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-success:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #1e7e34;
   border-color: #1c7430;
 }
-.tui .btn-success.btn-gradient {
+.tui .btn-success:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2fc652), to(#28a745));
   background-image: -webkit-linear-gradient(top, #2fc652 0%, #28a745 100%);
   background-image:      -o-linear-gradient(top, #2fc652 0%, #28a745 100%);
   background-image:         linear-gradient(to bottom, #2fc652 0%, #28a745 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-success.btn-gradient:hover {
+.tui .btn-success:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2fc652), to(#28a745));
   background-image: -webkit-linear-gradient(top, #2fc652 0%, #28a745 100%);
   background-image:      -o-linear-gradient(top, #2fc652 0%, #28a745 100%);
   background-image:         linear-gradient(to bottom, #2fc652 0%, #28a745 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-success.btn-shadow {
+.tui .btn-success:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-success.btn-shadow:focus, .tui .btn-success.btn-shadow.focus {
+.tui .btn-success:not(.not-tui).btn-shadow:focus, .tui .btn-success:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
-.tui .btn-success.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-success.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-success.btn-shadow.popout-toggle:focus {
+.tui .btn-success:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-success:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-success:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
@@ -445,53 +445,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
 
-.tui .btn-info {
+.tui .btn-info:not(.not-tui) {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
 }
-.tui .btn-info:hover {
+.tui .btn-info:not(.not-tui):hover {
   color: #fff;
   background-color: #138496;
   border-color: #117a8b;
 }
-.tui .btn-info:focus, .tui .btn-info.focus {
+.tui .btn-info:not(.not-tui):focus, .tui .btn-info:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
-.tui .btn-info.disabled, .tui .btn-info:disabled {
+.tui .btn-info:not(.not-tui).disabled, .tui .btn-info:not(.not-tui):disabled {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
 }
-.tui .btn-info:not(:disabled):not(.disabled):active, .tui .btn-info:not(:disabled):not(.disabled).active, .show > .tui .btn-info.popout-toggle {
+.tui .btn-info:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-info:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-info:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #117a8b;
   border-color: #10707f;
 }
-.tui .btn-info.btn-gradient {
+.tui .btn-info:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1bc0da), to(#17a2b8));
   background-image: -webkit-linear-gradient(top, #1bc0da 0%, #17a2b8 100%);
   background-image:      -o-linear-gradient(top, #1bc0da 0%, #17a2b8 100%);
   background-image:         linear-gradient(to bottom, #1bc0da 0%, #17a2b8 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-info.btn-gradient:hover {
+.tui .btn-info:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1bc0da), to(#17a2b8));
   background-image: -webkit-linear-gradient(top, #1bc0da 0%, #17a2b8 100%);
   background-image:      -o-linear-gradient(top, #1bc0da 0%, #17a2b8 100%);
   background-image:         linear-gradient(to bottom, #1bc0da 0%, #17a2b8 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-info.btn-shadow {
+.tui .btn-info:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-info.btn-shadow:focus, .tui .btn-info.btn-shadow.focus {
+.tui .btn-info:not(.not-tui).btn-shadow:focus, .tui .btn-info:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
-.tui .btn-info.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-info.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-info.btn-shadow.popout-toggle:focus {
+.tui .btn-info:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-info:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-info:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
@@ -547,53 +547,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
 
-.tui .btn-warning {
+.tui .btn-warning:not(.not-tui) {
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
-.tui .btn-warning:hover {
+.tui .btn-warning:not(.not-tui):hover {
   color: #212529;
   background-color: #e0a800;
   border-color: #d39e00;
 }
-.tui .btn-warning:focus, .tui .btn-warning.focus {
+.tui .btn-warning:not(.not-tui):focus, .tui .btn-warning:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
-.tui .btn-warning.disabled, .tui .btn-warning:disabled {
+.tui .btn-warning:not(.not-tui).disabled, .tui .btn-warning:not(.not-tui):disabled {
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
-.tui .btn-warning:not(:disabled):not(.disabled):active, .tui .btn-warning:not(:disabled):not(.disabled).active, .show > .tui .btn-warning.popout-toggle {
+.tui .btn-warning:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-warning:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-warning:not(.not-tui).popout-toggle {
   color: #212529;
   background-color: #d39e00;
   border-color: #c69500;
 }
-.tui .btn-warning.btn-gradient {
+.tui .btn-warning:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcb2d), to(#ffc107));
   background-image: -webkit-linear-gradient(top, #ffcb2d 0%, #ffc107 100%);
   background-image:      -o-linear-gradient(top, #ffcb2d 0%, #ffc107 100%);
   background-image:         linear-gradient(to bottom, #ffcb2d 0%, #ffc107 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-warning.btn-gradient:hover {
+.tui .btn-warning:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcb2d), to(#ffc107));
   background-image: -webkit-linear-gradient(top, #ffcb2d 0%, #ffc107 100%);
   background-image:      -o-linear-gradient(top, #ffcb2d 0%, #ffc107 100%);
   background-image:         linear-gradient(to bottom, #ffcb2d 0%, #ffc107 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-warning.btn-shadow {
+.tui .btn-warning:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-warning.btn-shadow:focus, .tui .btn-warning.btn-shadow.focus {
+.tui .btn-warning:not(.not-tui).btn-shadow:focus, .tui .btn-warning:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
-.tui .btn-warning.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-warning.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-warning.btn-shadow.popout-toggle:focus {
+.tui .btn-warning:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-warning:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-warning:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
@@ -649,53 +649,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
 
-.tui .btn-danger {
+.tui .btn-danger:not(.not-tui) {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
-.tui .btn-danger:hover {
+.tui .btn-danger:not(.not-tui):hover {
   color: #fff;
   background-color: #c82333;
   border-color: #bd2130;
 }
-.tui .btn-danger:focus, .tui .btn-danger.focus {
+.tui .btn-danger:not(.not-tui):focus, .tui .btn-danger:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
-.tui .btn-danger.disabled, .tui .btn-danger:disabled {
+.tui .btn-danger:not(.not-tui).disabled, .tui .btn-danger:not(.not-tui):disabled {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
-.tui .btn-danger:not(:disabled):not(.disabled):active, .tui .btn-danger:not(:disabled):not(.disabled).active, .show > .tui .btn-danger.popout-toggle {
+.tui .btn-danger:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-danger:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-danger:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #bd2130;
   border-color: #b21f2d;
 }
-.tui .btn-danger.btn-gradient {
+.tui .btn-danger:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e25663), to(#dc3545));
   background-image: -webkit-linear-gradient(top, #e25663 0%, #dc3545 100%);
   background-image:      -o-linear-gradient(top, #e25663 0%, #dc3545 100%);
   background-image:         linear-gradient(to bottom, #e25663 0%, #dc3545 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-danger.btn-gradient:hover {
+.tui .btn-danger:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e25663), to(#dc3545));
   background-image: -webkit-linear-gradient(top, #e25663 0%, #dc3545 100%);
   background-image:      -o-linear-gradient(top, #e25663 0%, #dc3545 100%);
   background-image:         linear-gradient(to bottom, #e25663 0%, #dc3545 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-danger.btn-shadow {
+.tui .btn-danger:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-danger.btn-shadow:focus, .tui .btn-danger.btn-shadow.focus {
+.tui .btn-danger:not(.not-tui).btn-shadow:focus, .tui .btn-danger:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
-.tui .btn-danger.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-danger.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-danger.btn-shadow.popout-toggle:focus {
+.tui .btn-danger:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-danger:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-danger:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
@@ -751,53 +751,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
 
-.tui .btn-light {
+.tui .btn-light:not(.not-tui) {
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
-.tui .btn-light:hover {
+.tui .btn-light:not(.not-tui):hover {
   color: #212529;
   background-color: #e2e6ea;
   border-color: #dae0e5;
 }
-.tui .btn-light:focus, .tui .btn-light.focus {
+.tui .btn-light:not(.not-tui):focus, .tui .btn-light:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
-.tui .btn-light.disabled, .tui .btn-light:disabled {
+.tui .btn-light:not(.not-tui).disabled, .tui .btn-light:not(.not-tui):disabled {
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
-.tui .btn-light:not(:disabled):not(.disabled):active, .tui .btn-light:not(:disabled):not(.disabled).active, .show > .tui .btn-light.popout-toggle {
+.tui .btn-light:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-light:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-light:not(.not-tui).popout-toggle {
   color: #212529;
   background-color: #dae0e5;
   border-color: #d3d9df;
 }
-.tui .btn-light.btn-gradient {
+.tui .btn-light:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f8f9fa));
   background-image: -webkit-linear-gradient(top, white 0%, #f8f9fa 100%);
   background-image:      -o-linear-gradient(top, white 0%, #f8f9fa 100%);
   background-image:         linear-gradient(to bottom, white 0%, #f8f9fa 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-light.btn-gradient:hover {
+.tui .btn-light:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f8f9fa));
   background-image: -webkit-linear-gradient(top, white 0%, #f8f9fa 100%);
   background-image:      -o-linear-gradient(top, white 0%, #f8f9fa 100%);
   background-image:         linear-gradient(to bottom, white 0%, #f8f9fa 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-light.btn-shadow {
+.tui .btn-light:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-light.btn-shadow:focus, .tui .btn-light.btn-shadow.focus {
+.tui .btn-light:not(.not-tui).btn-shadow:focus, .tui .btn-light:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
-.tui .btn-light.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-light.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-light.btn-shadow.popout-toggle:focus {
+.tui .btn-light:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-light:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-light:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
@@ -853,53 +853,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
 
-.tui .btn-dark {
+.tui .btn-dark:not(.not-tui) {
   color: #fff;
   background-color: #343a40;
   border-color: #343a40;
 }
-.tui .btn-dark:hover {
+.tui .btn-dark:not(.not-tui):hover {
   color: #fff;
   background-color: #23272b;
   border-color: #1d2124;
 }
-.tui .btn-dark:focus, .tui .btn-dark.focus {
+.tui .btn-dark:not(.not-tui):focus, .tui .btn-dark:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
-.tui .btn-dark.disabled, .tui .btn-dark:disabled {
+.tui .btn-dark:not(.not-tui).disabled, .tui .btn-dark:not(.not-tui):disabled {
   color: #fff;
   background-color: #343a40;
   border-color: #343a40;
 }
-.tui .btn-dark:not(:disabled):not(.disabled):active, .tui .btn-dark:not(:disabled):not(.disabled).active, .show > .tui .btn-dark.popout-toggle {
+.tui .btn-dark:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-dark:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-dark:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #1d2124;
   border-color: #171a1d;
 }
-.tui .btn-dark.btn-gradient {
+.tui .btn-dark:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#454d55), to(#343a40));
   background-image: -webkit-linear-gradient(top, #454d55 0%, #343a40 100%);
   background-image:      -o-linear-gradient(top, #454d55 0%, #343a40 100%);
   background-image:         linear-gradient(to bottom, #454d55 0%, #343a40 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-dark.btn-gradient:hover {
+.tui .btn-dark:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#454d55), to(#343a40));
   background-image: -webkit-linear-gradient(top, #454d55 0%, #343a40 100%);
   background-image:      -o-linear-gradient(top, #454d55 0%, #343a40 100%);
   background-image:         linear-gradient(to bottom, #454d55 0%, #343a40 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-dark.btn-shadow {
+.tui .btn-dark:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-dark.btn-shadow:focus, .tui .btn-dark.btn-shadow.focus {
+.tui .btn-dark:not(.not-tui).btn-shadow:focus, .tui .btn-dark:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
-.tui .btn-dark.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-dark.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-dark.btn-shadow.popout-toggle:focus {
+.tui .btn-dark:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-dark:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-dark:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
@@ -955,53 +955,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
 
-.tui .btn-default {
+.tui .btn-default:not(.not-tui) {
   color: #212529;
   background-color: #bbb;
   border-color: #bbb;
 }
-.tui .btn-default:hover {
+.tui .btn-default:not(.not-tui):hover {
   color: #212529;
   background-color: #a8a8a8;
   border-color: #a2a2a2;
 }
-.tui .btn-default:focus, .tui .btn-default.focus {
+.tui .btn-default:not(.not-tui):focus, .tui .btn-default:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
-.tui .btn-default.disabled, .tui .btn-default:disabled {
+.tui .btn-default:not(.not-tui).disabled, .tui .btn-default:not(.not-tui):disabled {
   color: #212529;
   background-color: #bbb;
   border-color: #bbb;
 }
-.tui .btn-default:not(:disabled):not(.disabled):active, .tui .btn-default:not(:disabled):not(.disabled).active, .show > .tui .btn-default.popout-toggle {
+.tui .btn-default:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-default:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-default:not(.not-tui).popout-toggle {
   color: #212529;
   background-color: #a2a2a2;
   border-color: #9b9b9b;
 }
-.tui .btn-default.btn-gradient {
+.tui .btn-default:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#cecece), to(#bbb));
   background-image: -webkit-linear-gradient(top, #cecece 0%, #bbb 100%);
   background-image:      -o-linear-gradient(top, #cecece 0%, #bbb 100%);
   background-image:         linear-gradient(to bottom, #cecece 0%, #bbb 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-default.btn-gradient:hover {
+.tui .btn-default:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#cecece), to(#bbb));
   background-image: -webkit-linear-gradient(top, #cecece 0%, #bbb 100%);
   background-image:      -o-linear-gradient(top, #cecece 0%, #bbb 100%);
   background-image:         linear-gradient(to bottom, #cecece 0%, #bbb 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-default.btn-shadow {
+.tui .btn-default:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-default.btn-shadow:focus, .tui .btn-default.btn-shadow.focus {
+.tui .btn-default:not(.not-tui).btn-shadow:focus, .tui .btn-default:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
-.tui .btn-default.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-default.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-default.btn-shadow.popout-toggle:focus {
+.tui .btn-default:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-default:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-default:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
@@ -1057,53 +1057,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
 
-.tui .btn-outline-primary {
+.tui .btn-outline-primary:not(.not-tui) {
   color: #007bff;
   background-color: transparent;
   background-image: none;
   border-color: #007bff;
 }
-.tui .btn-outline-primary:hover {
+.tui .btn-outline-primary:not(.not-tui):hover {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
 }
-.tui .btn-outline-primary:focus, .tui .btn-outline-primary.focus {
+.tui .btn-outline-primary:not(.not-tui):focus, .tui .btn-outline-primary:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
-.tui .btn-outline-primary.disabled, .tui .btn-outline-primary:disabled {
+.tui .btn-outline-primary:not(.not-tui).disabled, .tui .btn-outline-primary:not(.not-tui):disabled {
   color: #007bff;
   background-color: transparent;
 }
-.tui .btn-outline-primary:not(:disabled):not(.disabled):active, .tui .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-primary.popout-toggle {
+.tui .btn-outline-primary:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-outline-primary:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-outline-primary:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
 }
-.tui .btn-outline-primary.btn-gradient {
+.tui .btn-outline-primary:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#268fff), to(#007bff));
   background-image: -webkit-linear-gradient(top, #268fff 0%, #007bff 100%);
   background-image:      -o-linear-gradient(top, #268fff 0%, #007bff 100%);
   background-image:         linear-gradient(to bottom, #268fff 0%, #007bff 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-primary.btn-gradient:hover {
+.tui .btn-outline-primary:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#268fff), to(#007bff));
   background-image: -webkit-linear-gradient(top, #268fff 0%, #007bff 100%);
   background-image:      -o-linear-gradient(top, #268fff 0%, #007bff 100%);
   background-image:         linear-gradient(to bottom, #268fff 0%, #007bff 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-primary.btn-shadow {
+.tui .btn-outline-primary:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-outline-primary.btn-shadow:focus, .tui .btn-outline-primary.btn-shadow.focus {
+.tui .btn-outline-primary:not(.not-tui).btn-shadow:focus, .tui .btn-outline-primary:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
-.tui .btn-outline-primary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-primary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-primary.btn-shadow.popout-toggle:focus {
+.tui .btn-outline-primary:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-primary:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-primary:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(0, 123, 255, .5);
 }
@@ -1159,53 +1159,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
 
-.tui .btn-outline-secondary {
+.tui .btn-outline-secondary:not(.not-tui) {
   color: #6c757d;
   background-color: transparent;
   background-image: none;
   border-color: #6c757d;
 }
-.tui .btn-outline-secondary:hover {
+.tui .btn-outline-secondary:not(.not-tui):hover {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
 }
-.tui .btn-outline-secondary:focus, .tui .btn-outline-secondary.focus {
+.tui .btn-outline-secondary:not(.not-tui):focus, .tui .btn-outline-secondary:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
-.tui .btn-outline-secondary.disabled, .tui .btn-outline-secondary:disabled {
+.tui .btn-outline-secondary:not(.not-tui).disabled, .tui .btn-outline-secondary:not(.not-tui):disabled {
   color: #6c757d;
   background-color: transparent;
 }
-.tui .btn-outline-secondary:not(:disabled):not(.disabled):active, .tui .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-secondary.popout-toggle {
+.tui .btn-outline-secondary:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-outline-secondary:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-outline-secondary:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
 }
-.tui .btn-outline-secondary.btn-gradient {
+.tui .btn-outline-secondary:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7f8890), to(#6c757d));
   background-image: -webkit-linear-gradient(top, #7f8890 0%, #6c757d 100%);
   background-image:      -o-linear-gradient(top, #7f8890 0%, #6c757d 100%);
   background-image:         linear-gradient(to bottom, #7f8890 0%, #6c757d 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-secondary.btn-gradient:hover {
+.tui .btn-outline-secondary:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7f8890), to(#6c757d));
   background-image: -webkit-linear-gradient(top, #7f8890 0%, #6c757d 100%);
   background-image:      -o-linear-gradient(top, #7f8890 0%, #6c757d 100%);
   background-image:         linear-gradient(to bottom, #7f8890 0%, #6c757d 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-secondary.btn-shadow {
+.tui .btn-outline-secondary:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-outline-secondary.btn-shadow:focus, .tui .btn-outline-secondary.btn-shadow.focus {
+.tui .btn-outline-secondary:not(.not-tui).btn-shadow:focus, .tui .btn-outline-secondary:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
-.tui .btn-outline-secondary.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-secondary.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-secondary.btn-shadow.popout-toggle:focus {
+.tui .btn-outline-secondary:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-secondary:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-secondary:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(108, 117, 125, .5);
 }
@@ -1261,53 +1261,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
 
-.tui .btn-outline-success {
+.tui .btn-outline-success:not(.not-tui) {
   color: #28a745;
   background-color: transparent;
   background-image: none;
   border-color: #28a745;
 }
-.tui .btn-outline-success:hover {
+.tui .btn-outline-success:not(.not-tui):hover {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
 }
-.tui .btn-outline-success:focus, .tui .btn-outline-success.focus {
+.tui .btn-outline-success:not(.not-tui):focus, .tui .btn-outline-success:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
-.tui .btn-outline-success.disabled, .tui .btn-outline-success:disabled {
+.tui .btn-outline-success:not(.not-tui).disabled, .tui .btn-outline-success:not(.not-tui):disabled {
   color: #28a745;
   background-color: transparent;
 }
-.tui .btn-outline-success:not(:disabled):not(.disabled):active, .tui .btn-outline-success:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-success.popout-toggle {
+.tui .btn-outline-success:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-outline-success:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-outline-success:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
 }
-.tui .btn-outline-success.btn-gradient {
+.tui .btn-outline-success:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2fc652), to(#28a745));
   background-image: -webkit-linear-gradient(top, #2fc652 0%, #28a745 100%);
   background-image:      -o-linear-gradient(top, #2fc652 0%, #28a745 100%);
   background-image:         linear-gradient(to bottom, #2fc652 0%, #28a745 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-success.btn-gradient:hover {
+.tui .btn-outline-success:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2fc652), to(#28a745));
   background-image: -webkit-linear-gradient(top, #2fc652 0%, #28a745 100%);
   background-image:      -o-linear-gradient(top, #2fc652 0%, #28a745 100%);
   background-image:         linear-gradient(to bottom, #2fc652 0%, #28a745 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-success.btn-shadow {
+.tui .btn-outline-success:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-outline-success.btn-shadow:focus, .tui .btn-outline-success.btn-shadow.focus {
+.tui .btn-outline-success:not(.not-tui).btn-shadow:focus, .tui .btn-outline-success:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
-.tui .btn-outline-success.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-success.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-success.btn-shadow.popout-toggle:focus {
+.tui .btn-outline-success:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-success:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-success:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(40, 167, 69, .5);
 }
@@ -1363,53 +1363,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
 
-.tui .btn-outline-info {
+.tui .btn-outline-info:not(.not-tui) {
   color: #17a2b8;
   background-color: transparent;
   background-image: none;
   border-color: #17a2b8;
 }
-.tui .btn-outline-info:hover {
+.tui .btn-outline-info:not(.not-tui):hover {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
 }
-.tui .btn-outline-info:focus, .tui .btn-outline-info.focus {
+.tui .btn-outline-info:not(.not-tui):focus, .tui .btn-outline-info:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
-.tui .btn-outline-info.disabled, .tui .btn-outline-info:disabled {
+.tui .btn-outline-info:not(.not-tui).disabled, .tui .btn-outline-info:not(.not-tui):disabled {
   color: #17a2b8;
   background-color: transparent;
 }
-.tui .btn-outline-info:not(:disabled):not(.disabled):active, .tui .btn-outline-info:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-info.popout-toggle {
+.tui .btn-outline-info:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-outline-info:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-outline-info:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
 }
-.tui .btn-outline-info.btn-gradient {
+.tui .btn-outline-info:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1bc0da), to(#17a2b8));
   background-image: -webkit-linear-gradient(top, #1bc0da 0%, #17a2b8 100%);
   background-image:      -o-linear-gradient(top, #1bc0da 0%, #17a2b8 100%);
   background-image:         linear-gradient(to bottom, #1bc0da 0%, #17a2b8 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-info.btn-gradient:hover {
+.tui .btn-outline-info:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1bc0da), to(#17a2b8));
   background-image: -webkit-linear-gradient(top, #1bc0da 0%, #17a2b8 100%);
   background-image:      -o-linear-gradient(top, #1bc0da 0%, #17a2b8 100%);
   background-image:         linear-gradient(to bottom, #1bc0da 0%, #17a2b8 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-info.btn-shadow {
+.tui .btn-outline-info:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-outline-info.btn-shadow:focus, .tui .btn-outline-info.btn-shadow.focus {
+.tui .btn-outline-info:not(.not-tui).btn-shadow:focus, .tui .btn-outline-info:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
-.tui .btn-outline-info.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-info.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-info.btn-shadow.popout-toggle:focus {
+.tui .btn-outline-info:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-info:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-info:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(23, 162, 184, .5);
 }
@@ -1465,53 +1465,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
 
-.tui .btn-outline-warning {
+.tui .btn-outline-warning:not(.not-tui) {
   color: #ffc107;
   background-color: transparent;
   background-image: none;
   border-color: #ffc107;
 }
-.tui .btn-outline-warning:hover {
+.tui .btn-outline-warning:not(.not-tui):hover {
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
-.tui .btn-outline-warning:focus, .tui .btn-outline-warning.focus {
+.tui .btn-outline-warning:not(.not-tui):focus, .tui .btn-outline-warning:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
-.tui .btn-outline-warning.disabled, .tui .btn-outline-warning:disabled {
+.tui .btn-outline-warning:not(.not-tui).disabled, .tui .btn-outline-warning:not(.not-tui):disabled {
   color: #ffc107;
   background-color: transparent;
 }
-.tui .btn-outline-warning:not(:disabled):not(.disabled):active, .tui .btn-outline-warning:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-warning.popout-toggle {
+.tui .btn-outline-warning:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-outline-warning:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-outline-warning:not(.not-tui).popout-toggle {
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
-.tui .btn-outline-warning.btn-gradient {
+.tui .btn-outline-warning:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcb2d), to(#ffc107));
   background-image: -webkit-linear-gradient(top, #ffcb2d 0%, #ffc107 100%);
   background-image:      -o-linear-gradient(top, #ffcb2d 0%, #ffc107 100%);
   background-image:         linear-gradient(to bottom, #ffcb2d 0%, #ffc107 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-warning.btn-gradient:hover {
+.tui .btn-outline-warning:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcb2d), to(#ffc107));
   background-image: -webkit-linear-gradient(top, #ffcb2d 0%, #ffc107 100%);
   background-image:      -o-linear-gradient(top, #ffcb2d 0%, #ffc107 100%);
   background-image:         linear-gradient(to bottom, #ffcb2d 0%, #ffc107 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-warning.btn-shadow {
+.tui .btn-outline-warning:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-outline-warning.btn-shadow:focus, .tui .btn-outline-warning.btn-shadow.focus {
+.tui .btn-outline-warning:not(.not-tui).btn-shadow:focus, .tui .btn-outline-warning:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
-.tui .btn-outline-warning.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-warning.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-warning.btn-shadow.popout-toggle:focus {
+.tui .btn-outline-warning:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-warning:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-warning:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(255, 193, 7, .5);
 }
@@ -1567,53 +1567,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
 
-.tui .btn-outline-danger {
+.tui .btn-outline-danger:not(.not-tui) {
   color: #dc3545;
   background-color: transparent;
   background-image: none;
   border-color: #dc3545;
 }
-.tui .btn-outline-danger:hover {
+.tui .btn-outline-danger:not(.not-tui):hover {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
-.tui .btn-outline-danger:focus, .tui .btn-outline-danger.focus {
+.tui .btn-outline-danger:not(.not-tui):focus, .tui .btn-outline-danger:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
-.tui .btn-outline-danger.disabled, .tui .btn-outline-danger:disabled {
+.tui .btn-outline-danger:not(.not-tui).disabled, .tui .btn-outline-danger:not(.not-tui):disabled {
   color: #dc3545;
   background-color: transparent;
 }
-.tui .btn-outline-danger:not(:disabled):not(.disabled):active, .tui .btn-outline-danger:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-danger.popout-toggle {
+.tui .btn-outline-danger:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-outline-danger:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-outline-danger:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
-.tui .btn-outline-danger.btn-gradient {
+.tui .btn-outline-danger:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e25663), to(#dc3545));
   background-image: -webkit-linear-gradient(top, #e25663 0%, #dc3545 100%);
   background-image:      -o-linear-gradient(top, #e25663 0%, #dc3545 100%);
   background-image:         linear-gradient(to bottom, #e25663 0%, #dc3545 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-danger.btn-gradient:hover {
+.tui .btn-outline-danger:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e25663), to(#dc3545));
   background-image: -webkit-linear-gradient(top, #e25663 0%, #dc3545 100%);
   background-image:      -o-linear-gradient(top, #e25663 0%, #dc3545 100%);
   background-image:         linear-gradient(to bottom, #e25663 0%, #dc3545 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-danger.btn-shadow {
+.tui .btn-outline-danger:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-outline-danger.btn-shadow:focus, .tui .btn-outline-danger.btn-shadow.focus {
+.tui .btn-outline-danger:not(.not-tui).btn-shadow:focus, .tui .btn-outline-danger:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
-.tui .btn-outline-danger.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-danger.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-danger.btn-shadow.popout-toggle:focus {
+.tui .btn-outline-danger:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-danger:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-danger:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(220, 53, 69, .5);
 }
@@ -1669,53 +1669,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
 
-.tui .btn-outline-light {
+.tui .btn-outline-light:not(.not-tui) {
   color: #f8f9fa;
   background-color: transparent;
   background-image: none;
   border-color: #f8f9fa;
 }
-.tui .btn-outline-light:hover {
+.tui .btn-outline-light:not(.not-tui):hover {
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
-.tui .btn-outline-light:focus, .tui .btn-outline-light.focus {
+.tui .btn-outline-light:not(.not-tui):focus, .tui .btn-outline-light:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
-.tui .btn-outline-light.disabled, .tui .btn-outline-light:disabled {
+.tui .btn-outline-light:not(.not-tui).disabled, .tui .btn-outline-light:not(.not-tui):disabled {
   color: #f8f9fa;
   background-color: transparent;
 }
-.tui .btn-outline-light:not(:disabled):not(.disabled):active, .tui .btn-outline-light:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-light.popout-toggle {
+.tui .btn-outline-light:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-outline-light:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-outline-light:not(.not-tui).popout-toggle {
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
-.tui .btn-outline-light.btn-gradient {
+.tui .btn-outline-light:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f8f9fa));
   background-image: -webkit-linear-gradient(top, white 0%, #f8f9fa 100%);
   background-image:      -o-linear-gradient(top, white 0%, #f8f9fa 100%);
   background-image:         linear-gradient(to bottom, white 0%, #f8f9fa 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-light.btn-gradient:hover {
+.tui .btn-outline-light:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f8f9fa));
   background-image: -webkit-linear-gradient(top, white 0%, #f8f9fa 100%);
   background-image:      -o-linear-gradient(top, white 0%, #f8f9fa 100%);
   background-image:         linear-gradient(to bottom, white 0%, #f8f9fa 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-light.btn-shadow {
+.tui .btn-outline-light:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-outline-light.btn-shadow:focus, .tui .btn-outline-light.btn-shadow.focus {
+.tui .btn-outline-light:not(.not-tui).btn-shadow:focus, .tui .btn-outline-light:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
-.tui .btn-outline-light.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-light.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-light.btn-shadow.popout-toggle:focus {
+.tui .btn-outline-light:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-light:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-light:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(248, 249, 250, .5);
 }
@@ -1771,53 +1771,53 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
 
-.tui .btn-outline-dark {
+.tui .btn-outline-dark:not(.not-tui) {
   color: #343a40;
   background-color: transparent;
   background-image: none;
   border-color: #343a40;
 }
-.tui .btn-outline-dark:hover {
+.tui .btn-outline-dark:not(.not-tui):hover {
   color: #fff;
   background-color: #343a40;
   border-color: #343a40;
 }
-.tui .btn-outline-dark:focus, .tui .btn-outline-dark.focus {
+.tui .btn-outline-dark:not(.not-tui):focus, .tui .btn-outline-dark:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
-.tui .btn-outline-dark.disabled, .tui .btn-outline-dark:disabled {
+.tui .btn-outline-dark:not(.not-tui).disabled, .tui .btn-outline-dark:not(.not-tui):disabled {
   color: #343a40;
   background-color: transparent;
 }
-.tui .btn-outline-dark:not(:disabled):not(.disabled):active, .tui .btn-outline-dark:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-dark.popout-toggle {
+.tui .btn-outline-dark:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-outline-dark:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-outline-dark:not(.not-tui).popout-toggle {
   color: #fff;
   background-color: #343a40;
   border-color: #343a40;
 }
-.tui .btn-outline-dark.btn-gradient {
+.tui .btn-outline-dark:not(.not-tui).btn-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#454d55), to(#343a40));
   background-image: -webkit-linear-gradient(top, #454d55 0%, #343a40 100%);
   background-image:      -o-linear-gradient(top, #454d55 0%, #343a40 100%);
   background-image:         linear-gradient(to bottom, #454d55 0%, #343a40 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-dark.btn-gradient:hover {
+.tui .btn-outline-dark:not(.not-tui).btn-gradient:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#454d55), to(#343a40));
   background-image: -webkit-linear-gradient(top, #454d55 0%, #343a40 100%);
   background-image:      -o-linear-gradient(top, #454d55 0%, #343a40 100%);
   background-image:         linear-gradient(to bottom, #454d55 0%, #343a40 100%);
   background-repeat: repeat-x;
 }
-.tui .btn-outline-dark.btn-shadow {
+.tui .btn-outline-dark:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-outline-dark.btn-shadow:focus, .tui .btn-outline-dark.btn-shadow.focus {
+.tui .btn-outline-dark:not(.not-tui).btn-shadow:focus, .tui .btn-outline-dark:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
-.tui .btn-outline-dark.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-dark.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-dark.btn-shadow.popout-toggle:focus {
+.tui .btn-outline-dark:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-dark:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-dark:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(52, 58, 64, .5);
 }
@@ -1859,39 +1859,39 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
 
-.tui .btn-outline-default {
+.tui .btn-outline-default:not(.not-tui) {
   color: #bbb;
   background-color: transparent;
   background-image: none;
   border-color: #bbb;
 }
-.tui .btn-outline-default:hover {
+.tui .btn-outline-default:not(.not-tui):hover {
   color: #212529;
   background-color: #bbb;
   border-color: #bbb;
 }
-.tui .btn-outline-default:focus, .tui .btn-outline-default.focus {
+.tui .btn-outline-default:not(.not-tui):focus, .tui .btn-outline-default:not(.not-tui).focus {
   -webkit-box-shadow: 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
-.tui .btn-outline-default.disabled, .tui .btn-outline-default:disabled {
+.tui .btn-outline-default:not(.not-tui).disabled, .tui .btn-outline-default:not(.not-tui):disabled {
   color: #bbb;
   background-color: transparent;
 }
-.tui .btn-outline-default:not(:disabled):not(.disabled):active, .tui .btn-outline-default:not(:disabled):not(.disabled).active, .show > .tui .btn-outline-default.popout-toggle {
+.tui .btn-outline-default:not(.not-tui):not(:disabled):not(.disabled):active, .tui .btn-outline-default:not(.not-tui):not(:disabled):not(.disabled).active, .show > .tui .btn-outline-default:not(.not-tui).popout-toggle {
   color: #212529;
   background-color: #bbb;
   border-color: #bbb;
 }
-.tui .btn-outline-default.btn-shadow {
+.tui .btn-outline-default:not(.not-tui).btn-shadow {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
 }
-.tui .btn-outline-default.btn-shadow:focus, .tui .btn-outline-default.btn-shadow.focus {
+.tui .btn-outline-default:not(.not-tui).btn-shadow:focus, .tui .btn-outline-default:not(.not-tui).btn-shadow.focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
-.tui .btn-outline-default.btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-default.btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-default.btn-shadow.popout-toggle:focus {
+.tui .btn-outline-default:not(.not-tui).btn-shadow:not(:disabled):not(.disabled):active:focus, .tui .btn-outline-default:not(.not-tui).btn-shadow:not(:disabled):not(.disabled).active:focus, .show > .tui .btn-outline-default:not(.not-tui).btn-shadow.popout-toggle:focus {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125), 0 0 0 .2rem rgba(187, 187, 187, .5);
 }
@@ -1900,7 +1900,7 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   border-radius: .25rem;
 }
 
-.tui .btn-rounded {
+.tui .btn-rounded:not(.not-tui) {
   border-radius: .25rem;
 }
 
@@ -1925,24 +1925,24 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   color: #6c757d;
 }
 
-.tui .btn-link {
+.tui .btn-link:not(.not-tui) {
   font-weight: 400;
   color: #007bff;
   background-color: transparent;
 }
-.tui .btn-link:hover {
+.tui .btn-link:not(.not-tui):hover {
   color: #0056b3;
   text-decoration: underline;
   background-color: transparent;
   border-color: transparent;
 }
-.tui .btn-link:focus, .tui .btn-link.focus {
+.tui .btn-link:not(.not-tui):focus, .tui .btn-link:not(.not-tui).focus {
   text-decoration: underline;
   border-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.tui .btn-link:disabled, .tui .btn-link.disabled {
+.tui .btn-link:not(.not-tui):disabled, .tui .btn-link:not(.not-tui).disabled {
   color: #6c757d;
 }
 
@@ -1956,13 +1956,13 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   border-radius: .3rem;
 }
 
-.tui .btn-lg {
+.tui .btn-lg:not(.not-tui) {
   padding: .5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0;
 }
-.tui .btn-lg.btn-rounded {
+.tui .btn-lg:not(.not-tui).btn-rounded {
   border-radius: .3rem;
 }
 
@@ -1976,13 +1976,13 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   border-radius: .2rem;
 }
 
-.tui .btn-sm {
+.tui .btn-sm:not(.not-tui) {
   padding: .25rem .5rem;
   font-size: .875rem;
   line-height: 1.5;
   border-radius: 0;
 }
-.tui .btn-sm.btn-rounded {
+.tui .btn-sm:not(.not-tui).btn-rounded {
   border-radius: .2rem;
 }
 
@@ -1994,11 +1994,11 @@ a.btn.disabled.tui, fieldset:disabled a.btn.tui {
   margin-top: .5rem;
 }
 
-.tui .btn-block {
+.tui .btn-block:not(.not-tui) {
   display: block;
   width: 100%;
 }
-.tui .btn-block + .btn-block {
+.tui .btn-block:not(.not-tui) + .btn-block {
   margin-top: .5rem;
 }
 

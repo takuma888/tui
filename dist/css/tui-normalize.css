@@ -9,12 +9,12 @@
           box-sizing: border-box;
 }
 
-.tui * {
+.tui *:not(.not-tui) {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-.tui *::before, .tui *::after {
+.tui *:not(.not-tui)::before, .tui *:not(.not-tui)::after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -49,7 +49,7 @@ datalist.tui {
   display: none;
 }
 
-.tui datalist {
+.tui datalist:not(.not-tui) {
   display: none;
 }
 
@@ -57,7 +57,7 @@ table.tui {
   display: table;
 }
 
-.tui table {
+.tui table:not(.not-tui) {
   display: table;
 }
 
@@ -69,7 +69,7 @@ hr.tui {
   overflow: visible;
 }
 
-.tui hr {
+.tui hr:not(.not-tui) {
   height: 0;
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
@@ -81,7 +81,7 @@ pre.tui {
   font-family: monospace monospace;
 }
 
-.tui pre {
+.tui pre:not(.not-tui) {
   font-family: monospace monospace;
 }
 
@@ -89,7 +89,7 @@ a.tui {
   background-color: transparent;
 }
 
-.tui a {
+.tui a:not(.not-tui) {
   background-color: transparent;
 }
 
@@ -100,7 +100,7 @@ abbr[title].tui {
   border-bottom: none;
 }
 
-.tui abbr[title] {
+.tui abbr[title]:not(.not-tui) {
   text-decoration: underline;
   text-decoration: underline dotted;
   cursor: help;
@@ -111,7 +111,7 @@ b.tui, strong.tui {
   font-weight: bolder;
 }
 
-.tui b, .tui strong {
+.tui b, .tui strong:not(.not-tui) {
   font-weight: bolder;
 }
 
@@ -120,7 +120,7 @@ code.tui, kbd.tui, samp.tui {
   font-size: inherit;
 }
 
-.tui code, .tui kbd, .tui samp {
+.tui code, .tui kbd, .tui samp:not(.not-tui) {
   font-family: monospace, monospace;
   font-size: inherit;
 }
@@ -129,7 +129,7 @@ small.tui {
   font-size: 80%;
 }
 
-.tui small {
+.tui small:not(.not-tui) {
   font-size: 80%;
 }
 
@@ -140,7 +140,7 @@ sub.tui, sup.tui {
   vertical-align: baseline;
 }
 
-.tui sub, .tui sup {
+.tui sub, .tui sup:not(.not-tui) {
   position: relative;
   font-size: 75%;
   line-height: 0;
@@ -151,7 +151,7 @@ sub.tui {
   bottom: -.25em;
 }
 
-.tui sub {
+.tui sub:not(.not-tui) {
   bottom: -.25em;
 }
 
@@ -159,7 +159,7 @@ sup.tui {
   top: -.5em;
 }
 
-.tui sup {
+.tui sup:not(.not-tui) {
   top: -.5em;
 }
 
@@ -167,7 +167,7 @@ img.tui {
   border-style: none;
 }
 
-.tui img {
+.tui img:not(.not-tui) {
   border-style: none;
 }
 
@@ -178,7 +178,7 @@ button.tui, input.tui, optgroup.tui, select.tui, textarea.tui {
   line-height: 1.15;
 }
 
-.tui button, .tui input, .tui optgroup, .tui select, .tui textarea {
+.tui button, .tui input, .tui optgroup, .tui select, .tui textarea:not(.not-tui) {
   margin: 0;
   font-family: inherit;
   font-size: 1rem;
@@ -189,7 +189,7 @@ button.tui, input.tui {
   overflow: visible;
 }
 
-.tui button, .tui input {
+.tui button, .tui input:not(.not-tui) {
   overflow: visible;
 }
 
@@ -197,7 +197,7 @@ button.tui, select.tui {
   text-transform: none;
 }
 
-.tui button, .tui select {
+.tui button, .tui select:not(.not-tui) {
   text-transform: none;
 }
 
@@ -205,7 +205,7 @@ button.tui, [type="button"].tui, [type="reset"].tui, [type="submit"].tui {
   -webkit-appearance: button;
 }
 
-.tui button, .tui [type="button"], .tui [type="reset"], .tui [type="submit"] {
+.tui button, .tui [type="button"], .tui [type="reset"], .tui [type="submit"]:not(.not-tui) {
   -webkit-appearance: button;
 }
 
@@ -213,7 +213,7 @@ button:-moz-focusring.tui, [type="button"]:-moz-focusring.tui, [type="reset"]:-m
   outline: 1px dotted ButtonText;
 }
 
-.tui button:-moz-focusring, .tui [type="button"]:-moz-focusring, .tui [type="reset"]:-moz-focusring, .tui [type="submit"]:-moz-focusring {
+.tui button:-moz-focusring, .tui [type="button"]:-moz-focusring, .tui [type="reset"]:-moz-focusring, .tui [type="submit"]:-moz-focusring:not(.not-tui) {
   outline: 1px dotted ButtonText;
 }
 
@@ -221,7 +221,7 @@ fieldset.tui {
   padding: .35rem .75rem .625rem;
 }
 
-.tui fieldset {
+.tui fieldset:not(.not-tui) {
   padding: .35rem .75rem .625rem;
 }
 
@@ -236,7 +236,7 @@ legend.tui {
   white-space: normal;
 }
 
-.tui legend {
+.tui legend:not(.not-tui) {
   display: table;
   max-width: 100%;
   -webkit-box-sizing: border-box;
@@ -251,7 +251,7 @@ progress.tui {
   vertical-align: baseline;
 }
 
-.tui progress {
+.tui progress:not(.not-tui) {
   vertical-align: baseline;
 }
 
@@ -259,7 +259,7 @@ textarea.tui {
   overflow: auto;
 }
 
-.tui textarea {
+.tui textarea:not(.not-tui) {
   overflow: auto;
 }
 
@@ -270,7 +270,7 @@ textarea.tui {
   padding: 0;
 }
 
-.tui [type="checkbox"], .tui [type="radio"] {
+.tui [type="checkbox"], .tui [type="radio"]:not(.not-tui) {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -281,7 +281,7 @@ textarea.tui {
   height: auto;
 }
 
-.tui [type="number"]::-webkit-inner-spin-button, .tui [type="number"]::-webkit-outer-spin-button {
+.tui [type="number"]::-webkit-inner-spin-button, .tui [type="number"]::-webkit-outer-spin-button:not(.not-tui) {
   height: auto;
 }
 
@@ -290,7 +290,7 @@ textarea.tui {
   outline-offset: -2px;
 }
 
-.tui [type="search"] {
+.tui [type="search"]:not(.not-tui) {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -299,7 +299,7 @@ textarea.tui {
   -webkit-appearance: none;
 }
 
-.tui [type="search"]::-webkit-search-decoration {
+.tui [type="search"]::-webkit-search-decoration:not(.not-tui) {
   -webkit-appearance: none;
 }
 
@@ -308,7 +308,7 @@ textarea.tui {
   font: inherit;
 }
 
-.tui ::-webkit-file-upload-button {
+.tui ::-webkit-file-upload-button:not(.not-tui) {
   -webkit-appearance: button;
   font: inherit;
 }
@@ -317,7 +317,7 @@ template.tui, [hidden].tui {
   display: none;
 }
 
-.tui template, .tui [hidden] {
+.tui template, .tui [hidden]:not(.not-tui) {
   display: none;
 }
 
@@ -325,7 +325,7 @@ details.tui {
   display: block;
 }
 
-.tui details {
+.tui details:not(.not-tui) {
   display: block;
 }
 
@@ -333,35 +333,34 @@ summary.tui {
   display: list-item;
 }
 
-.tui summary {
+.tui summary:not(.not-tui) {
   display: list-item;
 }
 
 body.tui {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
   color: #212529;
   text-align: left;
 }
 
-.tui body {
+.tui body:not(.not-tui) {
   margin: 0;
+  color: #212529;
+  text-align: left;
+}
+
+.tui {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
-  text-align: left;
 }
 
 [tabindex="-1"]:focus.tui {
   outline: 0 !important;
 }
 
-.tui [tabindex="-1"]:focus {
+.tui [tabindex="-1"]:focus:not(.not-tui) {
   outline: 0 !important;
 }
 
@@ -370,7 +369,7 @@ h1.tui, h2.tui, h3.tui, h4.tui, h5.tui, h6.tui {
   margin-bottom: .5rem;
 }
 
-.tui h1, .tui h2, .tui h3, .tui h4, .tui h5, .tui h6 {
+.tui h1, .tui h2, .tui h3, .tui h4, .tui h5, .tui h6:not(.not-tui) {
   margin-top: 0;
   margin-bottom: .5rem;
 }
@@ -380,7 +379,7 @@ p.tui {
   margin-bottom: 1rem;
 }
 
-.tui p {
+.tui p:not(.not-tui) {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -392,7 +391,7 @@ abbr[title].tui, abbr[data-original-title].tui {
   border-bottom: 0;
 }
 
-.tui abbr[title], .tui abbr[data-original-title] {
+.tui abbr[title], .tui abbr[data-original-title]:not(.not-tui) {
   text-decoration: underline;
   text-decoration: underline dotted;
   cursor: help;
@@ -405,7 +404,7 @@ address.tui {
   line-height: inherit;
 }
 
-.tui address {
+.tui address:not(.not-tui) {
   margin-bottom: 1rem;
   font-style: normal;
   line-height: inherit;
@@ -416,7 +415,7 @@ ol.tui, ul.tui, dl.tui {
   margin-bottom: 1rem;
 }
 
-.tui ol, .tui ul, .tui dl {
+.tui ol, .tui ul, .tui dl:not(.not-tui) {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -425,7 +424,7 @@ ol.tui ol, ol.tui ul, ul.tui ol, ul.tui ul {
   margin-bottom: 0;
 }
 
-.tui ol ol, .tui ol ul, .tui ul ol, .tui ul ul {
+.tui ol ol, .tui ol ul, .tui ul:not(.not-tui) ol, .tui ul:not(.not-tui) ul {
   margin-bottom: 0;
 }
 
@@ -433,7 +432,7 @@ dt.tui {
   font-weight: bold;
 }
 
-.tui dt {
+.tui dt:not(.not-tui) {
   font-weight: bold;
 }
 
@@ -442,7 +441,7 @@ dd.tui {
   margin-left: 0;
 }
 
-.tui dd {
+.tui dd:not(.not-tui) {
   margin-bottom: .5rem;
   margin-left: 0;
 }
@@ -451,7 +450,7 @@ blockquote.tui {
   margin: 0 0 1rem;
 }
 
-.tui blockquote {
+.tui blockquote:not(.not-tui) {
   margin: 0 0 1rem;
 }
 
@@ -459,7 +458,7 @@ dfn.tui {
   font-style: italic;
 }
 
-.tui dfn {
+.tui dfn:not(.not-tui) {
   font-style: italic;
 }
 
@@ -475,14 +474,14 @@ a.tui:hover {
   text-decoration: underline;
 }
 
-.tui a {
+.tui a:not(.not-tui) {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
 
   -webkit-text-decoration-skip: objects;
 }
-.tui a:hover {
+.tui a:not(.not-tui):hover {
   color: #0056b3;
   text-decoration: underline;
 }
@@ -498,14 +497,14 @@ a:not([href]):not([tabindex]).tui:focus {
   outline: 0;
 }
 
-.tui a:not([href]):not([tabindex]) {
+.tui a:not([href]):not([tabindex]):not(.not-tui) {
   text-decoration: none;
 }
-.tui a:not([href]):not([tabindex]):hover, .tui a:not([href]):not([tabindex]):focus {
+.tui a:not([href]):not([tabindex]):not(.not-tui):hover, .tui a:not([href]):not([tabindex]):not(.not-tui):focus {
   color: inherit;
   text-decoration: none;
 }
-.tui a:not([href]):not([tabindex]):focus {
+.tui a:not([href]):not([tabindex]):not(.not-tui):focus {
   outline: 0;
 }
 
@@ -514,7 +513,7 @@ pre.tui, code.tui, kbd.tui, samp.tui {
   font-size: 1em;
 }
 
-.tui pre, .tui code, .tui kbd, .tui samp {
+.tui pre, .tui code, .tui kbd, .tui samp:not(.not-tui) {
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -526,7 +525,7 @@ pre.tui {
   -ms-overflow-style: scrollbar;
 }
 
-.tui pre {
+.tui pre:not(.not-tui) {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
@@ -537,7 +536,7 @@ figure.tui {
   margin: 0 0 1rem;
 }
 
-.tui figure {
+.tui figure:not(.not-tui) {
   margin: 0 0 1rem;
 }
 
@@ -546,7 +545,7 @@ img.tui {
   border-style: none;
 }
 
-.tui img {
+.tui img:not(.not-tui) {
   vertical-align: middle;
   border-style: none;
 }
@@ -555,7 +554,7 @@ svg:not(:root).tui {
   overflow: hidden;
 }
 
-.tui svg:not(:root) {
+.tui svg:not(:root):not(.not-tui) {
   overflow: hidden;
 }
 
@@ -563,7 +562,7 @@ table.tui {
   border-collapse: collapse;
 }
 
-.tui table {
+.tui table:not(.not-tui) {
   border-collapse: collapse;
 }
 
@@ -575,7 +574,7 @@ caption.tui {
   caption-side: top;
 }
 
-.tui caption {
+.tui caption:not(.not-tui) {
   padding-top: .75rem;
   padding-bottom: .75rem;
   color: #6c757d;
@@ -587,7 +586,7 @@ th.tui {
   text-align: inherit;
 }
 
-.tui th {
+.tui th:not(.not-tui) {
   text-align: inherit;
 }
 
@@ -596,7 +595,7 @@ label.tui {
   margin-bottom: .5rem;
 }
 
-.tui label {
+.tui label:not(.not-tui) {
   display: inline-block;
   margin-bottom: .5rem;
 }
@@ -605,7 +604,7 @@ button.tui {
   border-radius: 0;
 }
 
-.tui button {
+.tui button:not(.not-tui) {
   border-radius: 0;
 }
 
@@ -614,7 +613,7 @@ button:focus.tui {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.tui button:focus {
+.tui button:focus:not(.not-tui) {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -624,7 +623,7 @@ button::-moz-focus-inner.tui, [type="button"]::-moz-focus-inner.tui, [type="rese
   border-style: none;
 }
 
-.tui button::-moz-focus-inner, .tui [type="button"]::-moz-focus-inner, .tui [type="reset"]::-moz-focus-inner, .tui [type="submit"]::-moz-focus-inner {
+.tui button::-moz-focus-inner, .tui [type="button"]::-moz-focus-inner, .tui [type="reset"]::-moz-focus-inner, .tui [type="submit"]::-moz-focus-inner:not(.not-tui) {
   padding: 0;
   border-style: none;
 }
@@ -633,7 +632,7 @@ input[type="date"].tui, input[type="time"].tui, input[type="datetime-local"].tui
   -webkit-appearance: listbox;
 }
 
-.tui input[type="date"], .tui input[type="time"], .tui input[type="datetime-local"], .tui input[type="month"] {
+.tui input[type="date"], .tui input[type="time"], .tui input[type="datetime-local"], .tui input[type="month"]:not(.not-tui) {
   -webkit-appearance: listbox;
 }
 
@@ -643,7 +642,7 @@ textarea.tui {
   resize: vertical;
 }
 
-.tui textarea {
+.tui textarea:not(.not-tui) {
   min-height: 2rem;
   overflow: auto;
   resize: vertical;
@@ -656,7 +655,7 @@ fieldset.tui {
   border: none;
 }
 
-.tui fieldset {
+.tui fieldset:not(.not-tui) {
   min-width: 0;
   padding: .5rem;
   margin: 0;
@@ -676,7 +675,7 @@ legend.tui {
   border: none;
 }
 
-.tui legend {
+.tui legend:not(.not-tui) {
   display: block;
   max-width: 100%;
   padding-right: .5rem;
@@ -694,7 +693,7 @@ legend.tui {
   outline-offset: -2px;
 }
 
-.tui [type="search"] {
+.tui [type="search"]:not(.not-tui) {
   -webkit-appearance: none;
   outline-offset: -2px;
 }
@@ -703,7 +702,7 @@ legend.tui {
   -webkit-appearance: none;
 }
 
-.tui [type="search"]::-webkit-search-cancel-button, .tui [type="search"]::-webkit-search-decoration {
+.tui [type="search"]::-webkit-search-cancel-button, .tui [type="search"]::-webkit-search-decoration:not(.not-tui) {
   -webkit-appearance: none;
 }
 
@@ -711,7 +710,7 @@ output.tui {
   display: inline-block;
 }
 
-.tui output {
+.tui output:not(.not-tui) {
   display: inline-block;
 }
 
@@ -720,7 +719,7 @@ summary.tui {
   cursor: pointer;
 }
 
-.tui summary {
+.tui summary:not(.not-tui) {
   display: list-item;
   cursor: pointer;
 }
@@ -729,7 +728,7 @@ summary.tui {
   display: none !important;
 }
 
-.tui [hidden] {
+.tui [hidden]:not(.not-tui) {
   display: none !important;
 }
 
@@ -737,7 +736,7 @@ p[lang^="zh"].tui {
   text-indent: 2rem;
 }
 
-.tui p[lang^="zh"] {
+.tui p[lang^="zh"]:not(.not-tui) {
   text-indent: 2rem;
 }
 

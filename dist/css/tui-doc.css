@@ -46,50 +46,50 @@
   background-color: rgba(86, 61, 124, .2);
 }
 
-.tui .td-example {
+.tui .td-example:not(.not-tui) {
   position: relative;
   padding: 1rem;
   margin-top: 1rem;
   border: .2rem solid #f7f7f9;
 }
-.tui .td-example .td-example-container {
+.tui .td-example:not(.not-tui) .td-example-container {
   min-width: 16rem;
   max-width: 25rem;
   margin-right: auto;
   margin-left: auto;
 }
-.tui .td-example .td-example-container .td-example-container-header {
+.tui .td-example:not(.not-tui) .td-example-container .td-example-container-header {
   height: 3rem;
   margin-bottom: .5rem;
   background-color: silver;
   border-radius: .25rem;
 }
-.tui .td-example .td-example-container .td-example-container-sidebar {
+.tui .td-example:not(.not-tui) .td-example-container .td-example-container-sidebar {
   float: right;
   width: 4rem;
   height: 8rem;
   background-color: #80bdff;
   border-radius: .25rem;
 }
-.tui .td-example .td-example-container .td-example-container-body {
+.tui .td-example:not(.not-tui) .td-example-container .td-example-container-body {
   height: 8rem;
   margin-right: 4.5rem;
   background-color: #957bbe;
   border-radius: .25rem;
 }
-.tui .td-example .td-example-container-fluid {
+.tui .td-example:not(.not-tui) .td-example-container-fluid {
   max-width: none;
 }
-.tui .td-example.show-grid .row:hover {
+.tui .td-example:not(.not-tui).show-grid .row:hover {
   outline: 2px dashed #007bff;
 }
-.tui .td-example.show-grid .col, .tui .td-example.show-grid [class^="col-"] {
+.tui .td-example:not(.not-tui).show-grid .col, .tui .td-example:not(.not-tui).show-grid [class^="col-"] {
   padding-top: .75rem;
   padding-bottom: .75rem;
   background-color: rgba(86, 61, 124, .15);
   border: 1px solid rgba(86, 61, 124, .2);
 }
-.tui .td-example.show-grid .col:hover, .tui .td-example.show-grid [class^="col-"]:hover {
+.tui .td-example:not(.not-tui).show-grid .col:hover, .tui .td-example:not(.not-tui).show-grid [class^="col-"]:hover {
   background-color: rgba(86, 61, 124, .2);
 }
 
@@ -98,7 +98,7 @@
   background-color: #f8f8f8;
 }
 
-.tui .td-code {
+.tui .td-code:not(.not-tui) {
   margin-bottom: 1rem;
   background-color: #f8f8f8;
 }
@@ -120,12 +120,12 @@ pre.highlight.tui::after {
   content: "代码";
 }
 
-.tui pre.highlight {
+.tui pre.highlight:not(.not-tui) {
   position: relative;
   padding: 1rem;
   margin-bottom: 0;
 }
-.tui pre.highlight::after {
+.tui pre.highlight:not(.not-tui)::after {
   position: absolute;
   top: 0;
   right: .5rem;

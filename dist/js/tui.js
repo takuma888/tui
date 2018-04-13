@@ -3143,7 +3143,7 @@ var Select3 = function ($$$1) {
   var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
   var Default = {
     placeholder: '',
-    search: true
+    search: false
   };
   var DefaultType = {
     placeholder: 'string',
@@ -3154,6 +3154,9 @@ var Select3 = function ($$$1) {
     // HIDDEN            : `hidden${EVENT_KEY}`,
     // SHOW              : `show${EVENT_KEY}`,
     CLICK_SHOW: "click.show" + EVENT_KEY,
+    CLICK_SELECT: "click.select" + EVENT_KEY,
+    CLICK_RESET: "click.reset" + EVENT_KEY,
+    CLICK_REMOVE: "click.remove" + EVENT_KEY,
     // SHOWN             : `shown${EVENT_KEY}`,
     // LOADED            : `loaded${EVENT_KEY}`,
     // FOCUSIN           : `focusin${EVENT_KEY}`,
@@ -3187,6 +3190,7 @@ var Select3 = function ($$$1) {
       this._element = element;
       this._isShown = false;
       this._allowClear = !!this._config.placeholder;
+      this._isMultiple = $$$1(element).prop('multiple');
     } // Public
 
 
@@ -3197,15 +3201,31 @@ var Select3 = function ($$$1) {
       var $element = $$$1(this._element);
       $element.addClass('d-none');
       var html = '';
-      html += '<div class="tui-select-container">';
-      html += '<a href="javascript:void(0);" class="tui-select-choice" tabindex="-1">';
-      html += '<span>&nbsp;</span>';
 
-      if (this._allowClear) {
-        html += '<abbr class="tui-select-search-choice-close" style="">×</abbr>';
+      if (this._isMultiple) {
+        html += '<div class="tui tui-select-container tui-select-container-multiple">';
+      } else {
+        html += '<div class="tui tui-select-container">';
       }
 
-      html += '</a>';
+      if (this._isMultiple) {
+        html += '<ul class="tui-select-choices list-unstyled d-flex mb-0">'; // html += '<li class="tui-select-search-choice"><div>aaaaaaaaaaa</div><a href="javascript:void(0);" class="tui-select-search-choice-close" tabindex="-1">×</a></li>';
+
+        html += '<li class="tui-select-search-field">';
+        html += '<input type="text" autocomplete="off">';
+        html += '</li>';
+        html += '</ul>';
+      } else {
+        html += '<a href="javascript:void(0);" class="tui-select-choice" tabindex="-1">';
+        html += '<span>&nbsp;</span>';
+
+        if (this._allowClear) {
+          html += '<abbr class="tui-select-search-choice-close" style="">×</abbr>';
+        }
+
+        html += '</a>';
+      }
+
       html += '</div>';
       $element.parent().prepend(html);
       var that = this;
@@ -3219,6 +3239,78 @@ var Select3 = function ($$$1) {
           that.hide();
         }
       });
+      var $options = $$$1('option:selected', this._element);
+
+      if (this._isMultiple) {
+        // 多选
+        if ($options.length > 0) {
+          $options.each(function (i, d) {
+            var $option = $$$1(d);
+            var text = $option.html();
+            var value = d.getAttribute('value');
+            var html = '<li class="tui-select-search-choice">' + '<div>' + text + '</div>' + '<a href="javascript:void(0);" data-value="' + value + '" class="tui-select-search-choice-close" tabindex="-1">×</a>' + '</li>';
+            $container.find('.tui-select-choices > .tui-select-search-field').before(html);
+          });
+        }
+
+        $container.on("" + Event.CLICK_REMOVE, '.tui-select-search-choice-close', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var $this = $$$1(this);
+          var value = $this.data('value');
+          $$$1(this).parent().remove();
+          $$$1('option:selected', that._element).each(function (i, d) {
+            var v = d.getAttribute('value');
+
+            if (v == value) {
+              $$$1(d).prop('selected', false);
+            }
+          });
+        });
+      } else {
+        // 单选
+        var _html = '&nbsp;';
+        var isShowPlaceholder = false;
+
+        if ($options.length > 0) {
+          var $option = $$$1($options[0]);
+          _html = $option.html();
+
+          if (_html.length === 0 && this._config.placeholder) {
+            _html = this._config.placeholder;
+            isShowPlaceholder = true;
+          }
+        } else if (!this._config.placeholder) {
+          _html = this._config.placeholder;
+          isShowPlaceholder = true;
+        }
+
+        if (isShowPlaceholder) {
+          $container.find('.tui-select-search-choice-close').removeClass('d-none').addClass('d-none');
+          $container.find('.tui-select-choice > span').removeClass('text-muted').addClass('text-muted');
+        }
+
+        $container.find('.tui-select-choice > span').html(_html);
+        $container.on("" + Event.CLICK_RESET, '.tui-select-search-choice-close', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $$$1('option:selected', that._element).each(function (i, d) {
+            if (i === 0 && that._config.placeholder) {
+              $$$1(d).prop('selected', true);
+            } else {
+              $$$1(d).prop('selected', false);
+            }
+          });
+          $$$1(this).removeClass('d-none').addClass('d-none');
+          var html = '&nbsp;';
+
+          if (that._config.placeholder) {
+            html = that._config.placeholder;
+          }
+
+          $container.find('.tui-select-choice > span').removeClass('text-muted').addClass('text-muted').html(html);
+        });
+      }
 
       this._drawBackdrop();
     };
@@ -3228,6 +3320,7 @@ var Select3 = function ($$$1) {
         return;
       }
 
+      var $options = $$$1('option', this._element);
       var that = this;
 
       var $backdrop = this._drawBackdrop();
@@ -3252,7 +3345,59 @@ var Select3 = function ($$$1) {
         'margin': 0,
         'margin-top': '1px'
       });
-      $$$1('.tui-select-search', $popout).find('.tui-input').focus();
+
+      if (!this._isMultiple) {
+        $$$1('.tui-select-search', $popout).find('.tui-input').focus();
+      } else {
+        $$$1('.tui-select-search-field', $container).find('input').focus();
+      } // 设置选项
+
+
+      $options.each(function (i, d) {
+        var $e = $$$1(d);
+        var text = $e.html();
+        var value = d.getAttribute('value');
+        var selected = $e.prop('selected');
+        var disabled = $e.prop('disabled');
+
+        if (that._config.placeholder && i === 0) {
+          disabled = true;
+          text = that._config.placeholder;
+          selected = false;
+        }
+
+        var html = '<li data-index="' + i + '" class="tui-select-item' + (disabled ? ' tui-select-item-disabled' : '') + (selected ? ' tui-select-item-selected' : '') + '">';
+        html += '<div class="tui-select-item-label">';
+        html += text;
+        html += '</div>';
+        html += '</li>';
+        $popout.find('.tui-select-result').append(html);
+      });
+      $popout.off("" + Event.CLICK_SELECT).on("" + Event.CLICK_SELECT, ".tui-select-item:not(.tui-select-item-disabled)", function () {
+        var $e = $$$1(this);
+        var index = $e.data('index');
+        var option = $$$1('option', that._element)[index];
+        var $option = $$$1(option);
+
+        if (!$option.prop('selected')) {
+          // 选择
+          $option.prop('selected', true);
+
+          if (!that._isMultiple) {
+            // 单选
+            $container.find('.tui-select-choice > span').removeClass('text-muted').html($option.html());
+            $container.find('.tui-select-search-choice-close').removeClass('d-none');
+            that.hide();
+          } else {
+            // 多选
+            var text = $option.html();
+            var value = option.getAttribute('value');
+            var html = '<li class="tui-select-search-choice">' + '<div>' + text + '</div>' + '<a href="javascript:void(0);" data-value="' + value + '" class="tui-select-search-choice-close" tabindex="-1">×</a>' + '</li>';
+            $container.find('.tui-select-search-field').before(html);
+            that.hide();
+          }
+        }
+      });
     };
 
     _proto.hide = function hide() {
@@ -3266,15 +3411,26 @@ var Select3 = function ($$$1) {
 
       this._isShown = false;
       $backdrop.toggleClass('d-none');
+      $backdrop.off("" + Event.CLICK_DISMISS);
       $popout.toggleClass('d-none');
 
       var $container = this._getContainer();
 
-      $container.toggleClass("" + ClassName.CONTAINER_ACTIVE);
+      $container.toggleClass("" + ClassName.CONTAINER_ACTIVE); // 清空选项和搜索
+
+      if (!this._isMultiple) {
+        $$$1('.tui-select-search', $popout).find('.tui-input').val('');
+      } else {
+        $$$1('.tui-select-search-field', $container).find('input').val('');
+      }
+
+      $popout.find('.tui-select-result').empty();
     };
 
     _proto.dispose = function dispose() {}; // Private
 
+
+    _proto._selectItem = function _selectItem() {};
 
     _proto._getContainer = function _getContainer() {
       var $element = $$$1(this._element);
@@ -3287,7 +3443,7 @@ var Select3 = function ($$$1) {
         html += '<div class="tui-select-search p-1">';
         html += '<input type="text" autocomplete="off" class="tui-input">';
         html += '</div>';
-        html += '<ul class="tui-select-result mb-0"></ul>';
+        html += '<ul class="tui-select-result list-unstyled mb-0"></ul>';
         html += '</div>';
         $$$1('body').append(html);
       }
@@ -3295,7 +3451,7 @@ var Select3 = function ($$$1) {
       var $popout = $$$1("." + ClassName.POPOUT, 'body');
       $popout.find('.tui-select-search').removeClass('d-none');
 
-      if (!this._config.search) {
+      if (!this._config.search || this._isMultiple) {
         $popout.find('.tui-select-search').addClass('d-none');
       }
 

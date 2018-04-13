@@ -194,12 +194,12 @@
 
 // grid
 
-@include tui-class('.form-row') {
+@include tui('.form-row') {
   @include make-row();
   margin-right: -5px;
   margin-left: -5px;
 }
-@include tui-class('.form-row') {
+@include tui('.form-row') {
   margin-right: -5px;
   margin-left: -5px;
   &:not(.flexible) {
@@ -208,7 +208,7 @@
   }
 }
 
-@include tui-class('.form-row') {
+@include tui('.form-row') {
   &.flexible {
     @include make-flex-row();
     // column

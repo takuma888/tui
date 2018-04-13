@@ -4,7 +4,7 @@
 @import "variables";
 @import "mixins";
 
-@include tui-class('.td-example') {
+@include tui('.td-example') {
   position: relative;
   padding: 1rem;
   margin-top: 1rem;
@@ -57,12 +57,12 @@
   }
 }
 
-@include tui-class('.td-code') {
+@include tui('.td-code') {
   background-color: #f8f8f8;
   margin-bottom: 1rem;
 }
 
-@include tui-class('pre.highlight') {
+@include tui('pre.highlight') {
   position: relative;
   margin-bottom: 0 ;
   padding: 1rem;

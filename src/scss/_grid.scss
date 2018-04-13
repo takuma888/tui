@@ -2,20 +2,20 @@
 
 
 // container
-@include tui-class('.container') {
+@include tui('.container') {
   @include make-container();
   @include make-container-max-widths();
 }
-@include tui-class('.container-fluid') {
+@include tui('.container-fluid') {
   @include make-container();
 }
 
 
 // row
-@include tui-class('.row') {
+@include tui('.row') {
   @include make-row();
 }
-@include tui-class('.row') {
+@include tui('.row') {
   &:not(.flexible) {
     @include clearfix2();
     @include make-columns();
@@ -23,7 +23,7 @@
 }
 
 // flex row
-@include tui-class('.row') {
+@include tui('.row') {
   &.flexible {
     @include make-flex-row();
     // column

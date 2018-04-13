@@ -58,6 +58,58 @@
   }
 }
 
+@include tui('.tui-select-container-multiple') {
+  background-image: none;
+  padding: 0;
+
+  ul.tui-select-choices {
+    > li {
+      padding: 1px;
+      &.tui-select-search-field {
+        padding-top: calc(#{$input-padding-y} + 1px);
+        padding-bottom: calc(#{$input-padding-y} + 1px);
+        input {
+          border: none;
+          display: block;
+          height: 100%;
+          width: 100%;
+          padding: 0;
+          padding-left: $input-padding-x;
+          font-size: $font-size-base;
+          line-height: $line-height-base;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      &.tui-select-search-choice {
+        position: relative;
+        padding: calc(#{$input-padding-y} - 2px);
+        padding-left: $input-padding-x / 2;
+        padding-right: $input-padding-x * 2;
+        background-color: #DAE4F6;
+        border: 1px solid #DAE4F6;
+        margin: 1px;
+
+        a.tui-select-search-choice-close {
+          display: block;
+          position: absolute;
+          right: 5px;
+          top: calc(#{$input-padding-y} - 2px);
+          color: #444;
+          font-weight: 700;
+          outline: none;
+
+          @include hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 @include tui('.tui-select-backdrop') {
   position: absolute;
   left: 0;
@@ -69,11 +121,34 @@
 }
 
 @include tui('.tui-select-popout') {
-  background: #fff;
-  color: #000;
-  border: 1px solid #aaa;
+  background: white;
+  color: black;
+  border: 1px solid #aaaaaa;
   position: absolute;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
   z-index: 9999;
   margin-top: 1px;
+
+  .tui-select-result {
+    .tui-select-item {
+      padding: $input-padding-y $input-padding-x;
+      cursor: pointer;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      @include hover {
+        background: #efefef;
+      }
+
+      &.tui-select-item-disabled {
+        @include hover {
+          background: transparent;
+        }
+        cursor: not-allowed;
+        color: $text-muted;
+      }
+      &.tui-select-item-selected {
+        background: #DFDFDF;
+      }
+    }
+  }
 }

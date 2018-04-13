@@ -12,7 +12,7 @@
   display: none;
 }
 
-.tui .badge {
+.tui .badge:not(.not-tui) {
   display: inline-block;
   padding: .25em .4em;
   font-size: 75%;
@@ -22,7 +22,7 @@
   white-space: nowrap;
   vertical-align: baseline;
 }
-.tui .badge:empty {
+.tui .badge:not(.not-tui):empty {
   display: none;
 }
 
@@ -31,7 +31,7 @@
   top: -1px;
 }
 
-.tui .btn .badge {
+.tui .btn:not(.not-tui) .badge {
   position: relative;
   top: -1px;
 }
@@ -40,7 +40,7 @@
   border-radius: .25rem;
 }
 
-.tui .badge-rounded {
+.tui .badge-rounded:not(.not-tui) {
   border-radius: .25rem;
 }
 
@@ -50,7 +50,7 @@
   border-radius: 10rem;
 }
 
-.tui .badge-pill {
+.tui .badge-pill:not(.not-tui) {
   padding-right: .6em;
   padding-left: .6em;
   border-radius: 10rem;
@@ -66,11 +66,11 @@
   background-color: #0062cc;
 }
 
-.tui .badge-primary {
+.tui .badge-primary:not(.not-tui) {
   color: #fff;
   background-color: #007bff;
 }
-.tui .badge-primary[href]:hover, .tui .badge-primary[href]:focus {
+.tui .badge-primary:not(.not-tui)[href]:hover, .tui .badge-primary:not(.not-tui)[href]:focus {
   color: #fff;
   text-decoration: none;
   background-color: #0062cc;
@@ -86,11 +86,11 @@
   background-color: #545b62;
 }
 
-.tui .badge-secondary {
+.tui .badge-secondary:not(.not-tui) {
   color: #fff;
   background-color: #6c757d;
 }
-.tui .badge-secondary[href]:hover, .tui .badge-secondary[href]:focus {
+.tui .badge-secondary:not(.not-tui)[href]:hover, .tui .badge-secondary:not(.not-tui)[href]:focus {
   color: #fff;
   text-decoration: none;
   background-color: #545b62;
@@ -106,11 +106,11 @@
   background-color: #1e7e34;
 }
 
-.tui .badge-success {
+.tui .badge-success:not(.not-tui) {
   color: #fff;
   background-color: #28a745;
 }
-.tui .badge-success[href]:hover, .tui .badge-success[href]:focus {
+.tui .badge-success:not(.not-tui)[href]:hover, .tui .badge-success:not(.not-tui)[href]:focus {
   color: #fff;
   text-decoration: none;
   background-color: #1e7e34;
@@ -126,11 +126,11 @@
   background-color: #117a8b;
 }
 
-.tui .badge-info {
+.tui .badge-info:not(.not-tui) {
   color: #fff;
   background-color: #17a2b8;
 }
-.tui .badge-info[href]:hover, .tui .badge-info[href]:focus {
+.tui .badge-info:not(.not-tui)[href]:hover, .tui .badge-info:not(.not-tui)[href]:focus {
   color: #fff;
   text-decoration: none;
   background-color: #117a8b;
@@ -146,11 +146,11 @@
   background-color: #d39e00;
 }
 
-.tui .badge-warning {
+.tui .badge-warning:not(.not-tui) {
   color: #212529;
   background-color: #ffc107;
 }
-.tui .badge-warning[href]:hover, .tui .badge-warning[href]:focus {
+.tui .badge-warning:not(.not-tui)[href]:hover, .tui .badge-warning:not(.not-tui)[href]:focus {
   color: #212529;
   text-decoration: none;
   background-color: #d39e00;
@@ -166,11 +166,11 @@
   background-color: #bd2130;
 }
 
-.tui .badge-danger {
+.tui .badge-danger:not(.not-tui) {
   color: #fff;
   background-color: #dc3545;
 }
-.tui .badge-danger[href]:hover, .tui .badge-danger[href]:focus {
+.tui .badge-danger:not(.not-tui)[href]:hover, .tui .badge-danger:not(.not-tui)[href]:focus {
   color: #fff;
   text-decoration: none;
   background-color: #bd2130;
@@ -186,11 +186,11 @@
   background-color: #dae0e5;
 }
 
-.tui .badge-light {
+.tui .badge-light:not(.not-tui) {
   color: #212529;
   background-color: #f8f9fa;
 }
-.tui .badge-light[href]:hover, .tui .badge-light[href]:focus {
+.tui .badge-light:not(.not-tui)[href]:hover, .tui .badge-light:not(.not-tui)[href]:focus {
   color: #212529;
   text-decoration: none;
   background-color: #dae0e5;
@@ -206,11 +206,11 @@
   background-color: #1d2124;
 }
 
-.tui .badge-dark {
+.tui .badge-dark:not(.not-tui) {
   color: #fff;
   background-color: #343a40;
 }
-.tui .badge-dark[href]:hover, .tui .badge-dark[href]:focus {
+.tui .badge-dark:not(.not-tui)[href]:hover, .tui .badge-dark:not(.not-tui)[href]:focus {
   color: #fff;
   text-decoration: none;
   background-color: #1d2124;

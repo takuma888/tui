@@ -13,7 +13,7 @@
       -ms-flex-direction: column;
 }
 
-.tui .list-group {
+.tui .list-group:not(.not-tui) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -43,17 +43,17 @@
   background-color: #e9ecef;
 }
 
-.tui .list-group-item-action {
+.tui .list-group-item-action:not(.not-tui) {
   width: 100%;
   color: #495057;
   text-align: inherit;
 }
-.tui .list-group-item-action:hover, .tui .list-group-item-action:focus {
+.tui .list-group-item-action:not(.not-tui):hover, .tui .list-group-item-action:not(.not-tui):focus {
   color: #495057;
   text-decoration: none;
   background-color: #f8f9fa;
 }
-.tui .list-group-item-action:active {
+.tui .list-group-item-action:not(.not-tui):active {
   color: #212529;
   background-color: #e9ecef;
 }
@@ -85,7 +85,7 @@
   border-color: #007bff;
 }
 
-.tui .list-group-item {
+.tui .list-group-item:not(.not-tui) {
   position: relative;
   display: block;
   padding: .75rem 1.25rem;
@@ -93,19 +93,19 @@
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, .125);
 }
-.tui .list-group-item:last-child {
+.tui .list-group-item:not(.not-tui):last-child {
   margin-bottom: 0;
 }
-.tui .list-group-item:hover, .tui .list-group-item:focus {
+.tui .list-group-item:not(.not-tui):hover, .tui .list-group-item:not(.not-tui):focus {
   z-index: 1;
   text-decoration: none;
 }
-.tui .list-group-item.disabled, .tui .list-group-item:disabled {
+.tui .list-group-item:not(.not-tui).disabled, .tui .list-group-item:not(.not-tui):disabled {
   color: #6c757d;
   cursor: not-allowed;
   background-color: #fff;
 }
-.tui .list-group-item.active {
+.tui .list-group-item:not(.not-tui).active {
   z-index: 2;
   color: #fff;
   background-color: #007bff;
@@ -121,11 +121,11 @@
   border-bottom-left-radius: .25rem;
 }
 
-.tui .list-group.list-group-rounded .list-group-item:first-child {
+.tui .list-group:not(.not-tui).list-group-rounded .list-group-item:first-child {
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
 }
-.tui .list-group.list-group-rounded .list-group-item:last-child {
+.tui .list-group:not(.not-tui).list-group-rounded .list-group-item:last-child {
   border-bottom-right-radius: .25rem;
   border-bottom-left-radius: .25rem;
 }
@@ -142,15 +142,15 @@
   border-bottom: 0;
 }
 
-.tui .list-group-flush .list-group-item {
+.tui .list-group-flush:not(.not-tui) .list-group-item {
   border-right: 0;
   border-left: 0;
   border-radius: 0;
 }
-.tui .list-group-flush:first-child .list-group-item:first-child {
+.tui .list-group-flush:not(.not-tui):first-child .list-group-item:first-child {
   border-top: 0;
 }
-.tui .list-group-flush:last-child .list-group-item:last-child {
+.tui .list-group-flush:not(.not-tui):last-child .list-group-item:last-child {
   border-bottom: 0;
 }
 
@@ -168,15 +168,15 @@
   border-color: #004085;
 }
 
-.tui .list-group-item-primary {
+.tui .list-group-item-primary:not(.not-tui) {
   color: #004085;
   background-color: #b8daff;
 }
-.tui .list-group-item-primary.list-group-item-action:hover, .tui .list-group-item-primary.list-group-item-action:focus {
+.tui .list-group-item-primary:not(.not-tui).list-group-item-action:hover, .tui .list-group-item-primary:not(.not-tui).list-group-item-action:focus {
   color: #004085;
   background-color: #9fcdff;
 }
-.tui .list-group-item-primary.list-group-item-action.active {
+.tui .list-group-item-primary:not(.not-tui).list-group-item-action.active {
   color: #fff;
   background-color: #004085;
   border-color: #004085;
@@ -196,15 +196,15 @@
   border-color: #383d41;
 }
 
-.tui .list-group-item-secondary {
+.tui .list-group-item-secondary:not(.not-tui) {
   color: #383d41;
   background-color: #d6d8db;
 }
-.tui .list-group-item-secondary.list-group-item-action:hover, .tui .list-group-item-secondary.list-group-item-action:focus {
+.tui .list-group-item-secondary:not(.not-tui).list-group-item-action:hover, .tui .list-group-item-secondary:not(.not-tui).list-group-item-action:focus {
   color: #383d41;
   background-color: #c8cbcf;
 }
-.tui .list-group-item-secondary.list-group-item-action.active {
+.tui .list-group-item-secondary:not(.not-tui).list-group-item-action.active {
   color: #fff;
   background-color: #383d41;
   border-color: #383d41;
@@ -224,15 +224,15 @@
   border-color: #155724;
 }
 
-.tui .list-group-item-success {
+.tui .list-group-item-success:not(.not-tui) {
   color: #155724;
   background-color: #c3e6cb;
 }
-.tui .list-group-item-success.list-group-item-action:hover, .tui .list-group-item-success.list-group-item-action:focus {
+.tui .list-group-item-success:not(.not-tui).list-group-item-action:hover, .tui .list-group-item-success:not(.not-tui).list-group-item-action:focus {
   color: #155724;
   background-color: #b1dfbb;
 }
-.tui .list-group-item-success.list-group-item-action.active {
+.tui .list-group-item-success:not(.not-tui).list-group-item-action.active {
   color: #fff;
   background-color: #155724;
   border-color: #155724;
@@ -252,15 +252,15 @@
   border-color: #0c5460;
 }
 
-.tui .list-group-item-info {
+.tui .list-group-item-info:not(.not-tui) {
   color: #0c5460;
   background-color: #bee5eb;
 }
-.tui .list-group-item-info.list-group-item-action:hover, .tui .list-group-item-info.list-group-item-action:focus {
+.tui .list-group-item-info:not(.not-tui).list-group-item-action:hover, .tui .list-group-item-info:not(.not-tui).list-group-item-action:focus {
   color: #0c5460;
   background-color: #abdde5;
 }
-.tui .list-group-item-info.list-group-item-action.active {
+.tui .list-group-item-info:not(.not-tui).list-group-item-action.active {
   color: #fff;
   background-color: #0c5460;
   border-color: #0c5460;
@@ -280,15 +280,15 @@
   border-color: #856404;
 }
 
-.tui .list-group-item-warning {
+.tui .list-group-item-warning:not(.not-tui) {
   color: #856404;
   background-color: #ffeeba;
 }
-.tui .list-group-item-warning.list-group-item-action:hover, .tui .list-group-item-warning.list-group-item-action:focus {
+.tui .list-group-item-warning:not(.not-tui).list-group-item-action:hover, .tui .list-group-item-warning:not(.not-tui).list-group-item-action:focus {
   color: #856404;
   background-color: #ffe8a1;
 }
-.tui .list-group-item-warning.list-group-item-action.active {
+.tui .list-group-item-warning:not(.not-tui).list-group-item-action.active {
   color: #fff;
   background-color: #856404;
   border-color: #856404;
@@ -308,15 +308,15 @@
   border-color: #721c24;
 }
 
-.tui .list-group-item-danger {
+.tui .list-group-item-danger:not(.not-tui) {
   color: #721c24;
   background-color: #f5c6cb;
 }
-.tui .list-group-item-danger.list-group-item-action:hover, .tui .list-group-item-danger.list-group-item-action:focus {
+.tui .list-group-item-danger:not(.not-tui).list-group-item-action:hover, .tui .list-group-item-danger:not(.not-tui).list-group-item-action:focus {
   color: #721c24;
   background-color: #f1b0b7;
 }
-.tui .list-group-item-danger.list-group-item-action.active {
+.tui .list-group-item-danger:not(.not-tui).list-group-item-action.active {
   color: #fff;
   background-color: #721c24;
   border-color: #721c24;
@@ -336,15 +336,15 @@
   border-color: #818182;
 }
 
-.tui .list-group-item-light {
+.tui .list-group-item-light:not(.not-tui) {
   color: #818182;
   background-color: #fdfdfe;
 }
-.tui .list-group-item-light.list-group-item-action:hover, .tui .list-group-item-light.list-group-item-action:focus {
+.tui .list-group-item-light:not(.not-tui).list-group-item-action:hover, .tui .list-group-item-light:not(.not-tui).list-group-item-action:focus {
   color: #818182;
   background-color: #ececf6;
 }
-.tui .list-group-item-light.list-group-item-action.active {
+.tui .list-group-item-light:not(.not-tui).list-group-item-action.active {
   color: #fff;
   background-color: #818182;
   border-color: #818182;
@@ -364,15 +364,15 @@
   border-color: #1b1e21;
 }
 
-.tui .list-group-item-dark {
+.tui .list-group-item-dark:not(.not-tui) {
   color: #1b1e21;
   background-color: #c6c8ca;
 }
-.tui .list-group-item-dark.list-group-item-action:hover, .tui .list-group-item-dark.list-group-item-action:focus {
+.tui .list-group-item-dark:not(.not-tui).list-group-item-action:hover, .tui .list-group-item-dark:not(.not-tui).list-group-item-action:focus {
   color: #1b1e21;
   background-color: #b9bbbe;
 }
-.tui .list-group-item-dark.list-group-item-action.active {
+.tui .list-group-item-dark:not(.not-tui).list-group-item-action.active {
   color: #fff;
   background-color: #1b1e21;
   border-color: #1b1e21;

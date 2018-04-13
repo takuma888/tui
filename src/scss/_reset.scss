@@ -169,99 +169,99 @@ $inline-elements: map-merge((
 }
 
 // 其他
-@include tui-element(datalist) {
+@include tui(datalist) {
   display: none;
 }
 
-@include tui-element(table) {
+@include tui(table) {
   display: table;
 }
 
 // normalize
 
-@include tui-element(hr) {
+@include tui(hr) {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
 
-@include tui-element(pre) {
+@include tui(pre) {
   font-family: monospace monospace;
 }
 
-@include tui-element(a) {
+@include tui(a) {
   background-color: transparent;
 }
 
-@include tui-element("abbr[title]") {
+@include tui("abbr[title]") {
   border-bottom: none;
   text-decoration: underline;
   text-decoration: underline dotted;
   cursor: help;
 }
 
-@include tui-element("b, strong") {
+@include tui("b, strong") {
   font-weight: bolder;
 }
 
-@include tui-element("code, kbd, samp") {
+@include tui("code, kbd, samp") {
   font-family: monospace, monospace;
   font-size: inherit;
 }
 
-@include tui-element(small) {
+@include tui(small) {
   font-size: 80%;
 }
 
-@include tui-element("sub, sup") {
+@include tui("sub, sup") {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-@include tui-element(sub) {
+@include tui(sub) {
   bottom: -0.25em;
 }
-@include tui-element(sup) {
+@include tui(sup) {
   top: -0.5em;
 }
 
-@include tui-element(img) {
+@include tui(img) {
   border-style: none;
 }
 
 
-@include tui-element("button, input, optgroup, select, textarea") {
+@include tui("button, input, optgroup, select, textarea") {
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.15;
   margin: 0;
 }
 
-@include tui-element("button, input") {
+@include tui("button, input") {
   overflow: visible;
 }
 
-@include tui-element("button, select") {
+@include tui("button, select") {
   text-transform: none;
 }
 
 
-@include tui-element('button, [type="button"], [type="reset"], [type="submit"]') {
+@include tui('button, [type="button"], [type="reset"], [type="submit"]') {
   -webkit-appearance: button;
 }
 
 
-@include tui-element('button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring') {
+@include tui('button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring') {
   outline: 1px dotted ButtonText;
 }
 
-@include tui-element(fieldset) {
+@include tui(fieldset) {
   padding: 0.35rem 0.75rem 0.625rem;
 }
 
-@include tui-element(legend) {
+@include tui(legend) {
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -270,45 +270,45 @@ $inline-elements: map-merge((
   white-space: normal;
 }
 
-@include tui-element(progress) {
+@include tui(progress) {
   vertical-align: baseline;
 }
 
-@include tui-element(textarea) {
+@include tui(textarea) {
   overflow: auto;
 }
 
-@include tui-element('[type="checkbox"], [type="radio"]') {
+@include tui('[type="checkbox"], [type="radio"]') {
   box-sizing: border-box;
   padding: 0;
 }
 
-@include tui-element('[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button') {
+@include tui('[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button') {
   height: auto;
 }
 
-@include tui-element('[type="search"]') {
+@include tui('[type="search"]') {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-@include tui-element('[type="search"]::-webkit-search-decoration') {
+@include tui('[type="search"]::-webkit-search-decoration') {
   -webkit-appearance: none;
 }
 
-@include tui-element('::-webkit-file-upload-button') {
+@include tui('::-webkit-file-upload-button') {
   -webkit-appearance: button;
   font: inherit;
 }
 
-@include tui-element('template, [hidden]') {
+@include tui('template, [hidden]') {
   display: none;
 }
 
-@include tui-element(details) {
+@include tui(details) {
   display: block;
 }
 
-@include tui-element(summary) {
+@include tui(summary) {
   display: list-item;
 }

@@ -18,17 +18,20 @@
 //  --font-family-monospace: #{inspect($font-family-monospace)};
 //}
 
-@include tui-element(body) {
+@include tui(body) {
   margin: 0;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-base;
-  line-height: $line-height-base;
   color: $body-color;
   text-align: left;
 }
 
-@include tui-element('[tabindex="-1"]:focus') {
+.tui {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+}
+
+@include tui('[tabindex="-1"]:focus') {
   outline: 0 !important;
 }
 
@@ -36,21 +39,21 @@
 // Typography
 
 // headings: `<h1>`-`<h6>`
-@include tui-element('h1, h2, h3, h4, h5, h6') {
+@include tui('h1, h2, h3, h4, h5, h6') {
   margin-top: $headings-margin-top;
   margin-bottom: $headings-margin-bottom;
 }
 
 
 // paragraph
-@include tui-element(p) {
+@include tui(p) {
   margin-top: $paragraph-margin-top;
   margin-bottom: $paragraph-margin-bottom;
 }
 
 
 // Abbreviations
-@include tui-element('abbr[title], abbr[data-original-title]') {
+@include tui('abbr[title], abbr[data-original-title]') {
   text-decoration: underline;
   text-decoration: underline dotted;
   cursor: help;
@@ -58,44 +61,44 @@
 }
 
 
-@include tui-element(address) {
+@include tui(address) {
   margin-bottom: 1rem;
   font-style: normal;
   line-height: inherit;
 }
 
-@include tui-element('ol, ul, dl') {
+@include tui('ol, ul, dl') {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-@include tui-element('ol, ul') {
+@include tui('ol, ul') {
   ol, ul {
     margin-bottom: 0;
   }
 }
 
-@include tui-element(dt) {
+@include tui(dt) {
   font-weight: bold;
 }
 
-@include tui-element(dd) {
+@include tui(dd) {
   margin-bottom: .5rem;
   margin-left: 0;
 }
 
-@include tui-element(blockquote) {
+@include tui(blockquote) {
   margin: 0 0 1rem;
 }
 
-@include tui-element(dfn) {
+@include tui(dfn) {
   font-style: italic;
 }
 
 
 // Link
 
-@include tui-element(a) {
+@include tui(a) {
   color: $link-color;
   text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
@@ -108,7 +111,7 @@
 }
 
 
-@include tui-element('a:not([href]):not([tabindex])') {
+@include tui('a:not([href]):not([tabindex])') {
   text-decoration: none;
   @include hover-focus {
     color: inherit;
@@ -123,12 +126,12 @@
 // Code
 
 
-@include tui-element('pre, code, kbd, samp') {
+@include tui('pre, code, kbd, samp') {
   font-family: monospace, monospace;
   font-size: 1em;
 }
 
-@include tui-element(pre) {
+@include tui(pre) {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
@@ -138,30 +141,30 @@
 
 // Figures
 
-@include tui-element(figure) {
+@include tui(figure) {
   margin: 0 0 1rem;
 }
 
 
 // Images and content
 
-@include tui-element(img) {
+@include tui(img) {
   vertical-align: middle;
   border-style: none;
 }
 
-@include tui-element('svg:not(:root)') {
+@include tui('svg:not(:root)') {
   overflow: hidden;
 }
 
 
 // Tables
 
-@include tui-element(table) {
+@include tui(table) {
   border-collapse: collapse;
 }
 
-@include tui-element(caption) {
+@include tui(caption) {
   padding-top: $table-cell-padding;
   padding-bottom: $table-cell-padding;
   color: $table-caption-color;
@@ -169,52 +172,52 @@
   caption-side: top;
 }
 
-@include tui-element(th) {
+@include tui(th) {
   text-align: inherit;
 }
 
 
 // Forms
 
-@include tui-element(label) {
+@include tui(label) {
   display: inline-block;
   margin-bottom: $label-margin-bottom;
 }
 
-@include tui-element(button) {
+@include tui(button) {
   border-radius: 0;
 }
 
-@include tui-element('button:focus') {
+@include tui('button:focus') {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-@include tui-element('button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner') {
+@include tui('button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner') {
   padding: 0;
   border-style: none;
 }
 
-@include tui-element('input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"]') {
+@include tui('input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"]') {
   -webkit-appearance: listbox;
 }
 
 
-@include tui-element(textarea) {
+@include tui(textarea) {
   overflow: auto;
   resize: vertical;
   min-height: 2rem;
 }
 
 
-@include tui-element(fieldset) {
+@include tui(fieldset) {
   min-width: 0;
   padding: .5rem;
   margin: 0;
   border: none;
 }
 
-@include tui-element(legend) {
+@include tui(legend) {
   display: block;
   max-width: 100%;
   padding-left: .5rem;
@@ -227,30 +230,30 @@
   border: none;
 }
 
-@include tui-element('[type="search"]') {
+@include tui('[type="search"]') {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
 
-@include tui-element('[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration') {
+@include tui('[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration') {
   -webkit-appearance: none;
 }
 
-@include tui-element(output) {
+@include tui(output) {
   display: inline-block;
 }
 
-@include tui-element(summary) {
+@include tui(summary) {
   display: list-item;
   cursor: pointer;
 }
 
 
-@include tui-element('[hidden]') {
+@include tui('[hidden]') {
   display: none !important;
 }
 
 
-@include tui-element('p[lang^="zh"]') {
+@include tui('p[lang^="zh"]') {
   text-indent: 2rem;
 }

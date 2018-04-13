@@ -1,29 +1,3 @@
-@mixin tui-element($element) {
-  #{$element} {
-    &.tui {
-      @content;
-    }
-  }
-  .tui {
-    #{$element} {
-      @content;
-    }
-  }
-}
-
-@mixin tui-class($class) {
-  #{$class} {
-    &.tui {
-      @content;
-    }
-  }
-  .tui {
-    #{$class} {
-      @content;
-    }
-  }
-}
-
 @mixin tui($expr) {
   #{$expr} {
     &.tui {
@@ -31,7 +5,7 @@
     }
   }
   .tui {
-    #{$expr} {
+    #{$expr}:not(.not-tui) {
       @content;
     }
   }

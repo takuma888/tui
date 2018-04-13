@@ -49,7 +49,7 @@
 @include tui('.tui-table-body') {
   display: block;
   overflow-x: auto;
-  min-height: 58px;
+  min-height: 75px;
   margin-top: -1px;
   border: $table-border-width solid $table-border-color;
 }
@@ -171,14 +171,13 @@
     left: 0;
     right: 0;
     top: 100%;
-    margin-top: 2px;
+    margin-top: 0;
     min-height: 0;
   }
 
   .tui-table-filter-input {
     background-color: rgba($white, 0.7);
     font-weight: $font-weight-bold;
-    padding: 0;
   }
 }
 
@@ -192,7 +191,7 @@
           top: 0;
           right: auto;
           margin-top: 0;
-          margin-left: 2px;
+          margin-left: 1px;
           z-index: 1;
           width: 180px;
         }
@@ -217,17 +216,13 @@
 }
 
 
-.table {
-  .tui-table-filter-toggle {
-    margin-top: -$table-cell-padding;
-    margin-bottom: -$table-cell-padding;
+@include tui('.table') {
+  .tui-table-filter-toggle,.tui-table-sort,.tui-table-filter-input {
     padding: $table-cell-padding;
   }
 
   &.table-sm,.table-condensed {
-    .tui-table-filter-toggle {
-      margin-top: -$table-cell-padding-sm;
-      margin-bottom: -$table-cell-padding-sm;
+    .tui-table-filter-toggle,.tui-table-sort,.tui-table-filter-input {
       padding: $table-cell-padding-sm;
     }
   }
