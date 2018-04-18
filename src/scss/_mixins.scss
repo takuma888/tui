@@ -5,7 +5,7 @@
     }
   }
   .tui {
-    #{$expr}:not(.not-tui) {
+    #{$expr} {
       @content;
     }
   }

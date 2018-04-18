@@ -124,7 +124,7 @@
   position: relative;
   display: block;
   min-height: (1rem * $line-height-base);
-  padding-left: $custom-control-gutter;
+  padding-left: 1rem;
 
   .tui-label {
     margin: 0;

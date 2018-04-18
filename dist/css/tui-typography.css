@@ -6,7 +6,7 @@ h1.tui, h2.tui, h3.tui, h4.tui, h5.tui, h6.tui, .h1.tui, .h2.tui, .h3.tui, .h4.t
   color: inherit;
 }
 
-.tui h1, .tui h2, .tui h3, .tui h4, .tui h5, .tui h6, .tui .h1, .tui .h2, .tui .h3, .tui .h4, .tui .h5, .tui .h6:not(.not-tui) {
+.tui h1, .tui h2, .tui h3, .tui h4, .tui h5, .tui h6, .tui .h1, .tui .h2, .tui .h3, .tui .h4, .tui .h5, .tui .h6 {
   margin-bottom: .5rem;
   font-family: inherit;
   font-weight: 500;
@@ -18,7 +18,7 @@ h1.tui, .h1.tui {
   font-size: 3rem;
 }
 
-.tui h1, .tui .h1:not(.not-tui) {
+.tui h1, .tui .h1 {
   font-size: 3rem;
 }
 
@@ -26,7 +26,7 @@ h2.tui, .h2.tui {
   font-size: 2.5rem;
 }
 
-.tui h2, .tui .h2:not(.not-tui) {
+.tui h2, .tui .h2 {
   font-size: 2.5rem;
 }
 
@@ -34,7 +34,7 @@ h3.tui, .h3.tui {
   font-size: 2rem;
 }
 
-.tui h3, .tui .h3:not(.not-tui) {
+.tui h3, .tui .h3 {
   font-size: 2rem;
 }
 
@@ -42,7 +42,7 @@ h4.tui, .h4.tui {
   font-size: 1.5rem;
 }
 
-.tui h4, .tui .h4:not(.not-tui) {
+.tui h4, .tui .h4 {
   font-size: 1.5rem;
 }
 
@@ -50,7 +50,7 @@ h5.tui, .h5.tui {
   font-size: 1.25rem;
 }
 
-.tui h5, .tui .h5:not(.not-tui) {
+.tui h5, .tui .h5 {
   font-size: 1.25rem;
 }
 
@@ -58,7 +58,7 @@ h6.tui, .h6.tui {
   font-size: 1rem;
 }
 
-.tui h6, .tui .h6:not(.not-tui) {
+.tui h6, .tui .h6 {
   font-size: 1rem;
 }
 
@@ -68,7 +68,7 @@ h6.tui, .h6.tui {
   line-height: 1.2;
 }
 
-.tui .display-1:not(.not-tui) {
+.tui .display-1 {
   font-size: 6rem;
   font-weight: 300;
   line-height: 1.2;
@@ -80,7 +80,7 @@ h6.tui, .h6.tui {
   line-height: 1.2;
 }
 
-.tui .display-2:not(.not-tui) {
+.tui .display-2 {
   font-size: 5.5rem;
   font-weight: 300;
   line-height: 1.2;
@@ -92,7 +92,7 @@ h6.tui, .h6.tui {
   line-height: 1.2;
 }
 
-.tui .display-3:not(.not-tui) {
+.tui .display-3 {
   font-size: 4.5rem;
   font-weight: 300;
   line-height: 1.2;
@@ -104,7 +104,7 @@ h6.tui, .h6.tui {
   line-height: 1.2;
 }
 
-.tui .display-4:not(.not-tui) {
+.tui .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2;
@@ -115,7 +115,7 @@ h6.tui, .h6.tui {
   font-weight: 300;
 }
 
-.tui .lead:not(.not-tui) {
+.tui .lead {
   font-size: 1.25rem;
   font-weight: 300;
 }
@@ -125,7 +125,7 @@ h6.tui, .h6.tui {
   font-weight: 300;
 }
 
-.tui .lead:not(.not-tui) {
+.tui .lead {
   font-size: 1.25rem;
   font-weight: 300;
 }
@@ -135,7 +135,7 @@ small.tui, .small.tui {
   font-weight: 400;
 }
 
-.tui small, .tui .small:not(.not-tui) {
+.tui small, .tui .small {
   font-size: 80%;
   font-weight: 400;
 }
@@ -144,7 +144,7 @@ mark.tui, .mark.tui {
   padding: .2em;
 }
 
-.tui mark, .tui .mark:not(.not-tui) {
+.tui mark, .tui .mark {
   padding: .2em;
 }
 
@@ -155,7 +155,7 @@ hr.tui {
   border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
-.tui hr:not(.not-tui) {
+.tui hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
@@ -167,7 +167,7 @@ hr.tui {
   text-transform: uppercase;
 }
 
-.tui .initialism:not(.not-tui) {
+.tui .initialism {
   font-size: 90%;
   text-transform: uppercase;
 }
@@ -177,7 +177,7 @@ hr.tui {
   font-size: 1.25rem;
 }
 
-.tui .blockquote:not(.not-tui) {
+.tui .blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
@@ -191,12 +191,12 @@ hr.tui {
   content: "\2014 \00A0";
 }
 
-.tui .blockquote-footer:not(.not-tui) {
+.tui .blockquote-footer {
   display: block;
   font-size: 80%;
   color: #6c757d;
 }
-.tui .blockquote-footer:not(.not-tui)::before {
+.tui .blockquote-footer::before {
   content: "\2014 \00A0";
 }
 
@@ -205,7 +205,7 @@ hr.tui {
   list-style: none;
 }
 
-.tui .list-unstyled:not(.not-tui) {
+.tui .list-unstyled {
   padding-left: 0;
   list-style: none;
 }
@@ -215,7 +215,7 @@ hr.tui {
   list-style: none;
 }
 
-.tui .list-inline:not(.not-tui) {
+.tui .list-inline {
   padding-left: 0;
   list-style: none;
 }
@@ -227,10 +227,10 @@ hr.tui {
   margin-right: .5rem;
 }
 
-.tui .list-inline-item, .tui .list-inline > li:not(.not-tui) {
+.tui .list-inline-item, .tui .list-inline > li {
   display: inline-block;
 }
-.tui .list-inline-item:not(:last-child), .tui .list-inline > li:not(.not-tui):not(:last-child) {
+.tui .list-inline-item:not(:last-child), .tui .list-inline > li:not(:last-child) {
   margin-right: .5rem;
 }
 
@@ -238,7 +238,7 @@ li ul.list-unstyled.tui, li ol.list-unstyled.tui {
   margin-left: 1rem;
 }
 
-.tui li ul.list-unstyled, .tui li ol.list-unstyled:not(.not-tui) {
+.tui li ul.list-unstyled, .tui li ol.list-unstyled {
   margin-left: 1rem;
 }
 
@@ -246,7 +246,7 @@ code.tui, kbd.tui, pre.tui, samp.tui {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.tui code, .tui kbd, .tui pre, .tui samp:not(.not-tui) {
+.tui code, .tui kbd, .tui pre, .tui samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -259,12 +259,12 @@ a > code.tui {
   color: inherit;
 }
 
-.tui code:not(.not-tui) {
+.tui code {
   font-size: 87.5%;
   color: #e83e8c;
   word-break: break-word;
 }
-a > .tui code:not(.not-tui) {
+a > .tui code {
   color: inherit;
 }
 
@@ -285,7 +285,7 @@ kbd.tui kbd {
           box-shadow: none;
 }
 
-.tui kbd:not(.not-tui) {
+.tui kbd {
   padding: .2rem .4rem;
   font-size: 87.5%;
   color: #fff;
@@ -294,7 +294,7 @@ kbd.tui kbd {
   -webkit-box-shadow: inset 0 -.1rem 0 rgba(0, 0, 0, .25);
           box-shadow: inset 0 -.1rem 0 rgba(0, 0, 0, .25);
 }
-.tui kbd:not(.not-tui) kbd {
+.tui kbd kbd {
   padding: 0;
   font-size: 100%;
   font-weight: 700;
@@ -313,12 +313,12 @@ pre.tui code {
   word-break: normal;
 }
 
-.tui pre:not(.not-tui) {
+.tui pre {
   display: block;
   font-size: 87.5%;
   color: #212529;
 }
-.tui pre:not(.not-tui) code {
+.tui pre code {
   font-size: inherit;
   color: inherit;
   word-break: normal;
@@ -329,7 +329,7 @@ pre.tui code {
   overflow-y: scroll;
 }
 
-.tui .pre-scrollable:not(.not-tui) {
+.tui .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
 }
@@ -339,7 +339,7 @@ pre.tui code {
   height: auto;
 }
 
-.tui .img-responsive, .tui .img-fluid:not(.not-tui) {
+.tui .img-responsive, .tui .img-fluid {
   max-width: 100%;
   height: auto;
 }
@@ -355,7 +355,7 @@ pre.tui code {
           box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
 }
 
-.tui .img-thumbnail:not(.not-tui) {
+.tui .img-thumbnail {
   max-width: 100%;
   height: auto;
   padding: .25rem;
@@ -370,7 +370,7 @@ pre.tui code {
   border-radius: 50%;
 }
 
-.tui .img-circle:not(.not-tui) {
+.tui .img-circle {
   border-radius: 50%;
 }
 
@@ -378,7 +378,7 @@ pre.tui code {
   border-radius: .5rem;
 }
 
-.tui .img-rounded:not(.not-tui) {
+.tui .img-rounded {
   border-radius: .5rem;
 }
 
@@ -395,15 +395,15 @@ pre.tui code {
   color: #6c757d;
 }
 
-.tui .figure:not(.not-tui) {
+.tui .figure {
   display: inline-block;
 }
-.tui .figure:not(.not-tui) .figure-img {
+.tui .figure .figure-img {
   margin-top: .5rem;
   margin-bottom: .5rem;
   line-height: 1;
 }
-.tui .figure:not(.not-tui) .figure-caption {
+.tui .figure .figure-caption {
   font-size: 90%;
   color: #6c757d;
 }

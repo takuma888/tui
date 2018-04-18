@@ -23,7 +23,6 @@ body.layer-open {
   top: 0;
   left: 0;
   display: none;
-  overflow: hidden;
   // Prevent Chrome on Windows from adding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
@@ -38,13 +37,6 @@ body.layer-open {
     .layer-inner {
       //transform: translate(0, 0);
     }
-  }
-}
-
-.layer-open {
-  @include tui('.layer') {
-    overflow-x: hidden;
-    overflow-y: auto;
   }
 }
 

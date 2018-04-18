@@ -18,23 +18,23 @@
   border-top: 1px solid #c5c5c5;
 }
 
-.tui .table:not(.not-tui) {
+.tui .table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
 }
-.tui .table:not(.not-tui) th,
-.tui .table:not(.not-tui) td {
+.tui .table th,
+.tui .table td {
   padding: .75rem;
   vertical-align: top;
   border-top: 1px solid #c5c5c5;
 }
-.tui .table:not(.not-tui) thead th {
+.tui .table thead th {
   vertical-align: bottom;
   border-bottom: 1px solid #c5c5c5;
 }
-.tui .table:not(.not-tui) tbody + tbody {
+.tui .table tbody + tbody {
   border-top: 1px solid #c5c5c5;
 }
 
@@ -49,13 +49,13 @@
   padding-left: .25rem;
 }
 
-.tui .form-table:not(.not-tui) {
+.tui .form-table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
 }
-.tui .form-table:not(.not-tui) th.form-table-label, .tui .form-table:not(.not-tui) td.form-table-label {
+.tui .form-table th.form-table-label, .tui .form-table td.form-table-label {
   padding-right: .25rem;
   padding-left: .25rem;
 }
@@ -67,8 +67,8 @@
 }
 
 .tui .table-condensed th,
-.tui .table-condensed td, .tui .table-sm:not(.not-tui) th,
-.tui .table-sm:not(.not-tui) td {
+.tui .table-condensed td, .tui .table-sm th,
+.tui .table-sm td {
   padding: 5px;
 }
 
@@ -84,15 +84,15 @@
   border-bottom-width: 1px;
 }
 
-.tui .table-bordered:not(.not-tui) {
+.tui .table-bordered {
   border: 1px solid #c5c5c5;
 }
-.tui .table-bordered:not(.not-tui) th,
-.tui .table-bordered:not(.not-tui) td {
+.tui .table-bordered th,
+.tui .table-bordered td {
   border: 1px solid #c5c5c5;
 }
-.tui .table-bordered:not(.not-tui) thead th,
-.tui .table-bordered:not(.not-tui) thead td {
+.tui .table-bordered thead th,
+.tui .table-bordered thead td {
   border-bottom-width: 1px;
 }
 
@@ -103,10 +103,10 @@
   border: 0;
 }
 
-.tui .table-borderless:not(.not-tui) th,
-.tui .table-borderless:not(.not-tui) td,
-.tui .table-borderless:not(.not-tui) thead th,
-.tui .table-borderless:not(.not-tui) tbody + tbody {
+.tui .table-borderless th,
+.tui .table-borderless td,
+.tui .table-borderless thead th,
+.tui .table-borderless tbody + tbody {
   border: 0;
 }
 
@@ -114,7 +114,7 @@
   background-color: #f3f6fa;
 }
 
-.tui .table-striped:not(.not-tui) tbody tr:nth-of-type(odd) {
+.tui .table-striped tbody tr:nth-of-type(odd) {
   background-color: #f3f6fa;
 }
 
@@ -122,7 +122,7 @@
   background-color: #e6f0ff;
 }
 
-.tui .table-hover:not(.not-tui) tbody tr:hover {
+.tui .table-hover tbody tr:hover {
   background-color: #e6f0ff;
 }
 
@@ -132,9 +132,9 @@
   background-color: #b8daff;
 }
 
-.tui .table-primary:not(.not-tui),
-.tui .table-primary:not(.not-tui) > th,
-.tui .table-primary:not(.not-tui) > td {
+.tui .table-primary,
+.tui .table-primary > th,
+.tui .table-primary > td {
   background-color: #b8daff;
 }
 
@@ -145,26 +145,26 @@
 .table-hover.tui .table-primary.tui:hover > th {
   background-color: #9fcdff;
 }
-.table-hover.tui .tui .table-primary:not(.not-tui):hover {
+.table-hover.tui .tui .table-primary:hover {
   background-color: #9fcdff;
 }
-.table-hover.tui .tui .table-primary:not(.not-tui):hover > td,
-.table-hover.tui .tui .table-primary:not(.not-tui):hover > th {
+.table-hover.tui .tui .table-primary:hover > td,
+.table-hover.tui .tui .table-primary:hover > th {
   background-color: #9fcdff;
 }
 
-.tui .table-hover:not(.not-tui) .table-primary.tui:hover {
+.tui .table-hover .table-primary.tui:hover {
   background-color: #9fcdff;
 }
-.tui .table-hover:not(.not-tui) .table-primary.tui:hover > td,
-.tui .table-hover:not(.not-tui) .table-primary.tui:hover > th {
+.tui .table-hover .table-primary.tui:hover > td,
+.tui .table-hover .table-primary.tui:hover > th {
   background-color: #9fcdff;
 }
-.tui .table-hover:not(.not-tui) .tui .table-primary:not(.not-tui):hover {
+.tui .table-hover .tui .table-primary:hover {
   background-color: #9fcdff;
 }
-.tui .table-hover:not(.not-tui) .tui .table-primary:not(.not-tui):hover > td,
-.tui .table-hover:not(.not-tui) .tui .table-primary:not(.not-tui):hover > th {
+.tui .table-hover .tui .table-primary:hover > td,
+.tui .table-hover .tui .table-primary:hover > th {
   background-color: #9fcdff;
 }
 
@@ -174,9 +174,9 @@
   background-color: #d6d8db;
 }
 
-.tui .table-secondary:not(.not-tui),
-.tui .table-secondary:not(.not-tui) > th,
-.tui .table-secondary:not(.not-tui) > td {
+.tui .table-secondary,
+.tui .table-secondary > th,
+.tui .table-secondary > td {
   background-color: #d6d8db;
 }
 
@@ -187,26 +187,26 @@
 .table-hover.tui .table-secondary.tui:hover > th {
   background-color: #c8cbcf;
 }
-.table-hover.tui .tui .table-secondary:not(.not-tui):hover {
+.table-hover.tui .tui .table-secondary:hover {
   background-color: #c8cbcf;
 }
-.table-hover.tui .tui .table-secondary:not(.not-tui):hover > td,
-.table-hover.tui .tui .table-secondary:not(.not-tui):hover > th {
+.table-hover.tui .tui .table-secondary:hover > td,
+.table-hover.tui .tui .table-secondary:hover > th {
   background-color: #c8cbcf;
 }
 
-.tui .table-hover:not(.not-tui) .table-secondary.tui:hover {
+.tui .table-hover .table-secondary.tui:hover {
   background-color: #c8cbcf;
 }
-.tui .table-hover:not(.not-tui) .table-secondary.tui:hover > td,
-.tui .table-hover:not(.not-tui) .table-secondary.tui:hover > th {
+.tui .table-hover .table-secondary.tui:hover > td,
+.tui .table-hover .table-secondary.tui:hover > th {
   background-color: #c8cbcf;
 }
-.tui .table-hover:not(.not-tui) .tui .table-secondary:not(.not-tui):hover {
+.tui .table-hover .tui .table-secondary:hover {
   background-color: #c8cbcf;
 }
-.tui .table-hover:not(.not-tui) .tui .table-secondary:not(.not-tui):hover > td,
-.tui .table-hover:not(.not-tui) .tui .table-secondary:not(.not-tui):hover > th {
+.tui .table-hover .tui .table-secondary:hover > td,
+.tui .table-hover .tui .table-secondary:hover > th {
   background-color: #c8cbcf;
 }
 
@@ -216,9 +216,9 @@
   background-color: #c3e6cb;
 }
 
-.tui .table-success:not(.not-tui),
-.tui .table-success:not(.not-tui) > th,
-.tui .table-success:not(.not-tui) > td {
+.tui .table-success,
+.tui .table-success > th,
+.tui .table-success > td {
   background-color: #c3e6cb;
 }
 
@@ -229,26 +229,26 @@
 .table-hover.tui .table-success.tui:hover > th {
   background-color: #b1dfbb;
 }
-.table-hover.tui .tui .table-success:not(.not-tui):hover {
+.table-hover.tui .tui .table-success:hover {
   background-color: #b1dfbb;
 }
-.table-hover.tui .tui .table-success:not(.not-tui):hover > td,
-.table-hover.tui .tui .table-success:not(.not-tui):hover > th {
+.table-hover.tui .tui .table-success:hover > td,
+.table-hover.tui .tui .table-success:hover > th {
   background-color: #b1dfbb;
 }
 
-.tui .table-hover:not(.not-tui) .table-success.tui:hover {
+.tui .table-hover .table-success.tui:hover {
   background-color: #b1dfbb;
 }
-.tui .table-hover:not(.not-tui) .table-success.tui:hover > td,
-.tui .table-hover:not(.not-tui) .table-success.tui:hover > th {
+.tui .table-hover .table-success.tui:hover > td,
+.tui .table-hover .table-success.tui:hover > th {
   background-color: #b1dfbb;
 }
-.tui .table-hover:not(.not-tui) .tui .table-success:not(.not-tui):hover {
+.tui .table-hover .tui .table-success:hover {
   background-color: #b1dfbb;
 }
-.tui .table-hover:not(.not-tui) .tui .table-success:not(.not-tui):hover > td,
-.tui .table-hover:not(.not-tui) .tui .table-success:not(.not-tui):hover > th {
+.tui .table-hover .tui .table-success:hover > td,
+.tui .table-hover .tui .table-success:hover > th {
   background-color: #b1dfbb;
 }
 
@@ -258,9 +258,9 @@
   background-color: #bee5eb;
 }
 
-.tui .table-info:not(.not-tui),
-.tui .table-info:not(.not-tui) > th,
-.tui .table-info:not(.not-tui) > td {
+.tui .table-info,
+.tui .table-info > th,
+.tui .table-info > td {
   background-color: #bee5eb;
 }
 
@@ -271,26 +271,26 @@
 .table-hover.tui .table-info.tui:hover > th {
   background-color: #abdde5;
 }
-.table-hover.tui .tui .table-info:not(.not-tui):hover {
+.table-hover.tui .tui .table-info:hover {
   background-color: #abdde5;
 }
-.table-hover.tui .tui .table-info:not(.not-tui):hover > td,
-.table-hover.tui .tui .table-info:not(.not-tui):hover > th {
+.table-hover.tui .tui .table-info:hover > td,
+.table-hover.tui .tui .table-info:hover > th {
   background-color: #abdde5;
 }
 
-.tui .table-hover:not(.not-tui) .table-info.tui:hover {
+.tui .table-hover .table-info.tui:hover {
   background-color: #abdde5;
 }
-.tui .table-hover:not(.not-tui) .table-info.tui:hover > td,
-.tui .table-hover:not(.not-tui) .table-info.tui:hover > th {
+.tui .table-hover .table-info.tui:hover > td,
+.tui .table-hover .table-info.tui:hover > th {
   background-color: #abdde5;
 }
-.tui .table-hover:not(.not-tui) .tui .table-info:not(.not-tui):hover {
+.tui .table-hover .tui .table-info:hover {
   background-color: #abdde5;
 }
-.tui .table-hover:not(.not-tui) .tui .table-info:not(.not-tui):hover > td,
-.tui .table-hover:not(.not-tui) .tui .table-info:not(.not-tui):hover > th {
+.tui .table-hover .tui .table-info:hover > td,
+.tui .table-hover .tui .table-info:hover > th {
   background-color: #abdde5;
 }
 
@@ -300,9 +300,9 @@
   background-color: #ffeeba;
 }
 
-.tui .table-warning:not(.not-tui),
-.tui .table-warning:not(.not-tui) > th,
-.tui .table-warning:not(.not-tui) > td {
+.tui .table-warning,
+.tui .table-warning > th,
+.tui .table-warning > td {
   background-color: #ffeeba;
 }
 
@@ -313,26 +313,26 @@
 .table-hover.tui .table-warning.tui:hover > th {
   background-color: #ffe8a1;
 }
-.table-hover.tui .tui .table-warning:not(.not-tui):hover {
+.table-hover.tui .tui .table-warning:hover {
   background-color: #ffe8a1;
 }
-.table-hover.tui .tui .table-warning:not(.not-tui):hover > td,
-.table-hover.tui .tui .table-warning:not(.not-tui):hover > th {
+.table-hover.tui .tui .table-warning:hover > td,
+.table-hover.tui .tui .table-warning:hover > th {
   background-color: #ffe8a1;
 }
 
-.tui .table-hover:not(.not-tui) .table-warning.tui:hover {
+.tui .table-hover .table-warning.tui:hover {
   background-color: #ffe8a1;
 }
-.tui .table-hover:not(.not-tui) .table-warning.tui:hover > td,
-.tui .table-hover:not(.not-tui) .table-warning.tui:hover > th {
+.tui .table-hover .table-warning.tui:hover > td,
+.tui .table-hover .table-warning.tui:hover > th {
   background-color: #ffe8a1;
 }
-.tui .table-hover:not(.not-tui) .tui .table-warning:not(.not-tui):hover {
+.tui .table-hover .tui .table-warning:hover {
   background-color: #ffe8a1;
 }
-.tui .table-hover:not(.not-tui) .tui .table-warning:not(.not-tui):hover > td,
-.tui .table-hover:not(.not-tui) .tui .table-warning:not(.not-tui):hover > th {
+.tui .table-hover .tui .table-warning:hover > td,
+.tui .table-hover .tui .table-warning:hover > th {
   background-color: #ffe8a1;
 }
 
@@ -342,9 +342,9 @@
   background-color: #f5c6cb;
 }
 
-.tui .table-danger:not(.not-tui),
-.tui .table-danger:not(.not-tui) > th,
-.tui .table-danger:not(.not-tui) > td {
+.tui .table-danger,
+.tui .table-danger > th,
+.tui .table-danger > td {
   background-color: #f5c6cb;
 }
 
@@ -355,26 +355,26 @@
 .table-hover.tui .table-danger.tui:hover > th {
   background-color: #f1b0b7;
 }
-.table-hover.tui .tui .table-danger:not(.not-tui):hover {
+.table-hover.tui .tui .table-danger:hover {
   background-color: #f1b0b7;
 }
-.table-hover.tui .tui .table-danger:not(.not-tui):hover > td,
-.table-hover.tui .tui .table-danger:not(.not-tui):hover > th {
+.table-hover.tui .tui .table-danger:hover > td,
+.table-hover.tui .tui .table-danger:hover > th {
   background-color: #f1b0b7;
 }
 
-.tui .table-hover:not(.not-tui) .table-danger.tui:hover {
+.tui .table-hover .table-danger.tui:hover {
   background-color: #f1b0b7;
 }
-.tui .table-hover:not(.not-tui) .table-danger.tui:hover > td,
-.tui .table-hover:not(.not-tui) .table-danger.tui:hover > th {
+.tui .table-hover .table-danger.tui:hover > td,
+.tui .table-hover .table-danger.tui:hover > th {
   background-color: #f1b0b7;
 }
-.tui .table-hover:not(.not-tui) .tui .table-danger:not(.not-tui):hover {
+.tui .table-hover .tui .table-danger:hover {
   background-color: #f1b0b7;
 }
-.tui .table-hover:not(.not-tui) .tui .table-danger:not(.not-tui):hover > td,
-.tui .table-hover:not(.not-tui) .tui .table-danger:not(.not-tui):hover > th {
+.tui .table-hover .tui .table-danger:hover > td,
+.tui .table-hover .tui .table-danger:hover > th {
   background-color: #f1b0b7;
 }
 
@@ -384,9 +384,9 @@
   background-color: #fdfdfe;
 }
 
-.tui .table-light:not(.not-tui),
-.tui .table-light:not(.not-tui) > th,
-.tui .table-light:not(.not-tui) > td {
+.tui .table-light,
+.tui .table-light > th,
+.tui .table-light > td {
   background-color: #fdfdfe;
 }
 
@@ -397,26 +397,26 @@
 .table-hover.tui .table-light.tui:hover > th {
   background-color: #ececf6;
 }
-.table-hover.tui .tui .table-light:not(.not-tui):hover {
+.table-hover.tui .tui .table-light:hover {
   background-color: #ececf6;
 }
-.table-hover.tui .tui .table-light:not(.not-tui):hover > td,
-.table-hover.tui .tui .table-light:not(.not-tui):hover > th {
+.table-hover.tui .tui .table-light:hover > td,
+.table-hover.tui .tui .table-light:hover > th {
   background-color: #ececf6;
 }
 
-.tui .table-hover:not(.not-tui) .table-light.tui:hover {
+.tui .table-hover .table-light.tui:hover {
   background-color: #ececf6;
 }
-.tui .table-hover:not(.not-tui) .table-light.tui:hover > td,
-.tui .table-hover:not(.not-tui) .table-light.tui:hover > th {
+.tui .table-hover .table-light.tui:hover > td,
+.tui .table-hover .table-light.tui:hover > th {
   background-color: #ececf6;
 }
-.tui .table-hover:not(.not-tui) .tui .table-light:not(.not-tui):hover {
+.tui .table-hover .tui .table-light:hover {
   background-color: #ececf6;
 }
-.tui .table-hover:not(.not-tui) .tui .table-light:not(.not-tui):hover > td,
-.tui .table-hover:not(.not-tui) .tui .table-light:not(.not-tui):hover > th {
+.tui .table-hover .tui .table-light:hover > td,
+.tui .table-hover .tui .table-light:hover > th {
   background-color: #ececf6;
 }
 
@@ -426,9 +426,9 @@
   background-color: #c6c8ca;
 }
 
-.tui .table-dark:not(.not-tui),
-.tui .table-dark:not(.not-tui) > th,
-.tui .table-dark:not(.not-tui) > td {
+.tui .table-dark,
+.tui .table-dark > th,
+.tui .table-dark > td {
   background-color: #c6c8ca;
 }
 
@@ -439,26 +439,26 @@
 .table-hover.tui .table-dark.tui:hover > th {
   background-color: #b9bbbe;
 }
-.table-hover.tui .tui .table-dark:not(.not-tui):hover {
+.table-hover.tui .tui .table-dark:hover {
   background-color: #b9bbbe;
 }
-.table-hover.tui .tui .table-dark:not(.not-tui):hover > td,
-.table-hover.tui .tui .table-dark:not(.not-tui):hover > th {
+.table-hover.tui .tui .table-dark:hover > td,
+.table-hover.tui .tui .table-dark:hover > th {
   background-color: #b9bbbe;
 }
 
-.tui .table-hover:not(.not-tui) .table-dark.tui:hover {
+.tui .table-hover .table-dark.tui:hover {
   background-color: #b9bbbe;
 }
-.tui .table-hover:not(.not-tui) .table-dark.tui:hover > td,
-.tui .table-hover:not(.not-tui) .table-dark.tui:hover > th {
+.tui .table-hover .table-dark.tui:hover > td,
+.tui .table-hover .table-dark.tui:hover > th {
   background-color: #b9bbbe;
 }
-.tui .table-hover:not(.not-tui) .tui .table-dark:not(.not-tui):hover {
+.tui .table-hover .tui .table-dark:hover {
   background-color: #b9bbbe;
 }
-.tui .table-hover:not(.not-tui) .tui .table-dark:not(.not-tui):hover > td,
-.tui .table-hover:not(.not-tui) .tui .table-dark:not(.not-tui):hover > th {
+.tui .table-hover .tui .table-dark:hover > td,
+.tui .table-hover .tui .table-dark:hover > th {
   background-color: #b9bbbe;
 }
 
@@ -468,9 +468,9 @@
   background-color: #e6f0ff;
 }
 
-.tui .table-active:not(.not-tui),
-.tui .table-active:not(.not-tui) > th,
-.tui .table-active:not(.not-tui) > td {
+.tui .table-active,
+.tui .table-active > th,
+.tui .table-active > td {
   background-color: #e6f0ff;
 }
 
@@ -481,26 +481,26 @@
 .table-hover.tui .table-active.tui:hover > th {
   background-color: #cde1ff;
 }
-.table-hover.tui .tui .table-active:not(.not-tui):hover {
+.table-hover.tui .tui .table-active:hover {
   background-color: #cde1ff;
 }
-.table-hover.tui .tui .table-active:not(.not-tui):hover > td,
-.table-hover.tui .tui .table-active:not(.not-tui):hover > th {
+.table-hover.tui .tui .table-active:hover > td,
+.table-hover.tui .tui .table-active:hover > th {
   background-color: #cde1ff;
 }
 
-.tui .table-hover:not(.not-tui) .table-active.tui:hover {
+.tui .table-hover .table-active.tui:hover {
   background-color: #cde1ff;
 }
-.tui .table-hover:not(.not-tui) .table-active.tui:hover > td,
-.tui .table-hover:not(.not-tui) .table-active.tui:hover > th {
+.tui .table-hover .table-active.tui:hover > td,
+.tui .table-hover .table-active.tui:hover > th {
   background-color: #cde1ff;
 }
-.tui .table-hover:not(.not-tui) .tui .table-active:not(.not-tui):hover {
+.tui .table-hover .tui .table-active:hover {
   background-color: #cde1ff;
 }
-.tui .table-hover:not(.not-tui) .tui .table-active:not(.not-tui):hover > td,
-.tui .table-hover:not(.not-tui) .tui .table-active:not(.not-tui):hover > th {
+.tui .table-hover .tui .table-active:hover > td,
+.tui .table-hover .tui .table-active:hover > th {
   background-color: #cde1ff;
 }
 
@@ -523,22 +523,22 @@
   background-color: rgba(255, 255, 255, .075);
 }
 
-.tui .table-dark:not(.not-tui) {
+.tui .table-dark {
   color: #fff;
   background-color: #212529;
 }
-.tui .table-dark:not(.not-tui) th,
-.tui .table-dark:not(.not-tui) td,
-.tui .table-dark:not(.not-tui) thead th {
+.tui .table-dark th,
+.tui .table-dark td,
+.tui .table-dark thead th {
   border-color: #32383e;
 }
-.tui .table-dark:not(.not-tui).table-bordered {
+.tui .table-dark.table-bordered {
   border: 0;
 }
-.tui .table-dark:not(.not-tui).table-striped tbody tr:nth-of-type(odd) {
+.tui .table-dark.table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(255, 255, 255, .05);
 }
-.tui .table-dark:not(.not-tui).table-hover tbody tr:hover {
+.tui .table-dark.table-hover tbody tr:hover {
   background-color: rgba(255, 255, 255, .075);
 }
 
@@ -927,31 +927,31 @@
 }
 
 @media (max-width: 575.98px) {
-  .tui .table-responsive:not(.not-tui).table-responsive-sm {
+  .tui .table-responsive.table-responsive-sm {
     position: relative;
     display: block;
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm thead {
+  .tui .table-responsive.table-responsive-sm thead {
     display: block;
     float: left;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm thead tr {
+  .tui .table-responsive.table-responsive-sm thead tr {
     display: block;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm thead tr::after {
+  .tui .table-responsive.table-responsive-sm thead tr::after {
     display: block;
     clear: both;
     content: "";
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm thead tr th {
+  .tui .table-responsive.table-responsive-sm thead tr th {
     display: block;
     width: auto !important;
     text-align: right;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm tbody {
+  .tui .table-responsive.table-responsive-sm tbody {
     position: relative;
     display: block;
     width: auto;
@@ -960,75 +960,75 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     white-space: nowrap;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm tbody tr {
+  .tui .table-responsive.table-responsive-sm tbody tr {
     display: inline-block;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm tbody tr:not(:first-child) {
+  .tui .table-responsive.table-responsive-sm tbody tr:not(:first-child) {
     margin-left: -5px;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm tbody tr td {
+  .tui .table-responsive.table-responsive-sm tbody tr td {
     display: block;
     text-align: left;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table th,
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table td {
+  .tui .table-responsive.table-responsive-sm.table th,
+  .tui .table-responsive.table-responsive-sm.table td {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table thead th {
+  .tui .table-responsive.table-responsive-sm.table thead th {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table tbody + tbody {
+  .tui .table-responsive.table-responsive-sm.table tbody + tbody {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table-bordered thead td, .tui .table-responsive:not(.not-tui).table-responsive-sm.table-bordered thead th {
+  .tui .table-responsive.table-responsive-sm.table-bordered thead td, .tui .table-responsive.table-responsive-sm.table-bordered thead th {
     border-top: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table-bordered thead td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-sm.table-bordered thead th:first-child {
+  .tui .table-responsive.table-responsive-sm.table-bordered thead td:first-child, .tui .table-responsive.table-responsive-sm.table-bordered thead th:first-child {
     border-top: 0;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table-bordered tbody td, .tui .table-responsive:not(.not-tui).table-responsive-sm.table-bordered tbody th {
+  .tui .table-responsive.table-responsive-sm.table-bordered tbody td, .tui .table-responsive.table-responsive-sm.table-bordered tbody th {
     vertical-align: bottom;
     border-top: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table-bordered tbody td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-sm.table-bordered tbody th:first-child {
+  .tui .table-responsive.table-responsive-sm.table-bordered tbody td:first-child, .tui .table-responsive.table-responsive-sm.table-bordered tbody th:first-child {
     border-top: 0;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table-borderless th,
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table-borderless td,
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table-borderless thead th,
-  .tui .table-responsive:not(.not-tui).table-responsive-sm.table-borderless tbody + tbody {
+  .tui .table-responsive.table-responsive-sm.table-borderless th,
+  .tui .table-responsive.table-responsive-sm.table-borderless td,
+  .tui .table-responsive.table-responsive-sm.table-borderless thead th,
+  .tui .table-responsive.table-responsive-sm.table-borderless tbody + tbody {
     border: 0;
   }
 }
 @media (max-width: 767.98px) {
-  .tui .table-responsive:not(.not-tui).table-responsive-md {
+  .tui .table-responsive.table-responsive-md {
     position: relative;
     display: block;
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md thead {
+  .tui .table-responsive.table-responsive-md thead {
     display: block;
     float: left;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md thead tr {
+  .tui .table-responsive.table-responsive-md thead tr {
     display: block;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md thead tr::after {
+  .tui .table-responsive.table-responsive-md thead tr::after {
     display: block;
     clear: both;
     content: "";
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md thead tr th {
+  .tui .table-responsive.table-responsive-md thead tr th {
     display: block;
     width: auto !important;
     text-align: right;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md tbody {
+  .tui .table-responsive.table-responsive-md tbody {
     position: relative;
     display: block;
     width: auto;
@@ -1037,75 +1037,75 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     white-space: nowrap;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md tbody tr {
+  .tui .table-responsive.table-responsive-md tbody tr {
     display: inline-block;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md tbody tr:not(:first-child) {
+  .tui .table-responsive.table-responsive-md tbody tr:not(:first-child) {
     margin-left: -5px;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md tbody tr td {
+  .tui .table-responsive.table-responsive-md tbody tr td {
     display: block;
     text-align: left;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table th,
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table td {
+  .tui .table-responsive.table-responsive-md.table th,
+  .tui .table-responsive.table-responsive-md.table td {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table thead th {
+  .tui .table-responsive.table-responsive-md.table thead th {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table tbody + tbody {
+  .tui .table-responsive.table-responsive-md.table tbody + tbody {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table-bordered thead td, .tui .table-responsive:not(.not-tui).table-responsive-md.table-bordered thead th {
+  .tui .table-responsive.table-responsive-md.table-bordered thead td, .tui .table-responsive.table-responsive-md.table-bordered thead th {
     border-top: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table-bordered thead td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-md.table-bordered thead th:first-child {
+  .tui .table-responsive.table-responsive-md.table-bordered thead td:first-child, .tui .table-responsive.table-responsive-md.table-bordered thead th:first-child {
     border-top: 0;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table-bordered tbody td, .tui .table-responsive:not(.not-tui).table-responsive-md.table-bordered tbody th {
+  .tui .table-responsive.table-responsive-md.table-bordered tbody td, .tui .table-responsive.table-responsive-md.table-bordered tbody th {
     vertical-align: bottom;
     border-top: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table-bordered tbody td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-md.table-bordered tbody th:first-child {
+  .tui .table-responsive.table-responsive-md.table-bordered tbody td:first-child, .tui .table-responsive.table-responsive-md.table-bordered tbody th:first-child {
     border-top: 0;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table-borderless th,
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table-borderless td,
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table-borderless thead th,
-  .tui .table-responsive:not(.not-tui).table-responsive-md.table-borderless tbody + tbody {
+  .tui .table-responsive.table-responsive-md.table-borderless th,
+  .tui .table-responsive.table-responsive-md.table-borderless td,
+  .tui .table-responsive.table-responsive-md.table-borderless thead th,
+  .tui .table-responsive.table-responsive-md.table-borderless tbody + tbody {
     border: 0;
   }
 }
 @media (max-width: 991.98px) {
-  .tui .table-responsive:not(.not-tui).table-responsive-lg {
+  .tui .table-responsive.table-responsive-lg {
     position: relative;
     display: block;
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg thead {
+  .tui .table-responsive.table-responsive-lg thead {
     display: block;
     float: left;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg thead tr {
+  .tui .table-responsive.table-responsive-lg thead tr {
     display: block;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg thead tr::after {
+  .tui .table-responsive.table-responsive-lg thead tr::after {
     display: block;
     clear: both;
     content: "";
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg thead tr th {
+  .tui .table-responsive.table-responsive-lg thead tr th {
     display: block;
     width: auto !important;
     text-align: right;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg tbody {
+  .tui .table-responsive.table-responsive-lg tbody {
     position: relative;
     display: block;
     width: auto;
@@ -1114,75 +1114,75 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     white-space: nowrap;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg tbody tr {
+  .tui .table-responsive.table-responsive-lg tbody tr {
     display: inline-block;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg tbody tr:not(:first-child) {
+  .tui .table-responsive.table-responsive-lg tbody tr:not(:first-child) {
     margin-left: -5px;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg tbody tr td {
+  .tui .table-responsive.table-responsive-lg tbody tr td {
     display: block;
     text-align: left;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table th,
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table td {
+  .tui .table-responsive.table-responsive-lg.table th,
+  .tui .table-responsive.table-responsive-lg.table td {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table thead th {
+  .tui .table-responsive.table-responsive-lg.table thead th {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table tbody + tbody {
+  .tui .table-responsive.table-responsive-lg.table tbody + tbody {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table-bordered thead td, .tui .table-responsive:not(.not-tui).table-responsive-lg.table-bordered thead th {
+  .tui .table-responsive.table-responsive-lg.table-bordered thead td, .tui .table-responsive.table-responsive-lg.table-bordered thead th {
     border-top: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table-bordered thead td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-lg.table-bordered thead th:first-child {
+  .tui .table-responsive.table-responsive-lg.table-bordered thead td:first-child, .tui .table-responsive.table-responsive-lg.table-bordered thead th:first-child {
     border-top: 0;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table-bordered tbody td, .tui .table-responsive:not(.not-tui).table-responsive-lg.table-bordered tbody th {
+  .tui .table-responsive.table-responsive-lg.table-bordered tbody td, .tui .table-responsive.table-responsive-lg.table-bordered tbody th {
     vertical-align: bottom;
     border-top: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table-bordered tbody td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-lg.table-bordered tbody th:first-child {
+  .tui .table-responsive.table-responsive-lg.table-bordered tbody td:first-child, .tui .table-responsive.table-responsive-lg.table-bordered tbody th:first-child {
     border-top: 0;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table-borderless th,
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table-borderless td,
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table-borderless thead th,
-  .tui .table-responsive:not(.not-tui).table-responsive-lg.table-borderless tbody + tbody {
+  .tui .table-responsive.table-responsive-lg.table-borderless th,
+  .tui .table-responsive.table-responsive-lg.table-borderless td,
+  .tui .table-responsive.table-responsive-lg.table-borderless thead th,
+  .tui .table-responsive.table-responsive-lg.table-borderless tbody + tbody {
     border: 0;
   }
 }
 @media (max-width: 1199.98px) {
-  .tui .table-responsive:not(.not-tui).table-responsive-xl {
+  .tui .table-responsive.table-responsive-xl {
     position: relative;
     display: block;
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl thead {
+  .tui .table-responsive.table-responsive-xl thead {
     display: block;
     float: left;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl thead tr {
+  .tui .table-responsive.table-responsive-xl thead tr {
     display: block;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl thead tr::after {
+  .tui .table-responsive.table-responsive-xl thead tr::after {
     display: block;
     clear: both;
     content: "";
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl thead tr th {
+  .tui .table-responsive.table-responsive-xl thead tr th {
     display: block;
     width: auto !important;
     text-align: right;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl tbody {
+  .tui .table-responsive.table-responsive-xl tbody {
     position: relative;
     display: block;
     width: auto;
@@ -1191,74 +1191,74 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     white-space: nowrap;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl tbody tr {
+  .tui .table-responsive.table-responsive-xl tbody tr {
     display: inline-block;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl tbody tr:not(:first-child) {
+  .tui .table-responsive.table-responsive-xl tbody tr:not(:first-child) {
     margin-left: -5px;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl tbody tr td {
+  .tui .table-responsive.table-responsive-xl tbody tr td {
     display: block;
     text-align: left;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table th,
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table td {
+  .tui .table-responsive.table-responsive-xl.table th,
+  .tui .table-responsive.table-responsive-xl.table td {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table thead th {
+  .tui .table-responsive.table-responsive-xl.table thead th {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table tbody + tbody {
+  .tui .table-responsive.table-responsive-xl.table tbody + tbody {
     border: none;
     border-right: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table-bordered thead td, .tui .table-responsive:not(.not-tui).table-responsive-xl.table-bordered thead th {
+  .tui .table-responsive.table-responsive-xl.table-bordered thead td, .tui .table-responsive.table-responsive-xl.table-bordered thead th {
     border-top: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table-bordered thead td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-xl.table-bordered thead th:first-child {
+  .tui .table-responsive.table-responsive-xl.table-bordered thead td:first-child, .tui .table-responsive.table-responsive-xl.table-bordered thead th:first-child {
     border-top: 0;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table-bordered tbody td, .tui .table-responsive:not(.not-tui).table-responsive-xl.table-bordered tbody th {
+  .tui .table-responsive.table-responsive-xl.table-bordered tbody td, .tui .table-responsive.table-responsive-xl.table-bordered tbody th {
     vertical-align: bottom;
     border-top: 1px solid #c5c5c5;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table-bordered tbody td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-xl.table-bordered tbody th:first-child {
+  .tui .table-responsive.table-responsive-xl.table-bordered tbody td:first-child, .tui .table-responsive.table-responsive-xl.table-bordered tbody th:first-child {
     border-top: 0;
   }
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table-borderless th,
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table-borderless td,
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table-borderless thead th,
-  .tui .table-responsive:not(.not-tui).table-responsive-xl.table-borderless tbody + tbody {
+  .tui .table-responsive.table-responsive-xl.table-borderless th,
+  .tui .table-responsive.table-responsive-xl.table-borderless td,
+  .tui .table-responsive.table-responsive-xl.table-borderless thead th,
+  .tui .table-responsive.table-responsive-xl.table-borderless tbody + tbody {
     border: 0;
   }
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs {
+.tui .table-responsive.table-responsive-xs {
   position: relative;
   display: block;
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs thead {
+.tui .table-responsive.table-responsive-xs thead {
   display: block;
   float: left;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs thead tr {
+.tui .table-responsive.table-responsive-xs thead tr {
   display: block;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs thead tr::after {
+.tui .table-responsive.table-responsive-xs thead tr::after {
   display: block;
   clear: both;
   content: "";
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs thead tr th {
+.tui .table-responsive.table-responsive-xs thead tr th {
   display: block;
   width: auto !important;
   text-align: right;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs tbody {
+.tui .table-responsive.table-responsive-xs tbody {
   position: relative;
   display: block;
   width: auto;
@@ -1267,46 +1267,46 @@
   -ms-overflow-style: -ms-autohiding-scrollbar;
   white-space: nowrap;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs tbody tr {
+.tui .table-responsive.table-responsive-xs tbody tr {
   display: inline-block;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs tbody tr:not(:first-child) {
+.tui .table-responsive.table-responsive-xs tbody tr:not(:first-child) {
   margin-left: -5px;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs tbody tr td {
+.tui .table-responsive.table-responsive-xs tbody tr td {
   display: block;
   text-align: left;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table th,
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table td {
+.tui .table-responsive.table-responsive-xs.table th,
+.tui .table-responsive.table-responsive-xs.table td {
   border: none;
   border-right: 1px solid #c5c5c5;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table thead th {
+.tui .table-responsive.table-responsive-xs.table thead th {
   border: none;
   border-right: 1px solid #c5c5c5;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table tbody + tbody {
+.tui .table-responsive.table-responsive-xs.table tbody + tbody {
   border: none;
   border-right: 1px solid #c5c5c5;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table-bordered thead td, .tui .table-responsive:not(.not-tui).table-responsive-xs.table-bordered thead th {
+.tui .table-responsive.table-responsive-xs.table-bordered thead td, .tui .table-responsive.table-responsive-xs.table-bordered thead th {
   border-top: 1px solid #c5c5c5;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table-bordered thead td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-xs.table-bordered thead th:first-child {
+.tui .table-responsive.table-responsive-xs.table-bordered thead td:first-child, .tui .table-responsive.table-responsive-xs.table-bordered thead th:first-child {
   border-top: 0;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table-bordered tbody td, .tui .table-responsive:not(.not-tui).table-responsive-xs.table-bordered tbody th {
+.tui .table-responsive.table-responsive-xs.table-bordered tbody td, .tui .table-responsive.table-responsive-xs.table-bordered tbody th {
   vertical-align: bottom;
   border-top: 1px solid #c5c5c5;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table-bordered tbody td:first-child, .tui .table-responsive:not(.not-tui).table-responsive-xs.table-bordered tbody th:first-child {
+.tui .table-responsive.table-responsive-xs.table-bordered tbody td:first-child, .tui .table-responsive.table-responsive-xs.table-bordered tbody th:first-child {
   border-top: 0;
 }
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table-borderless th,
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table-borderless td,
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table-borderless thead th,
-.tui .table-responsive:not(.not-tui).table-responsive-xs.table-borderless tbody + tbody {
+.tui .table-responsive.table-responsive-xs.table-borderless th,
+.tui .table-responsive.table-responsive-xs.table-borderless td,
+.tui .table-responsive.table-responsive-xs.table-borderless thead th,
+.tui .table-responsive.table-responsive-xs.table-borderless tbody + tbody {
   border: 0;
 }
 

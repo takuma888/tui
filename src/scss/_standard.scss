@@ -68,14 +68,8 @@
 }
 
 @include tui('ol, ul, dl') {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-@include tui('ol, ul') {
-  ol, ul {
-    margin-bottom: 0;
-  }
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @include tui(dt) {
@@ -161,7 +155,7 @@
 // Tables
 
 @include tui(table) {
-  border-collapse: collapse;
+  border-collapse: collapse !important;
 }
 
 @include tui(caption) {
