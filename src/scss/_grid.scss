@@ -11,16 +11,16 @@
 }
 
 
-// row
-@include tui('.row') {
-  @include make-row();
-}
-@include tui('.row') {
-  &:not(.flexible) {
-    @include clearfix2();
-    @include make-columns();
-  }
-}
+//// row
+//@include tui('.row') {
+//  @include make-row();
+//}
+//@include tui('.row') {
+//  &:not(.flexible) {
+//    @include clearfix2();
+//    @include make-columns();
+//  }
+//}
 
 // flex row
 @include tui('.row') {

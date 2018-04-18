@@ -1818,7 +1818,7 @@ var Layer = function ($$$1) {
           'width': this._config.width
         });
         $$$1(this._layer).css({
-          'height': this._config.height
+          'width': this._config.width
         });
       }
 
@@ -1834,8 +1834,6 @@ var Layer = function ($$$1) {
       if (this._config.fixed) {
         $$$1(document.body).addClass(ClassName.OPEN);
       }
-
-      this._adjustLayer();
 
       this._setEscapeEvent();
 
@@ -1957,8 +1955,11 @@ var Layer = function ($$$1) {
         } else {
           offsetTop = this._config.offset;
         }
+      } else {
+        offsetTop = 40;
       }
 
+      offsetTop = Math.max(40, offsetTop);
       $element.css({
         top: offsetTop,
         left: offsetLeft
@@ -2002,6 +2003,8 @@ var Layer = function ($$$1) {
 
         _this3._isTransitioning = false;
         $$$1(_this3._element).trigger(shownEvent);
+
+        _this3._adjustLayer();
       };
 
       if (transition) {

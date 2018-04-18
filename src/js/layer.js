@@ -178,7 +178,7 @@ const Layer = (($) => {
                     'width': this._config.width,
                 });
                 $(this._layer).css({
-                    'height': this._config.height
+                    'width': this._config.width,
                 });
             }
             if (this._config.height) {
@@ -193,8 +193,6 @@ const Layer = (($) => {
             if (this._config.fixed) {
                 $(document.body).addClass(ClassName.OPEN);
             }
-
-            this._adjustLayer();
 
 
             this._setEscapeEvent();
@@ -318,7 +316,10 @@ const Layer = (($) => {
                 } else {
                     offsetTop = this._config.offset;
                 }
+            } else {
+                offsetTop = 40;
             }
+            offsetTop = Math.max(40, offsetTop);
             $element.css({top: offsetTop, left: offsetLeft});
         }
 
@@ -354,6 +355,7 @@ const Layer = (($) => {
                 }
                 this._isTransitioning = false;
                 $(this._element).trigger(shownEvent);
+                this._adjustLayer();
             };
 
             if (transition) {

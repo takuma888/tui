@@ -6186,7 +6186,6 @@ input[type="radio"].tui.custom-control-input:disabled ~ .custom-control-label, i
   width: 10em;
   padding-right: 1em;
   margin-bottom: 0;
-  text-align: right;
 }
 .tui-form-item-inline.tui .tui-label + .tui-control {
   margin-left: 10em;
@@ -6210,7 +6209,6 @@ input[type="radio"].tui.custom-control-input:disabled ~ .custom-control-label, i
   width: 10em;
   padding-right: 1em;
   margin-bottom: 0;
-  text-align: right;
 }
 .tui .tui-form-item-inline:not(.not-tui) .tui-label + .tui-control {
   margin-left: 10em;

@@ -33,18 +33,6 @@ html.tui {
 @-ms-viewport {
   width: device-width;
 }
-.tui body, body.tui, .tui div, div.tui, .tui hr, hr.tui, .tui h1, h1.tui, .tui h2, h2.tui, .tui h3, h3.tui, .tui h4, h4.tui, .tui h5, h5.tui, .tui h6, h6.tui, .tui p, p.tui, .tui address, address.tui, .tui blockquote, blockquote.tui, .tui pre, pre.tui, .tui form, form.tui, .tui optgroup, optgroup.tui, .tui option, option.tui, .tui fieldset, fieldset.tui, .tui legend, legend.tui, .tui iframe, iframe.tui, .tui figure, figure.tui, .tui figcaption, figcaption.tui, .tui nav, nav.tui, .tui article, article.tui, .tui header, header.tui, .tui footer, footer.tui, .tui section, section.tui, .tui aside, aside.tui, .tui details, details.tui {
-  display: block;
-}
-
-.tui meter, meter.tui, .tui progress, progress.tui, .tui input, input.tui, .tui textarea, textarea.tui, .tui button, button.tui, .tui select, select.tui {
-  display: inline-block;
-}
-
-.tui abbr, abbr.tui, .tui b, b.tui, .tui bdi, bdi.tui, .tui bdo, bdo.tui, .tui br, br.tui, .tui cite, cite.tui, .tui code, code.tui, .tui del, del.tui, .tui dfn, dfn.tui, .tui em, em.tui, .tui i, i.tui, .tui ins, ins.tui, .tui kbd, kbd.tui, .tui mark, mark.tui, .tui q, q.tui, .tui rp, rp.tui, .tui rt, rt.tui, .tui ruby, ruby.tui, .tui s, s.tui, .tui samp, samp.tui, .tui small, small.tui, .tui strong, strong.tui, .tui sub, sub.tui, .tui sup, sup.tui, .tui time, time.tui, .tui u, u.tui, .tui var, var.tui, .tui wbr, wbr.tui, .tui label, label.tui, .tui img, img.tui, .tui map, map.tui, .tui area, area.tui, .tui canvas, canvas.tui, .tui audio, audio.tui, .tui source, source.tui, .tui video, video.tui, .tui track, track.tui, .tui a, a.tui, .tui span, span.tui, .tui embed, embed.tui {
-  display: inline;
-}
-
 datalist.tui {
   display: none;
 }
@@ -733,11 +721,11 @@ summary.tui {
 }
 
 p[lang^="zh"].tui {
-  text-indent: 2rem;
+  text-indent: 2em;
 }
 
 .tui p[lang^="zh"]:not(.not-tui) {
-  text-indent: 2rem;
+  text-indent: 2em;
 }
 
 /*# sourceMappingURL=tui-normalize.css.map */

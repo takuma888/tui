@@ -135,10 +135,10 @@
   border-left: 0;
   border-radius: 0;
 }
-.list-group-flush.tui:first-child .list-group-item:first-child {
+.list-group-flush.tui .list-group-item:first-child {
   border-top: 0;
 }
-.list-group-flush.tui:last-child .list-group-item:last-child {
+.list-group-flush.tui .list-group-item:last-child {
   border-bottom: 0;
 }
 
@@ -147,10 +147,10 @@
   border-left: 0;
   border-radius: 0;
 }
-.tui .list-group-flush:not(.not-tui):first-child .list-group-item:first-child {
+.tui .list-group-flush:not(.not-tui) .list-group-item:first-child {
   border-top: 0;
 }
-.tui .list-group-flush:not(.not-tui):last-child .list-group-item:last-child {
+.tui .list-group-flush:not(.not-tui) .list-group-item:last-child {
   border-bottom: 0;
 }
 
