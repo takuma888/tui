@@ -10,25 +10,11 @@
   @include make-container();
 }
 
-
-//// row
-//@include tui('.row') {
-//  @include make-row();
-//}
-//@include tui('.row') {
-//  &:not(.flexible) {
-//    @include clearfix2();
-//    @include make-columns();
-//  }
-//}
-
 // flex row
 @include tui('.row') {
-  &.flexible {
-    @include make-flex-row();
-    // column
-    @include make-flex-columns();
-  }
+  @include make-flex-row();
+  // column
+  @include make-flex-columns();
   // Remove the negative margin from default .row, then the horizontal padding
   // from all immediate children columns (to prevent runaway style inheritance).
   &.no-gutters {

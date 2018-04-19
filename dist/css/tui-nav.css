@@ -302,6 +302,7 @@
   display: -ms-flexbox;
   display:         flex;
   padding-left: 0;
+  margin-top: 0;
   margin-bottom: 0;
   list-style: none;
           flex-direction: column;
@@ -326,6 +327,7 @@
   display: -ms-flexbox;
   display:         flex;
   padding-left: 0;
+  margin-top: 0;
   margin-bottom: 0;
   list-style: none;
           flex-direction: column;

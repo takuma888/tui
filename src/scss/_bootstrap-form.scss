@@ -195,25 +195,9 @@
 // grid
 
 @include tui('.form-row') {
-  @include make-row();
-  margin-right: -5px;
-  margin-left: -5px;
-}
-@include tui('.form-row') {
-  margin-right: -5px;
-  margin-left: -5px;
-  &:not(.flexible) {
-    @include clearfix2();
-    @include make-columns();
-  }
-}
-
-@include tui('.form-row') {
-  &.flexible {
-    @include make-flex-row();
-    // column
-    @include make-flex-columns();
-  }
+  @include make-flex-row();
+  // column
+  @include make-flex-columns();
   // Remove the negative margin from default .row, then the horizontal padding
   // from all immediate children columns (to prevent runaway style inheritance).
   &.no-gutters {
